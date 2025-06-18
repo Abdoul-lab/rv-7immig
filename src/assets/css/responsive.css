@@ -1,0 +1,1134 @@
+/* Normal desktop :1200 1500px. */
+@media (min-width: 1500px) and (max-width: 1600px) {
+  .slick-slide img {
+    width: 100%;
+  }
+  .slider .bd-video {
+    left: 32% !important;
+    top: 67% !important;
+  }
+  .service-area .ptl-rsp {
+    padding-left: 246px !important;
+  }
+  .service-area .dreamit-section-main-title h1 {
+    font-size: 33px !important;
+  }
+  .service-title h2 {
+    font-size: 18px !important;
+  }
+  .service-content p {
+    width: 100% !important;
+  }
+  .flipx-section .flip-box {
+    margin-bottom: 40px !important;
+  }
+}
+/* Normal desktop :1200 1500px. */
+@media (min-width: 1200px) and (max-width: 1500px) {
+  .slick-slide img {
+    width: 100%;
+  }
+  .slider .bd-video {
+    left: 29% !important;
+    top: 67% !important;
+  }
+  .service-area .ptl-rsp {
+    padding-left: 106px !important;
+  }
+  .service-area .dreamit-section-main-title h1 {
+    font-size: 29px !important;
+  }
+  .service-title h2 {
+    font-size: 16px !important;
+  }
+  .service-content p {
+    width: 100% !important;
+  }
+  .dreamit-service-box {
+    padding: 33px 17px 41px 14px !important;
+  }
+}
+/* Normal Laptop :992px. */
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .dreamit-feature-box {
+    padding: 48px 28px 48px 28px !important;
+  }
+  .blog-details .quote_btn button {
+    width: 30% !important;
+  }
+  .dreamit-thumb img {
+    width: 100%;
+  }
+  .dreamit-single-counter {
+    margin-right: 43px !important;
+    width: 55% !important;
+  }
+  .flag-shape-inner {
+    display: none;
+  }
+  .dreamit-slider-content p {
+    width: 61% !important;
+  }
+  .dreamit-section-main-title h1,
+  .dreamit-section-main-title h2 {
+    font-size: 32px;
+  }
+  .ptl-rsp {
+    padding-left: 50px !important;
+  }
+  .testimonials-icon {
+    right: 38px !important;
+  }
+  .dreamit-section-main-title-2 h2 {
+    font-size: 36px !important;
+  }
+  .dreamit-section-main-title-2 h2:before {
+    top: 19px !important;
+  }
+  .dreamit-section-main-title-2 h2:before {
+    left: -22px !important;
+    width: 21px !important;
+  }
+  .about-area.style-three.upper2 .dreamit-thumb:before {
+    top: 31px !important;
+  }
+  /*-============= home-two===========*/
+  .dreamit-section-main-title h1 {
+    font-size: 29px !important;
+  }
+  .slider .bd-video {
+    display: none !important;
+  }
+  .process-content {
+    padding: 0 6px !important;
+  }
+  .call-section .call-title h2 {
+    font-size: 19px !important;
+  }
+  .course-content-text p {
+    width: 83% !important;
+  }
+  .service-area.style-two.upper .dreamit-service-content-text p {
+    width: 85% !important;
+  }
+  .about-area.style-three .about-icon {
+    float: inherit !important;
+  }
+  .slick-slide img {
+    width: 135%;
+  }
+  ul.slick-dots {
+    margin: -77px auto 0 !important;
+  }
+  .call-section.upper .call-btn {
+    padding-left: 0px !important;
+  }
+  .title-content p {
+    font-size: 17px !important;
+  }
+  .style-three .dreamit-slider-content h1 {
+    font-size: 58px !important;
+  }
+  .dreamit-service-box {
+    padding: 33px 18px 41px 18px !important;
+  }
+  .service-content p {
+    width: 100% !important;
+    font-size: 15px;
+  }
+  .header-area.style-four .header-btn {
+    display: none !important;
+  }
+}
+/* Normal Laptop :992px. */
+@media (min-width: 992px) and (max-width: 1024px) {
+  .dreamit-feature-box {
+    padding: 48px 28px 48px 28px !important;
+  }
+  .blog-details .quote_btn button {
+    width: 31% !important;
+  }
+  .dreamit-thumb img {
+    width: 100%;
+  }
+  .dreamit-single-counter {
+    margin-right: 43px !important;
+    width: 55% !important;
+  }
+  .flag-shape-inner {
+    display: none;
+  }
+  .dreamit-slider-content p {
+    width: 61% !important;
+  }
+  .dreamit-section-main-title h1,
+  .dreamit-section-main-title h2 {
+    font-size: 32px;
+  }
+  .ptl-rsp {
+    padding-left: 50px !important;
+  }
+  .testimonials-icon {
+    right: 38px !important;
+  }
+  .dreamit-section-main-title-2 h2 {
+    font-size: 36px !important;
+  }
+  .dreamit-section-main-title-2 h2:before {
+    top: 19px !important;
+  }
+  .dreamit-section-main-title-2 h2:before {
+    left: -22px !important;
+    width: 21px !important;
+  }
+  .header-area.style-four .header-btn {
+    display: none !important;
+  }
+  /*-============= home-two===========*/
+  .dreamit-section-main-title h1 {
+    font-size: 29px !important;
+  }
+  .slider .bd-video {
+    left: 20% !important;
+  }
+  .process-content {
+    padding: 0 6px !important;
+  }
+  .call-section .call-title h2 {
+    font-size: 19px !important;
+  }
+  .course-content-text p {
+    width: 83% !important;
+  }
+  .service-area.style-two.upper .dreamit-service-content-text p {
+    width: 85% !important;
+  }
+  .about-area.style-three .about-icon {
+    float: inherit !important;
+  }
+  .tp-caption a {
+    margin-top: 20px !important;
+  }
+  .slider .bd-video {
+    display: none !important;
+  }
+  .slick-slide img {
+    width: 135%;
+  }
+  ul.slick-dots {
+    margin: -77px auto 0 !important;
+  }
+  .about-area.style-four .dreamit-thumb {
+    right: 25px !important;
+  }
+  .call-section.upper .call-btn {
+    padding-left: 0 !important;
+  }
+  .style-three .dreamit-slider-content h1 {
+    font-size: 60px !important;
+  }
+  .country-area.style-two.upper .country-content-text p {
+    width: 94% !important;
+  }
+  .agency-section .dreamit-section-main-title h2 {
+    font-size: 34px !important;
+  }
+  .tp-caption p {
+    margin-bottom: 30px !important;
+  }
+  .dreamit-service-box {
+    padding: 33px 11px 41px 16px !important;
+  }
+}
+/* Tablet Tab :768px. */
+@media (min-width: 768px) and (max-width: 991px) {
+  /*start Mobile menu*/
+  .header-logo {
+    display: none !important;
+  }
+  .logo-txt::before {
+    display: block !important;
+  }
+  .menu-toggle {
+    display: block !important;
+  }
+  .header-area {
+    background: #ff3c00 !important;
+    padding: 30px;
+  }
+  .menu-wrapper {
+    position: absolute;
+    top: 60px;
+    background: #fff !important;
+    left: -100%;
+    padding-bottom: 20px;
+    height: auto;
+    width: 350px;
+    transition: 0.5s;
+  }
+  .header-area.sticky-nav {
+    position: relative !important;
+  }
+  .active-nav {
+    left: 0 !important;
+  }
+  .menu-toggle {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+  }
+  .header-button {
+    display: none !important;
+  }
+  .header-menu ul li a {
+    color: #232323 !important;
+    border-bottom: 1px solid #d6d6d6;
+    display: block !important;
+    margin: 0 !important;
+    padding: 18px 0 18px 25px;
+  }
+  .header-menu ul li a:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+  .header-menu ul {
+    text-align: left;
+    display: block !important;
+  }
+  .header-menu ul li {
+    display: block !important;
+    padding-bottom: 0 !important;
+  }
+  .mobile-menu-icon {
+    color: #6d6d6d;
+    right: 0;
+    float: right;
+    margin-right: 30px;
+    display: block !important;
+    transition: 0.3s;
+  }
+  .header-menu ul li:hover .mobile-menu-icon {
+    color: #ff3c00;
+  }
+  .header-menu .sub-menu {
+    position: absolute;
+    width: 250px !important;
+    left: 350px !important;
+    padding-bottom: 30px;
+  }
+  .header-menu ul li:hover .sub-menu {
+    top: 0 !important;
+    left: 350px !important;
+  }
+  .header-menu .sub-menu ul {
+    width: 250px;
+  }
+  .header-area.style-three {
+    margin-bottom: 0px !important;
+    padding: 30px 0 !important;
+    background: #ff3c00 !important;
+  }
+  .header-area.style-four span {
+    color: #fff !important;
+  }
+  .header-area .sub-menu ul li {
+    border-bottom: 1px solid #d6d6d6;
+    margin-bottom: 0 !important;
+    transition: 0.5s;
+  }
+  .header-area .sub-menu ul li:last-child {
+    border-bottom: none;
+  }
+  .header-area .sub-menu ul li a {
+    margin: 0 !important;
+    padding: 18px 30px !important;
+    transition: 0.5s;
+  }
+  .header-area .sub-menu ul li a::before {
+    left: 5px !important;
+    top: 30px !important;
+    transition: 0.5s;
+  }
+  .header-area .sub-menu ul li:hover {
+    margin-left: 10px;
+  }
+  /*end Mobile menu   */
+  .header-top-menu {
+    display: none;
+  }
+  .dreamit-slider-content h1,
+  .dreamit-slider-content h3 {
+    font-size: 50px !important;
+  }
+  .dreamit-slider-content p {
+    width: 90%;
+  }
+  .blog-details .quote_btn button {
+    width: 30% !important;
+  }
+  .flag-shape-inner {
+    display: none;
+  }
+  .ptl-rsp {
+    padding-left: 50px !important;
+  }
+  .testimonials-icon {
+    right: 60px !important;
+  }
+  .dreamit-section-main-title-2 h2 {
+    font-size: 24px !important;
+  }
+  .dreamit-section-main-title-2 h2:before {
+    top: 14px !important;
+  }
+  .title-content p {
+    font-size: 14px !important;
+  }
+  .row.online-visa-bx {
+    padding-bottom: 35px;
+  }
+  .dreamit-online-visa-title h2 {
+    padding-top: 15px;
+  }
+  /*-============= home-two===========*/
+  .dreamit-slider-content h1,
+  .dreamit-slider-content h3 {
+    font-size: 38px !important;
+  }
+  .slider-two .dreamit-slider-content p {
+    width: 77% !important;
+  }
+  h3.appointment-title {
+    font-size: 18px !important;
+  }
+  .appointment-area {
+    padding-bottom: 2px !important;
+  }
+  .appointtent-content .appointment-form-section {
+    margin-bottom: 30px !important;
+  }
+  .cda-content {
+    margin-bottom: 30px !important;
+  }
+  .owl-nav {
+    display: none !important;
+  }
+  .pt-30 {
+    margin-bottom: 30px !important;
+  }
+  .dreamit-blog-title h2 a {
+    font-size: 18px !important;
+  }
+  .tp-caption a {
+    margin-top: 40px !important;
+  }
+  .slider .bd-video {
+    display: none !important;
+  }
+  .single-feature-box {
+    padding: 47px 36px !important;
+  }
+  .call-section .call-do-action-content {
+    padding-top: 16px !important;
+  }
+  .call-section .call-title h2 {
+    font-size: 19px !important;
+  }
+  .call-section .call-btn {
+    padding-top: 7px !important;
+  }
+  .service-area.style-two.upper .dreamit-section-main-title h1 {
+    font-size: 24px !important;
+  }
+  .service-area.style-two.upper .dreamit-section-main-title h2 {
+    font-size: 32px !important;
+  }
+  .service-area.style-two.upper .dreamit-section-content-text p {
+    font-size: 15px !important;
+    width: 100% !important;
+  }
+  .service-area.style-two.upper .dreamit-service-content-text p {
+    width: 99% !important;
+  }
+  .country-section-title-area.upper4 .dreamit-section-main-title h1 {
+    font-size: 26px !important;
+  }
+  .country-section-title-area.upper4 .dreamit-section-content-text p {
+    font-size: 16px !important;
+    width: 100% !important;
+  }
+  .course-content-text p {
+    width: 94% !important;
+  }
+  .blog-area.style-three.upper .dreamit-single-blog-box {
+    margin-bottom: 100px !important;
+  }
+  .blog-area.style-three.upper .owl-dots {
+    top: -31px !important;
+    position: relative !important;
+  }
+  .slider-section .dreamit-slider-content p {
+    width: 80% !important;
+  }
+  .call-section .row.upper4 {
+    padding: 15px 0 46px 20px !important;
+  }
+  .call-section.upper .call-btn {
+    padding-left: 0 !important;
+  }
+  .call-section .call-btn a {
+    padding: 7px 5px !important;
+  }
+  .blog-area.style-three.upper1 .dreamit-section-main-title h1 {
+    font-size: 26px !important;
+  }
+  .blog-area.style-three.upper1 .dreamit-section-main-title h2 {
+    font-size: 30px !important;
+  }
+  .slider-section.style-three .contact_from_box {
+    display: none !important;
+  }
+  .about-area.style-five .dreamit-section-main-title h1 {
+    font-size: 23px !important;
+  }
+  .about-area.style-five .dreamit-section-main-title h2 {
+    font-size: 29px !important;
+  }
+  .agency-section .dreamit-section-main-title h1 {
+    font-size: 31px !important;
+  }
+  .agency-section .dreamit-section-main-title h2 {
+    font-size: 26px !important;
+  }
+  .call-section.style-three .call-title h3 {
+    font-size: 30px !important;
+  }
+  .service-area .dreamit-section-bold-text p {
+    width: 60% !important;
+  }
+}
+/* Large Mobile :600px. */
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+  /*start Mobile menu*/
+  .header-logo {
+    display: none !important;
+  }
+  .logo-txt::before {
+    display: block !important;
+  }
+  .menu-toggle {
+    display: block !important;
+  }
+  .header-area {
+    background: #ff3c00 !important;
+    padding: 30px;
+  }
+  .menu-wrapper {
+    position: absolute;
+    top: 60px;
+    background: #fff !important;
+    left: -100%;
+    padding-bottom: 20px;
+    height: 100vh;
+    width: 350px;
+    transition: 0.5s;
+  }
+  .active-nav {
+    left: 0 !important;
+  }
+  .header-area.style-three {
+    margin-bottom: 0px !important;
+    padding: 30px 0 !important;
+    background: #ff3c00 !important;
+  }
+  .header-area.sticky-nav {
+    position: relative !important;
+  }
+  .menu-toggle {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+  }
+  .header-area.style-four span {
+    color: #fff !important;
+  }
+  .header-button {
+    display: none !important;
+  }
+  .header-menu ul li a {
+    color: #232323 !important;
+    border-bottom: 1px solid #d6d6d6;
+    display: block !important;
+    margin: 0 !important;
+    padding: 18px 0 18px 25px;
+  }
+  .header-menu ul li a:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+  .header-menu ul {
+    text-align: left;
+    display: block !important;
+  }
+  .header-menu ul li {
+    display: block !important;
+    padding-bottom: 0 !important;
+  }
+  .mobile-menu-icon {
+    color: #6d6d6d;
+    right: 0;
+    float: right;
+    margin-right: 30px;
+    display: block !important;
+    transition: 0.3s;
+  }
+  .header-menu ul li:hover .mobile-menu-icon {
+    color: #ff3c00;
+  }
+  .header-menu .sub-menu {
+    position: absolute;
+    width: 250px !important;
+    left: 350px !important;
+    padding-bottom: 30px;
+  }
+  .header-menu ul li:hover .sub-menu {
+    top: 0 !important;
+    left: 350px !important;
+  }
+  .header-menu .sub-menu ul {
+    width: 250px;
+  }
+  .header-area .sub-menu ul li {
+    border-bottom: 1px solid #d6d6d6;
+    margin-bottom: 0 !important;
+    transition: 0.5s;
+  }
+  .header-area .sub-menu ul li:last-child {
+    border-bottom: none;
+  }
+  .header-area .sub-menu ul li a {
+    margin: 0 !important;
+    padding: 18px 30px !important;
+    transition: 0.5s;
+  }
+  .header-area .sub-menu ul li a::before {
+    left: 5px !important;
+    top: 30px !important;
+    transition: 0.5s;
+  }
+  .header-area .sub-menu ul li:hover {
+    margin-left: 10px;
+  }
+  /*end Mobile menu   */
+  .dreamit-slider-content h1,
+  .dreamit-slider-content h3 {
+    font-size: 35px !important;
+  }
+  .dreamit-slider-content p {
+    width: 81% !important;
+  }
+  .header-top-menu {
+    display: none;
+  }
+  .slider-area {
+    height: 775px !important;
+  }
+  .flag-shape-inner {
+    display: none;
+  }
+  .dreamit-section-main-title h1,
+  .dreamit-section-main-title h2 {
+    font-size: 30px !important;
+  }
+  .ptl-rsp {
+    padding-left: 50px !important;
+  }
+  .testimonials-icon {
+    right: 142px !important;
+  }
+  .copy-right-text {
+    text-align: center !important;
+  }
+  .footer-text-menu {
+    text-align: center !important;
+  }
+  .row.online-visa-bx {
+    padding-bottom: 35px;
+  }
+  .dreamit-online-visa-title h2 {
+    padding-top: 15px;
+  }
+  /*-============= home-two-======*/
+  .header-menu ul li a {
+    font-size: 10px !important;
+    margin: 32px 6px !important;
+  }
+  .dreamit-slider-content p {
+    width: 100% !important;
+  }
+  .dreamit-slider-content h1,
+  .dreamit-slider-content h3 {
+    font-size: 32px !important;
+  }
+  .appointment-form-section {
+    margin-left: inherit !important;
+  }
+  .appointment-area {
+    padding-bottom: 2px !important;
+  }
+  .call-do-action-title h3 {
+    font-size: 32px !important;
+  }
+  .cda-content {
+    margin-bottom: 30px !important;
+  }
+  .appointtent-content .appointment-form-section {
+    margin-bottom: 30px !important;
+  }
+  .header-menu ul li a {
+    font-size: 18px !important;
+    margin: 2px 6px !important;
+  }
+  .owl-nav {
+    display: none !important;
+  }
+  .pt-30 {
+    margin-bottom: 30px !important;
+  }
+  .slider .bd-video {
+    display: none !important;
+  }
+  .call-section .call-btn {
+    padding-top: 35px !important;
+  }
+  .process-number {
+    right: 35% !important;
+  }
+  .call-section .call-title h2 {
+    font-size: 24px !important;
+    margin: 7px 0 0 !important;
+  }
+  .call-section .call-do-action-content {
+    padding-bottom: 33px;
+  }
+  .slick-slider .slider-content h1 {
+    font-size: 34px !important;
+  }
+  .slick-slider .slider-content h2 {
+    font-size: 48px !important;
+  }
+  .about-area.style-four .dreamit-thumb {
+    right: 0 !important;
+  }
+  .call-do-action .dreamit-contet-text p {
+    width: 64% !important;
+  }
+  .blog-area.style-three.upper .dreamit-single-blog-box {
+    margin-bottom: 90px !important;
+  }
+  .blog-area.style-three.upper .owl-dots {
+    display: none !important;
+  }
+  .slider-section.style-three .contact_from_box {
+    display: none !important;
+  }
+  .slider-section.style-three .dreamit-slider-content h2 {
+    font-size: 56px !important;
+  }
+  .country-area.style-two.upper .dreamit-country-box {
+    margin-bottom: 30px !important;
+  }
+  .call-section.style-three .call-title h3 {
+    font-size: 30px !important;
+  }
+  .call-section.style-three .call-btn {
+    float: left !important;
+  }
+  .blog-details-title h1 {
+    font-size: 31px !important;
+  }
+  .blog-details .quote_btn button {
+    width: 38% !important;
+  }
+}
+/* small mobile :320px. */
+@media only screen and (min-width: 320px) and (max-width: 599px) {
+  /*start Mobile menu*/
+  .header-logo {
+    display: none !important;
+  }
+  .logo-txt::before {
+    display: block !important;
+  }
+  .menu-toggle {
+    display: block !important;
+  }
+  .header-area {
+    background: #ff3c00 !important;
+    padding: 30px;
+  }
+  .menu-wrapper {
+    position: absolute;
+    top: 60px;
+    background: #fff !important;
+    left: -100%;
+    padding-bottom: 20px;
+    height: auto;
+    width: 350px;
+    transition: 0.5s;
+  }
+  .active-nav {
+    left: 0 !important;
+  }
+  .menu-toggle {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+  }
+  .header-button {
+    display: none !important;
+  }
+  .header-menu ul li a {
+    color: #232323 !important;
+    border-bottom: 1px solid #d6d6d6;
+    display: block !important;
+    margin: 0 !important;
+    padding: 18px 0 18px 25px;
+  }
+  .header-menu ul li a:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+  .header-menu ul {
+    text-align: left;
+    display: block !important;
+  }
+  .header-menu ul li {
+    display: block !important;
+    padding-bottom: 0 !important;
+  }
+  .mobile-menu-icon {
+    color: #6d6d6d;
+    right: 0;
+    float: right;
+    margin-right: 30px;
+    display: block !important;
+    transition: 0.3s;
+  }
+  .header-menu ul li:hover .mobile-menu-icon {
+    color: #ff3c00;
+  }
+  .header-menu .sub-menu {
+    position: absolute;
+    width: 250px !important;
+    left: 177px !important;
+    padding-bottom: 30px;
+  }
+  .header-menu ul li:hover .sub-menu {
+    top: 0 !important;
+    left: 177px !important;
+  }
+  .header-menu .sub-menu ul {
+    width: 250px;
+  }
+  .header-area .sub-menu ul li {
+    border-bottom: 1px solid #d6d6d6;
+    margin-bottom: 0 !important;
+    transition: 0.5s;
+  }
+  .header-area .sub-menu ul li:last-child {
+    border-bottom: none;
+  }
+  .header-area .sub-menu ul li a {
+    margin: 0 !important;
+    padding: 18px 9px !important;
+    transition: 0.5s;
+  }
+  .header-area .sub-menu ul li a::before {
+    display: none;
+  }
+  .header-area .sub-menu ul li:hover {
+    margin-left: 10px;
+  }
+  .header-area.style-three.sticky-nav {
+    position: relative !important;
+  }
+  /*end Mobile menu   */
+  .owl-nav {
+    display: none !important;
+  }
+  .header-top-menu {
+    display: none;
+  }
+  .dreamit-slider-content h1,
+  .dreamit-slider-content h3 {
+    font-size: 25px !important;
+  }
+  .dreamit-slider-content h4 {
+    font-size: 14px !important;
+  }
+  .dreamit-slider-content p {
+    width: 100% !important;
+  }
+  .slider-area {
+    height: 575px !important;
+  }
+  .row.margin-top {
+    margin-top: -45px !important;
+  }
+  .dreamit-thumb img {
+    width: 100%;
+  }
+  .dreamit-single-counter {
+    margin-right: 40px !important;
+    width: 72% !important;
+    padding: 6px 0 23px 0 !important;
+    margin-bottom: 20px;
+  }
+  .dreamit-section-main-title h1,
+  .dreamit-section-main-title h2 {
+    font-size: 26px !important;
+  }
+  .flag-shape-inner {
+    display: none;
+  }
+  .ptl-rsp {
+    padding-left: 20px !important;
+  }
+  .testimonials-icon {
+    right: 35px !important;
+  }
+  .dreamit-section-main-title-2 h2 {
+    font-size: 21px !important;
+  }
+  .dreamit-section-main-title-2 h2:before {
+    top: 13px !important;
+    left: -13px !important;
+    width: 12px !important;
+  }
+  .pb-60 {
+    padding-bottom: 30px !important;
+  }
+  .pt-65 {
+    padding-top: 51px !important;
+  }
+  .title-content p {
+    font-size: 13px !important;
+  }
+  .dreamit-meta-box h3 {
+    font-size: 11px !important;
+  }
+  .dreamit-blog-title h2 a {
+    font-size: 13px !important;
+  }
+  .dreamit-blog-content p {
+    font-size: 14px !important;
+  }
+  .row.online-visa-bx {
+    padding-bottom: 35px;
+  }
+  .dreamit-online-visa-title h2 {
+    padding-top: 15px;
+    font-size: 25px !important;
+  }
+  .dreamit-online-visa-box {
+    padding-left: 10px !important;
+  }
+  /*-============= home-two-======*/
+  .dreamit-slider-content h1,
+  .dreamit-slider-content h3 {
+    font-size: 18px !important;
+    line-height: 1.4;
+  }
+  .dreamit-slider-content p {
+    font-size: 18px !important;
+  }
+  .dreamit-section-sub-title h5 {
+    font-size: 14px !important;
+  }
+  .dreamit-section-main-title h1,
+  .dreamit-section-main-title h2 {
+    font-size: 23px !important;
+  }
+  .dreamit-section-bold-text p {
+    font-size: 15px !important;
+  }
+  h3.appointment-title {
+    font-size: 18px !important;
+  }
+  .appointment-form-section {
+    margin-left: inherit !important;
+  }
+  .appointment-area {
+    padding-bottom: 2px !important;
+  }
+  .pt-60 {
+    padding-top: 17px !important;
+  }
+  .pb-100 {
+    padding-bottom: 52px !important;
+  }
+  /*-----HOME-THREE-------*/
+  .header-area.style-three {
+    margin-bottom: -155px !important;
+  }
+  .call-do-action-title h3 {
+    font-size: 16px !important;
+  }
+  .call-do-action-title h2 {
+    font-size: 24px !important;
+  }
+  .call-do-action-content-inner p {
+    width: 82% !important;
+  }
+  h1 {
+    font-size: 28px !important;
+  }
+  .dreamit-team-social-address ul li a i {
+    height: 25px !important;
+    width: 25px !important;
+    line-height: 25px !important;
+  }
+  h2 {
+    font-size: 17px !important;
+  }
+  .cda-content {
+    margin-bottom: 30px !important;
+  }
+  .appointtent-content .appointment-form-section {
+    margin-bottom: 30px !important;
+  }
+  .dreamit-section-bold-text2.pt-40 {
+    font-size: 17px !important;
+  }
+  .menu-wrapper {
+    width: 177px !important;
+  }
+  .pt-30 {
+    margin-bottom: 30px !important;
+  }
+  .tofel-content-inner p {
+    font-size: 14px !important;
+  }
+  .about-content-text p {
+    font-size: 13px !important;
+  }
+  .pb-130 {
+    padding-bottom: 61px !important;
+  }
+  .process-content {
+    padding: 0 7px !important;
+  }
+  .testimonials-area.style-five .testimonial-thumb {
+    right: 50px !important;
+  }
+  .blog-area.style-three .pt-45 {
+    padding-top: 0px !important;
+  }
+  .course-section.pt-90 {
+    padding-top: 54px !important;
+  }
+  .country-section-title-area.upper4 .dreamit-section-title {
+    padding-left: 15px;
+  }
+  .country-section-title-area.upper4.pt-100 {
+    padding-top: 49px !important;
+  }
+  .service-area.style-two.upper {
+    padding: 50px 0 43px !important;
+  }
+  .call-section .call-do-action-content {
+    padding-bottom: 25px;
+  }
+  .service-area.style-two.upper .dreamit-section-title {
+    padding-left: 15px;
+  }
+  .proceas-area.pt-100 {
+    padding-top: 50px !important;
+  }
+  .about-area.style-three.upper2.pb-65 {
+    padding-bottom: 30px !important;
+  }
+  .slider .bd-video {
+    display: none !important;
+  }
+  .call-do-action .dreamit-contet-text p {
+    width: 77% !important;
+  }
+  .about-area.style-four .dreamit-thumb {
+    right: 0 !important;
+  }
+  .blog-area.style-three.upper .dreamit-single-blog-box {
+    margin-bottom: 87px !important;
+  }
+  .about-area.style-four.upper .contact_from_box {
+    width: 99% !important;
+  }
+  .call-section.upper .call-btn {
+    padding-top: 0 !important;
+    padding-left: 0 !important;
+  }
+  .slider-section .dreamit-slider-content:before {
+    top: 40px !important;
+    height: 54px !important;
+  }
+  .call-section.style-three .call-btn {
+    float: left !important;
+  }
+  .about-area.style-five .about-thumb {
+    right: 0 !important;
+  }
+  .slider-section.style-three .contact_from_box {
+    display: none !important;
+  }
+  .mobile-menu-social-icon a {
+    margin-left: 0px !important;
+  }
+  .about-area.style-three.upper2 .dreamit-thumb:before {
+    top: 20px !important;
+  }
+  .blog-details .quote_btn button {
+    width: 63% !important;
+  }
+  .blog-details-content {
+    padding: 20px 0px 45px 19px !important;
+  }
+  .Septimmigration-blog-social ul li a {
+    margin-right: 0 !important;
+  }
+  .header-area.transparent {
+    margin-bottom: 0 !important;
+  }
+  .header-area.style-three {
+    margin-bottom: 0px !important;
+    padding: 30px 0 !important;
+    background: #ff3c00 !important;
+  }
+  .slick-slider .container,
+  .container-fluid,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+  }
+  .header-area.style-four span {
+    color: #fff !important;
+  }
+  .header-area.style-three span {
+    color: #fff !important;
+  }
+  .header-area.style-four span {
+    color: #fff !important;
+  }
+}
