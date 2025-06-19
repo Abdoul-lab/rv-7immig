@@ -1,4 +1,4 @@
-import React from "react";
+
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
 
@@ -21,7 +21,7 @@ export default function AboutSection() {
           {/* Colonne gauche - image et compteur */}
           <div className="col-lg-6">
             <div className="dreamit-thumb">
-              <img src="src/assets/images/about-pic.png" alt="À propos" />
+              <img src="/rv-7immig/images/about-pic.png" alt="À propos" />
             </div>
             <div className="dreamit-single-counter" ref={ref}>
               <div className="counter-text">
