@@ -11,7 +11,7 @@ const ChooseUsSection2 = () => {
             data-wow-duration="1500ms"
           >
             <div className="choose-thumb">
-              <img src="src/assets/images/choose.jpg" alt="Choose Us" />
+              <img src="/rv-7immig/images/choose.jpg" alt="Choose Us" />
             </div>
           </div>
           <div

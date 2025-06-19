@@ -1,4 +1,4 @@
-import React from 'react';
+
 
 const InscriptionSection = () => {
   return (
@@ -12,7 +12,7 @@ const InscriptionSection = () => {
             data-wow-duration="1500ms"
           >
             <div className="dreamit-thumb">
-              <img src="src/assets/images/new5.png" alt="about" />
+              <img src="/rv-7immig/images/new5.png" alt="about" />
             </div>
           </div>
 

@@ -11,7 +11,7 @@ const blogPosts = [
     category: ["Working Visa", "Working Visa"],
     date: "March 24, 2023",
     author: "Septimmigration",
-    image: "/assets/images/blog1.jpg",
+    image: "/rv-7immig/images/blog1.jpg",
     excerpt:
       "Meh synth Schlitz,tempor duis single-origin coffee ea next level ethnic fingerstache.",
   },
@@ -21,7 +21,7 @@ const blogPosts = [
     category: ["Student Visa"],
     date: "March 24, 2023",
     author: "Septimmigration",
-    image: "/assets/images/bol.jpg",
+    image: "/rv-7immig/images/bol.jpg",
     excerpt:
       "Meh synth Schlitz,tempor duis single-origin coffee ea next level ethnic fingerstache.",
   },
@@ -31,7 +31,7 @@ const blogPosts = [
     category: ["Immigration Visa"],
     date: "March 24, 2023",
     author: "Septimmigration",
-    image: "/assets/images/bol2.jpg",
+    image: "/rv-7immig/images/bol2.jpg",
     excerpt:
       "Meh synth Schlitz,tempor duis single-origin coffee ea next level ethnic fingerstache.",
   },
@@ -41,7 +41,7 @@ const blogPosts = [
     category: ["Student Visa"],
     date: "March 24, 2023",
     author: "Septimmigration",
-    image: "/assets/images/bol.jpg",
+    image: "/rv-7immig/images/bol.jpg",
     excerpt:
       "Meh synth Schlitz,tempor duis single-origin coffee ea next level ethnic fingerstache.",
   },

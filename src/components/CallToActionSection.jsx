@@ -12,7 +12,7 @@ const CallToActionSection = () => {
         >
           <div className="col-lg-5 col-md-5 pl-0">
             <div className="call-thumb">
-              <img src="src/assets/images/new3.jpg" alt="Call to Action" />
+              <img src="/rv-7immig/images/new3.jpg" alt="Call to Action" />
             </div>
           </div>
           <div className="col-lg-7 col-md-7">
@@ -29,7 +29,7 @@ const CallToActionSection = () => {
                 </a>
               </div>
               <div className="shape-image bounce-animate5">
-                <img src="src/assets/images/call4.png" alt="Shape Decoration" />
+                <img src="/rv-7immig/images/call4.png" alt="Shape Decoration" />
               </div>
             </div>
           </div>

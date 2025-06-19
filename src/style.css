@@ -535,28 +535,28 @@ start search Popup Css
 		start--slider--area------------------
 	-========================================*/
 .slider-area {
-	background: url(assets/images/slider1.jpg);
+	background: url(/rv-7immig/images/slider1.jpg);
 	height: 875px;
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center center;
 }
 .slider-area.style-two {
-    background: url(assets/images/slider2.jpg);
+    background: url(/rv-7immig/images/slider2.jpg);
     height: 875px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
 }
 .slider-area.style-three {
-    background: url(assets/images/style-three.jpg);
+    background: url(/rv-7immig/images/style-three.jpg);
     height: 875px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
 }
 .slider-area.style-fore {
-    background: url(assets/images/style-fore.jpg);
+    background: url(/rv-7immig/images/style-fore.jpg);
     height: 875px;
     background-repeat: no-repeat;
     background-size: cover;
@@ -649,14 +649,14 @@ start search Popup Css
 }
 /* start slider aection */
 .slider-section{
-    background: url(assets/images/slide4.png);
+    background: url(/rv-7immig/images/slide4.png);
     height: 875px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
 }
 .slider-section.two{
-    background: url(assets/images/slide5.png);
+    background: url(/rv-7immig/images/slide5.png);
     height: 875px;
     background-repeat: no-repeat;
     background-size: cover;
@@ -716,7 +716,7 @@ start search Popup Css
 }
 /*slider section style three*/
 .slider-section.style-three{
-    background: url(assets/images/section.jpg);
+    background: url(/rv-7immig/images/section.jpg);
     height: 875px;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1075,14 +1075,14 @@ start search Popup Css
 }
 /*-home-2 slider-button--==*/
   .slider-area.slider-two {
-    background: url(assets/images/home-2.jpg);
+    background: url(/rv-7immig/images/home-2.jpg);
     height: 800px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
 }
 .slider-area.slider-three{
-	background: url(assets/images/home-3.jpg);
+	background: url(/rv-7immig/images/home-3.jpg);
 	height: 800px;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -1169,7 +1169,7 @@ start search Popup Css
     content: "";
     width: 62px;
     height: 79px;
-    background: url(assets/images/icon-1.png);
+    background: url(/rv-7immig/images/icon-1.png);
     background-repeat: no-repeat;
     right: 0;
     margin: auto;
@@ -1327,7 +1327,7 @@ start search Popup Css
     color: #616161;
 }
 .feature-section .flip-box-back {
-    background: linear-gradient(rgba(241, 42, 2, 0.85), rgba(241, 42, 2, 0.85)), transparent url(assets/images/education.jpg) center center/cover no-repeat scroll;
+    background: linear-gradient(rgba(241, 42, 2, 0.85), rgba(241, 42, 2, 0.85)), transparent url(/rv-7immig/images/education.jpg) center center/cover no-repeat scroll;
     border: 0px solid rgba(255, 255, 255, 0);
     border-radius: 10px;
     color: white;
@@ -1336,11 +1336,11 @@ start search Popup Css
 }
 .feature-section .flip-box-back.two{
     background: linear-gradient(rgba(241, 42, 2, 0.85), rgba(241, 42, 2, 0.85)),
-     transparent url(assets/images/service3.jpg) center center/cover no-repeat scroll;
+     transparent url(/rv-7immig/images/service3.jpg) center center/cover no-repeat scroll;
 }
 .feature-section .flip-box-back.three{
     background: linear-gradient(rgba(241, 42, 2, 0.85), rgba(241, 42, 2, 0.85)),
-     transparent url(assets/images/tofel2.jpg) center center/cover no-repeat scroll;
+     transparent url(/rv-7immig/images/tofel2.jpg) center center/cover no-repeat scroll;
 }
 .feature-section .des a{
     display: inline-block;
@@ -1873,7 +1873,7 @@ start search Popup Css
 }
 /*about area style four*/
 .about-area.style-four {
-    background: url(assets/images/shape2.png) no-repeat bottom right;
+    background: url(/rv-7immig/images/shape2.png) no-repeat bottom right;
     background-size: auto; 
 }
 .about-area.style-four .dreamit-thumb::after {
@@ -1907,7 +1907,7 @@ start search Popup Css
      opacity: 1;
 }
 .about-area.style-four .about-content.two {
-    background: #f12a02 url(assets/images/map4.png);
+    background: #f12a02 url(/rv-7immig/images/map4.png);
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -2133,7 +2133,7 @@ start search Popup Css
 }
 /* start call do action area*/
 .call-do-action {
-    background: linear-gradient(rgba(17, 26, 58, 0.86), rgba(17, 26, 58, 0.86)),url(assets/images/home-3.jpg);
+    background: linear-gradient(rgba(17, 26, 58, 0.86), rgba(17, 26, 58, 0.86)),url(/rv-7immig/images/home-3.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -2291,7 +2291,7 @@ start search Popup Css
 }
 /* flipx section*/
 .flipx-section {
-    background: linear-gradient(rgba(17, 26, 58, 0.92), rgba(17, 26, 58, 0.92)), #f4f7fc url(assets/images/flipx2.jpg);
+    background: linear-gradient(rgba(17, 26, 58, 0.92), rgba(17, 26, 58, 0.92)), #f4f7fc url(/rv-7immig/images/flipx2.jpg);
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -2330,7 +2330,7 @@ start search Popup Css
     color: rgba(255, 255, 255, 0.83);
 }
 .flipx-section .flip-box-back {
-    background: linear-gradient(rgba(241, 42, 2, 0.85), rgba(241, 42, 2, 0.85)), transparent url(assets/images/education.jpg) center center/cover no-repeat scroll;
+    background: linear-gradient(rgba(241, 42, 2, 0.85), rgba(241, 42, 2, 0.85)), transparent url(/rv-7immig/images/education.jpg) center center/cover no-repeat scroll;
     border: 0px solid rgba(255, 255, 255, 0);
     border-radius: 10px;
     color: white;
@@ -2351,23 +2351,23 @@ start search Popup Css
 }
 .flipx-section .flip-box-back.two{
     background: linear-gradient(rgba(241, 42, 2, 0.85), rgba(241, 42, 2, 0.85)),
-     transparent url(assets/images/service3.jpg) center center/cover no-repeat scroll;
+     transparent url(/rv-7immig/images/service3.jpg) center center/cover no-repeat scroll;
 }
 .flipx-section .flip-box-back.three{
     background: linear-gradient(rgba(241, 42, 2, 0.85), rgba(241, 42, 2, 0.85)),
-     transparent url(assets/images/tofel2.jpg) center center/cover no-repeat scroll;
+     transparent url(/rv-7immig/images/tofel2.jpg) center center/cover no-repeat scroll;
 }
 .flipx-section .flip-box-back{
     background: linear-gradient(rgba(241, 42, 2, 0.85), rgba(241, 42, 2, 0.85)),
-     transparent url(assets/images/service-3.jpg) center center/cover no-repeat scroll;
+     transparent url(/rv-7immig/images/service-3.jpg) center center/cover no-repeat scroll;
 }
 .flipx-section .flip-box-back{
     background: linear-gradient(rgba(241, 42, 2, 0.85), rgba(241, 42, 2, 0.85)),
-     transparent url(assets/images/new3.jpg) center center/cover no-repeat scroll;
+     transparent url(/rv-7immig/images/new3.jpg) center center/cover no-repeat scroll;
 }
 .flipx-section .flip-box-back{
     background: linear-gradient(rgba(241, 42, 2, 0.85), rgba(241, 42, 2, 0.85)),
-     transparent url(assets/images/service5.jpg) center center/cover no-repeat scroll;
+     transparent url(/rv-7immig/images/service5.jpg) center center/cover no-repeat scroll;
 }
 .flipx-section .dreamit-section-sub-title h5 {
     color: #f12a02;
@@ -2409,7 +2409,7 @@ start search Popup Css
 }
 .flipx-section.style-two .flip-box-front {
     background: linear-gradient(360deg, rgba(17, 26, 58, 0.88), 
-    rgba(241, 42, 2, 0.31)), rgba(255, 255, 255, 0) url(assets/images/coac3.jpg);
+    rgba(241, 42, 2, 0.31)), rgba(255, 255, 255, 0) url(/rv-7immig/images/coac3.jpg);
     border: none;
     box-shadow: none;
     border-radius: 7px;
@@ -2425,27 +2425,27 @@ start search Popup Css
 }
 .flipx-section.style-two .flip-box-front.two{
     background: linear-gradient(360deg, rgba(17, 26, 58, 0.88), 
-    rgba(241, 42, 2, 0.31)), rgba(255, 255, 255, 0) url(assets/images/coach.jpg);
+    rgba(241, 42, 2, 0.31)), rgba(255, 255, 255, 0) url(/rv-7immig/images/coach.jpg);
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
 }
 .flipx-section.style-two .flip-box-front.three {
     background: linear-gradient(360deg, rgba(17, 26, 58, 0.88), 
-    rgba(241, 42, 2, 0.31)), rgba(255, 255, 255, 0) url(assets/images/coach5.jpg);
+    rgba(241, 42, 2, 0.31)), rgba(255, 255, 255, 0) url(/rv-7immig/images/coach5.jpg);
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
 }
 .flipx-section.style-two .flip-box-front.four {
     background: linear-gradient(360deg, rgba(17, 26, 58, 0.88), 
-    rgba(241, 42, 2, 0.31)), rgba(255, 255, 255, 0) url(assets/images/coach4.jpg);
+    rgba(241, 42, 2, 0.31)), rgba(255, 255, 255, 0) url(/rv-7immig/images/coach4.jpg);
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
 }
 .flipx-section.style-two .flip-box-back {
-    background: linear-gradient(rgba(241, 42, 2, 0.85), rgba(241, 42, 2, 0.85)), transparent url(assets/images/education.jpg) center center/cover no-repeat scroll;
+    background: linear-gradient(rgba(241, 42, 2, 0.85), rgba(241, 42, 2, 0.85)), transparent url(/rv-7immig/images/education.jpg) center center/cover no-repeat scroll;
     border: 0px solid rgba(255, 255, 255, 0);
     padding-top: 53px;
 }
@@ -2570,7 +2570,7 @@ start search Popup Css
 }
 /* start testimonial section*/
 .testimonial-section{
-    background:#f4f7fc url(assets/images/skill2.png);
+    background:#f4f7fc url(/rv-7immig/images/skill2.png);
     background-position: center center; 
     background-size: cover;
     background-repeat: no-repeat; 
@@ -2694,7 +2694,7 @@ start search Popup Css
 }
 /* start process area */
 .proceas-area {
-    background: linear-gradient(rgba(17, 26, 58, 0.90), rgba(17, 26, 58, 0.90)),transparent url(assets/images/process.jpg);
+    background: linear-gradient(rgba(17, 26, 58, 0.90), rgba(17, 26, 58, 0.90)),transparent url(/rv-7immig/images/process.jpg);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -2836,7 +2836,7 @@ start search Popup Css
 }
 /*call section upper*/
 .call-section .row.upper4 {
-    background: #f12a02 url(assets/images/skiil3.png);
+    background: #f12a02 url(/rv-7immig/images/skiil3.png);
     border-radius: 5px;
     overflow: hidden;
     position: relative;
@@ -2885,7 +2885,7 @@ start search Popup Css
 }
 /*call section style three*/
 .call-section.style-three{
-    background: #f12a02 url(assets/images/skiil3.png);
+    background: #f12a02 url(/rv-7immig/images/skiil3.png);
     position: relative;
     background-position: center center;
     background-repeat: no-repeat;
@@ -2937,7 +2937,7 @@ start search Popup Css
 -====================================*/
 .service-area {
     padding-top: 119px;
-    background: url(assets/images/solder.jpg);
+    background: url(/rv-7immig/images/solder.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -3164,7 +3164,7 @@ start search Popup Css
 }
 /*---home-two-service-area---*/
 .visa-area.pt-60.pb-40 {
-    background: #f4f7fc url(assets/images/two.png);
+    background: #f4f7fc url(/rv-7immig/images/two.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -3276,7 +3276,7 @@ start search Popup Css
     z-index: -1;
 }
 .visa-area.pt-60.pb-15 {
-    background: #f4f7fc url(assets/images/team.png);
+    background: #f4f7fc url(/rv-7immig/images/team.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -3329,7 +3329,7 @@ start search Popup Css
         start----choose------area----------------
     -=============================================*/
 .choose-us-area {
-    background: url(assets/images/choose-us.png);
+    background: url(/rv-7immig/images/choose-us.png);
     padding-top: 76px;
     background-position: center center;
     background-repeat: no-repeat;
@@ -3358,7 +3358,7 @@ start search Popup Css
         start TEAM-MEMBER area--
     -=============================================*/
 .team-member-area {
-    background: transparent url(assets/images/team-member.jpg);
+    background: transparent url(/rv-7immig/images/team-member.jpg);
     padding-top: 60px;
     background-position: center center;
     background-repeat: no-repeat;
@@ -3516,7 +3516,7 @@ start search Popup Css
         start-apponetment-area--
     -==========================================*/
 .appointment-area {
-    background: url(assets/images/appointment-map.jpg);
+    background: url(/rv-7immig/images/appointment-map.jpg);
     background-repeat: no-repeat;
     background-size: auto;
     background-position: center right;
@@ -3571,13 +3571,13 @@ h3.appointment-title {
 		start country area--
 -============================================*/
     .country-section-title-area {
-    background: url(assets/images/country-slider.jpg);
+    background: url(/rv-7immig/images/country-slider.jpg);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
 }
 .country-area {
-    background: #f4f7fc url(assets/images/map-img.png);
+    background: #f4f7fc url(/rv-7immig/images/map-img.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -3591,7 +3591,7 @@ h3.appointment-title {
 }
 /*country section style two*/
 .country-section-title-area.upper4{
-    background: url(assets/images/country.jpg);
+    background: url(/rv-7immig/images/country.jpg);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -3609,7 +3609,7 @@ h3.appointment-title {
 }
 /* country section title area style three*/
 .country-section-title-area.style-three{
-    background: url(assets/images/section2.png);
+    background: url(/rv-7immig/images/section2.png);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -3841,7 +3841,7 @@ span.fill {
 		start------testimonials-----area----------
 	-=============================================*/
 .testimonials-area {
-    background: linear-gradient(rgb(17, 26,58,0.75), rgba(17, 26, 58, 0.75)), transparent url(assets/images/testi-bg.jpg);
+    background: linear-gradient(rgb(17, 26,58,0.75), rgba(17, 26, 58, 0.75)), transparent url(/rv-7immig/images/testi-bg.jpg);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -4661,7 +4661,7 @@ span.fill {
     font-size: 38px;
 }
 .course-section {
-    background: #f4f7fc url(assets/images/coach2.png);
+    background: #f4f7fc url(/rv-7immig/images/coach2.png);
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -4760,7 +4760,7 @@ span.fill {
         Start Breatcome area
     -========================================*/
 .breatcome-area {
-    background: linear-gradient(rgb(94 109 162 / 75%), rgba(17, 26, 58, -0.25)), transparent url(assets/images/style-three.jpg);
+    background: linear-gradient(rgb(94 109 162 / 75%), rgba(17, 26, 58, -0.25)), transparent url(/rv-7immig/images/style-three.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -4899,7 +4899,7 @@ span.fill {
 }
 /*-======= call-do-action-area-=================*/
 .call-do-action-area {
-    background: linear-gradient(rgba(26, 31, 53, 0.62), rgba(26, 31, 53, 0.62)), transparent url(assets/images/home-3.jpg);
+    background: linear-gradient(rgba(26, 31, 53, 0.62), rgba(26, 31, 53, 0.62)), transparent url(/rv-7immig/images/home-3.jpg);
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -4941,7 +4941,7 @@ span.fill {
     color: #f12a02;
 } 
 .style-three .row.experienced-box {
-    background: linear-gradient(rgba(26, 31, 53, 0.82), rgba(26, 31, 53, 0.82)), transparent url(assets/images/book.jpg);
+    background: linear-gradient(rgba(26, 31, 53, 0.82), rgba(26, 31, 53, 0.82)), transparent url(/rv-7immig/images/book.jpg);
     padding: 1px 0;
     position: relative;
     margin-top: -191px;
@@ -5005,7 +5005,7 @@ span.fill {
 /*testimonial style five*/
 /*testiomonial style five*/
 .testimonials-area.style-five {
-    background: linear-gradient(rgb(17, 26,58,0.1), rgba(17, 26, 58, 0.1)), transparent url(assets/images/map3.jpg);
+    background: linear-gradient(rgb(17, 26,58,0.1), rgba(17, 26, 58, 0.1)), transparent url(/rv-7immig/images/map3.jpg);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -5066,7 +5066,7 @@ span.fill {
 
 /*--------------service -area-----------------*/
 .country-area.style-three{
-    background: #f4f7fc url(assets/images/map-img.png);
+    background: #f4f7fc url(/rv-7immig/images/map-img.png);
 }
 /*-----------team member-----------------------*/
 .team-member-area.style-two {
@@ -5120,12 +5120,12 @@ span.fill {
 }
 /*----------------------assesstment-----area---*/
 .appointment-area.pt-50.pb-60 {
-    background: url(assets/images/slider2.jpg);
+    background: url(/rv-7immig/images/slider2.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }
 .appointment-area.style-two {
-    background: transparent url(assets/images/full.png);
+    background: transparent url(/rv-7immig/images/full.png);
     padding: 100px 50px;
 }
 select.appointment-student-visa {

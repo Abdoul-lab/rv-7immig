@@ -64,10 +64,10 @@ const Header = () => {
               <div className="col-lg-3">
                 <div className="header-logo">
                   <Link className="main-logo" to="/">
-                    <img src="src/assets/images/logost1.png" alt="Logo" />
+                    <img src="/rv-7immig/images/logost1.png" alt="Logo" />
                   </Link>
                   <Link className="stiky-logo" to="/">
-                    <img src="src/assets/images/logost1.png" alt="Logo" />
+                    <img src="/rv-7immig/images/logost1.png" alt="Logo" />
                   </Link>
                 </div>
               </div>

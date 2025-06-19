@@ -3,7 +3,7 @@ import React from 'react';
 const blogPosts = [
   {
     id: 1,
-    image: 'src/assets/images/blog1.jpg',
+    image: '/rv-7immig/images/blog1.jpg',
     categories: ['Working Visa', 'Working Visa'],
     author: 'Septimmigration',
     date: 'March 24, 2023',
@@ -13,7 +13,7 @@ const blogPosts = [
   },
   {
     id: 2,
-    image: 'src/assets/images/bol.jpg',
+    image: '/rv-7immig/images/bol.jpg',
     categories: ['Visa étudiants'],
     author: 'Septimmigration',
     date: 'March 24, 2023',
@@ -23,7 +23,7 @@ const blogPosts = [
   },
   {
     id: 3,
-    image: 'src/assets/images/bol2.jpg',
+    image: '/rv-7immig/images/bol2.jpg',
     categories: ['Immigration Visa'],
     author: 'Septimmigration',
     date: 'March 24, 2023',

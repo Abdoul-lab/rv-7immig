@@ -3,17 +3,17 @@ import React from 'react';
 const CallDoSection = () => {
   const cards = [
     {
-      image: 'src/assets/images/call4.jpg',
+      image: '/rv-7immig/images/call4.jpg',
       title: 'Immigration Resources',
       delay: '100ms',
     },
     {
-      image: 'src/assets/images/call7.jpg',
+      image: '/rv-7immig/images/call7.jpg',
       title: 'Important Information',
       delay: '200ms',
     },
     {
-      image: 'src/assets/images/call8.jpg',
+      image: '/rv-7immig/images/call8.jpg',
       title: 'Apply Visa Online',
       delay: '300ms',
     },

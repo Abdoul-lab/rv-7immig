@@ -7,7 +7,7 @@ export default function VisaAssessmentSection() {
         <div className="row online-visa-bx align-items-center">
           <div className="col-lg-5 pl-0">
             <div className="dreamit-online-visa-thumb">
-              <img src="src/assets/images/ass.jpg" alt="Visa Assessment" />
+              <img src="/rv-7immig/images/ass.jpg" alt="Visa Assessment" />
             </div>
           </div>
           <div className="col-lg-7">

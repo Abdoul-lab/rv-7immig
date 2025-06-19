@@ -34,7 +34,7 @@ const Footer = () => {
             <div className="col-lg-3 col-md-6">
               <div className="footer-content mb-30">
                 <div className="footer-logo">
-                  <img src="assets/images/logost1.png" alt="Logo" />
+                  <img src="/rv-7immig/images/logost1.png" alt="Logo" />
                 </div>
                 <div className="dreamit-footer-social-address">
                   <ul>

@@ -1,4 +1,3 @@
-import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/effect-fade';
@@ -8,7 +7,7 @@ import { motion } from 'framer-motion';
 
 const slides = [
   {
-    image: 'src/assets/images/slick5.jpg',
+    image: '/rv-7immig/images/slick5.jpg',
     titleSmall: 'World Best Agency',
     titleMain: 'Visa & Immigration',
     titleSub: 'Consultant Agent',
@@ -16,7 +15,7 @@ const slides = [
     buttonLink: '#formations',
   },
   {
-    image: 'src/assets/images/slick6.jpg',
+    image: '/rv-7immig/images/slick6.jpg',
     titleSmall: 'World Best Agency',
     titleMain: 'Visa & Immigration',
     titleSub: 'Consultant Agent',

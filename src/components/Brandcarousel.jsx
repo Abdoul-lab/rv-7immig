@@ -4,11 +4,11 @@ import 'swiper/css/autoplay';
 import { Autoplay } from 'swiper/modules';
 
 const brandImages = [
-  'src/assets/images/brand1.png',
-  'src/assets/images/brand2.png',
-  'src/assets/images/brand3.png',
-  'src/assets/images/brand4.png',
-  'src/assets/images/brand5.png',
+  '/rv-7immig/images/brand1.png',
+  '/rv-7immig/images/brand2.png',
+  '/rv-7immig/images/brand3.png',
+  '/rv-7immig/images/brand4.png',
+  '/rv-7immig/images/brand5.png',
 ];
 
 const BrandCarousel = () => {
