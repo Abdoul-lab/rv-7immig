@@ -5516,7 +5516,7 @@ padding-top: 8px;
     position: relative;
     color: #fff;
     animation: ripple-blue 1s linear infinite;
-    transition: background 0.5s ease, transform 0.5s ease;
+    transition: 0.5s ease, transform 0.5s ease;
     background: #f12a02;
     font-size: 28px;
     z-index: 1;

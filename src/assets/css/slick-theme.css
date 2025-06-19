@@ -1,17 +1,8 @@
 @charset 'UTF-8';
-/* Slider */
-.slick-loading .slick-list
-{
- 
-}
+
 
 /* Icons */
-@font-face
-{
-    font-family: 'slick';
-    font-weight: normal;
-    font-style: normal;
-}
+
 /* Arrows */
 .slick-prev,
 .slick-next
