@@ -39,7 +39,7 @@ import './assets/js/vendor/modernizr-3.5.0.min.js';
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <BrowserRouter>
+  <BrowserRouter basename="/rv-7immig">
     <App />
   </BrowserRouter>
 );
