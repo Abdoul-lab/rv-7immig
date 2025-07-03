@@ -1,13 +1,8 @@
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
+import CounterSection from "./CounterSection";
 
 export default function WhyChooseUs() {
-  const counters = [
-    { icon: "flaticon-ui", number: 480, label: "Visiteurs" },
-    { icon: "flaticon-global", number: 560, label: "Travailleurs" },
-    { icon: "flaticon-time", number: 15000, label: "Étudiants" },
-    { icon: "flaticon-compass", number: 200, label: "Regroupement familial" },
-  ];
 
   return (
     <div className="counter-area pt-65">
@@ -25,30 +20,7 @@ export default function WhyChooseUs() {
             </div>
           </div>
         </div>
-
-        <div className="row">
-          {counters.map((item, index) => {
-            const { ref, inView } = useInView({ triggerOnce: true });
-            return (
-              <div className="col-lg-3 col-md-6" key={index}>
-                <div className="single-counter-text" ref={ref}>
-                  <div className="counter-icon">
-                    <i className={item.icon}></i>
-                  </div>
-                  <div className="counter-content ">
-                    <h1 className="counter" >
-                      {inView && <CountUp end={item.number} duration={2} />}
-                    </h1>
-                    <h3>+</h3>
-                  </div>
-                  <div className="counter-title-style-2">
-                    <h4>{item.label}</h4>
-                  </div>
-                </div>
-              </div>
-            );
-          })}
-        </div>
+        <CounterSection></CounterSection>
       </div>
     </div>
   );

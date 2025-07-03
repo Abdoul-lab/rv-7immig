@@ -140,8 +140,12 @@ const Contact = () => {
                     <div className="cda-content-inner">
                       <h4>Localisation</h4>
                       <p>
-                        20 Rue Wellington Sud, Sherbrooke, Québec, Canada, J1H 5C7,
-                        <br />
+                        <ul>
+                          <li>Abidjan, Cocody Angré, Djorogobité 1, Côte d'ivoire</li>
+                          <li>20 Rue Wellington Sud, Sherbrooke, Québec, Canada, J1H 5C7,
+                            </li>
+                            </ul>
+                        
                       </p>
                     </div>
                   </div>
@@ -155,9 +159,9 @@ const Contact = () => {
                     <div className="cda-content-inner">
                       <h4>Numéro de téléphone</h4>
                       <p>
-                        + 1 819-919-4544,
+                        + 1 81 99 19 4544
                         <br />
-                        + 225 070-787-7956
+                        + 225 07 07 877 956
                       </p>
                     </div>
                   </div>
@@ -187,9 +191,10 @@ const Contact = () => {
           <div className="row">
             <div className="col-lg-12 pt-0">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2649222.671397079!2d87.519828831783!3d23.50527941402398!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30adaaed80e18ba7%3A0xf2d28e0c4e1fc6b!2sBangladesh!5e0!3m2!1sen!2sbd!4v1608008266718!5m2!1sen!2sbd"
-                width="1920"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3972.113696758615!2d-3.9363249262769635!3d5.399644235204804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfc193003f02b109%3A0x27fd4d0ff5aa3868!2sSeptimmigration%20C%C3%B4te%20d%E2%80%99Ivoire!5e0!3m2!1sfr!2sci!4v1751544828149!5m2!1sfr!2sci"
                 height="360"
+                width="1920"
+                loading="lazy"
                 frameBorder="0"
                 style={{ border: 0 }}
                 allowFullScreen
