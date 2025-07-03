@@ -38,7 +38,7 @@ const Blog = () => {
       <div className="col-lg-4 col-md-6">
         <div className="dreamit-single-blog-box">
           <div className="dreamit-blog-thumb">
-            <a href="#"><img src="src/assets/fav-icon/blog1.jpg" alt="" /></a>
+            <a href="#"><img src="/rv-7immig/images/blog1.jpg" alt="" /></a>
             <div className="post-catgory">
               <a href="#">Working Visa</a>
               <a href="#">Working Visa</a>
@@ -64,7 +64,7 @@ const Blog = () => {
       <div className="col-lg-4 col-md-6">
         <div className="dreamit-single-blog-box">
           <div className="dreamit-blog-thumb">
-            <a href="#"><img src="src/assets/fav-icon/bol.jpg" alt="" /></a>
+            <a href="#"><img src="/rv-7immig/images/bol.jpg" alt="" /></a>
             <div className="post-catgory">
               <a href="#">Student Visa</a>
             </div>
@@ -88,7 +88,7 @@ const Blog = () => {
       <div className="col-lg-4 col-md-6">
         <div className="dreamit-single-blog-box">
           <div className="dreamit-blog-thumb">
-            <a href="#"><img src="src/assets/fav-icon/bol2.jpg" alt="" /></a>
+            <a href="#"><img src="/rv-7immig/images/bol2.jpg" alt="" /></a>
             <div className="post-catgory">
               <a href="#">Immigration Visa</a>
             </div>
@@ -112,7 +112,7 @@ const Blog = () => {
       <div className="col-lg-4 col-md-6">
         <div className="dreamit-single-blog-box">
           <div className="dreamit-blog-thumb">
-            <a href="#"><img src="src/assets/fav-icon/bol2.jpg" alt="" /></a>
+            <a href="#"><img src="/rv-7immig/images/bol2.jpg" alt="" /></a>
             <div className="post-catgory">
               <a href="#">Immigration Visa</a>
             </div>
@@ -136,7 +136,7 @@ const Blog = () => {
       <div className="col-lg-4 col-md-6">
         <div className="dreamit-single-blog-box">
           <div className="dreamit-blog-thumb">
-            <a href="#"><img src="src/assets/fav-icon/bol2.jpg" alt="" /></a>
+            <a href="#"><img src="/rv-7immig/images/bol2.jpg" alt="" /></a>
             <div className="post-catgory">
               <a href="#">Immigration Visa</a>
             </div>
@@ -160,7 +160,7 @@ const Blog = () => {
       <div className="col-lg-4 col-md-6">
         <div className="dreamit-single-blog-box">
           <div className="dreamit-blog-thumb">
-            <a href="#"><img src="src/assets/fav-icon/bol2.jpg" alt="" /></a>
+            <a href="#"><img src="/rv-7immig/images/bol2.jpg" alt="" /></a>
             <div className="post-catgory">
               <a href="#">Immigration Visa</a>
             </div>

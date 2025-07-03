@@ -4176,14 +4176,14 @@ span.fill {
     display: inline-block;
     font-size: 30px;
     font-family: "Rubik",Sans-serif;
-    color: #fff !important;
+    color: #000 !important;
 }
 .counter-title-style-2 h4 {
     text-transform: capitalize;
-    font-size: 18px;
+    font-size: 30px;
     margin-top: 2px;
     font-weight: 300;
-    color: #fff;
+    color: #000;
 }
 
 

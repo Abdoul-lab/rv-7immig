@@ -41,7 +41,7 @@ const Business = () => {
                     <div className="dreamit-single-blog-box">
                       <div className="dreamit-blog-thumb">
                         <Link to="#">
-                          <img src={`src/assets/fav-icon/blog${index % 2 === 0 ? 2 : 1}.jpg`} alt="" />
+                          <img src={`/rv-7immig/images/blog${index % 2 === 0 ? 2 : 1}.jpg`} alt="" />
                         </Link>
                         <div className="post-catgory">
                           <Link to="#">Working Visa</Link>

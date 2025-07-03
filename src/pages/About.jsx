@@ -30,8 +30,8 @@ const About = () => {
         <div className="row align-items-center">
           <div className="col-lg-6">
             <div className="dreamit-thumb">
-              <img src="src/assets/fav-icon/about-pic.png" alt="" />
-            </div>
+              <img src="/rv-7immig/images/about-pic.png" alt="" />
+            </div>  
             <div className="dreamit-single-counter">
               <div className="counter-text">
                 <h1 className="counter">370</h1>
@@ -232,10 +232,10 @@ const About = () => {
           </div>
           <div className="row">
             {[
-              { name: "Mme Dodde", role: "Gestionnaire Principal", img: "src/assets/fav-icon/team3.jpg" },
-              { name: "Alexandre Dodde", role: "Manager général", img: "src/assets/fav-icon/team2.jpg" },
-              { name: "Mme Tchétché", role: "Comptable", img: "src/assets/fav-icon/team1.jpg" },
-              { name: "Mutiu Abayomi", role: "Responsable informatique", img: "src/assets/fav-icon/team2.jpg" },
+              { name: "Mme Dodde", role: "Gestionnaire Principal", img: "/rv-7immig/images/team3.jpg" },
+              { name: "Alexandre Dodde", role: "Manager général", img: "/rv-7immig/images/team2.jpg" },
+              { name: "Mme Tchétché", role: "Comptable", img: "/rv-7immig/images/team1.jpg" },
+              { name: "Mutiu Abayomi", role: "Responsable informatique", img: "/rv-7immig/images/team2.jpg" },
             ].map((member, index) => (
               <div key={index} className="col-lg-3 col-md-6 col-sm-12">
                 <div className="dreamit-single-team">
@@ -296,9 +296,9 @@ const About = () => {
           <div className="row">
             <div className="testimonials_list owl-carousel">
               {[
-                { name: "Shene Watsan", visa: "France Working Visa", img: "src/assets/fav-icon/client3.jpg" },
-                { name: "Ellen Erye", visa: "Singapur PR Visa", img: "src/assets/fav-icon/client2.jpg" },
-                { name: "John Dome", visa: "USA Student Visa", img: "src/assets/fav-icon/client1.jpg" },
+                { name: "Shene Watsan", visa: "France Working Visa", img: "/rv-7immig/images/client3.jpg" },
+                { name: "Ellen Erye", visa: "Singapur PR Visa", img: "/rv-7immig/images/client2.jpg" },
+                { name: "John Dome", visa: "USA Student Visa", img: "/rv-7immig/images/client1.jpg" },
               ].map((client, index) => (
                 <div key={index} className="dreamit-testimonials-box">
                   <img src={client.img} alt={client.name} />
@@ -323,35 +323,35 @@ const About = () => {
         <div className="col-lg-12">
           <div className="dreamit-brand">
             <div className="single-brand-thumb">
-              <img src="src/assets/fav-icon/brand1.png" alt="" />
+              <img src="/rv-7immig/images/brand1.png" alt="" />
             </div>
           </div>
         </div>
         <div className="col-lg-12">
           <div className="dreamit-brand">
             <div className="single-brand-thumb">
-              <img src="src/assets/fav-icon/brand2.png" alt="" />
+              <img src="/rv-7immig/images/brand2.png" alt="" />
             </div>
           </div>
         </div>
         <div className="col-lg-12">
           <div className="dreamit-brand">
             <div className="single-brand-thumb">
-              <img src="src/assets/fav-icon/brand3.png" alt="" />
+              <img src="/rv-7immig/images/brand3.png" alt="" />
             </div>
           </div>
         </div>
         <div className="col-lg-12">
           <div className="dreamit-brand">
             <div className="single-brand-thumb">
-              <img src="src/assets/fav-icon/brand4.png" alt="" />
+              <img src="/rv-7immig/images/brand4.png" alt="" />
             </div>
           </div>
         </div>
         <div className="col-lg-12">
           <div className="dreamit-brand">
             <div className="single-brand-thumb">
-              <img src="src/assets/fav-icon/brand5.png" alt="" />
+              <img src="/rv-7immig/images/brand5.png" alt="" />
             </div>
           </div>
         </div>
