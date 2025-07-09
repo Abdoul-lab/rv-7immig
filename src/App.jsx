@@ -2,6 +2,7 @@
 import { Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import Assistant from "./components/Assistant"
 
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -15,6 +16,7 @@ import SpouseFamilyVisas from "./pages/SpouseFamilyVisas";
 import TouristVisitorVisas from "./pages/TouristVisitorVisas";
 import Blog from "./pages/Blog";
 import Formations from "./pages/Formations";
+
 
 const App = () => {
   return (
@@ -40,6 +42,8 @@ const App = () => {
       </Routes>
 
       <Footer />
+      {/* ✅ L'assistante est ici : visible partout */}
+      <Assistant />
     </>
   );
 };

@@ -28,7 +28,7 @@ const Contact = () => {
 
   return (
     <>
-                <div className="breatcome-area d-flex align-items-center">
+  <div className="breatcome-area d-flex align-items-center">
   <div className="container">
     <div className="row">
       <div className="col-lg-12">

@@ -1,5 +1,3 @@
-import CountUp from "react-countup";
-import { useInView } from "react-intersection-observer";
 import CounterSection from "./CounterSection";
 
 export default function WhyChooseUs() {
