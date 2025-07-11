@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Link } from "react-router-dom";
 
 const Header = () => {
@@ -20,13 +20,14 @@ const Header = () => {
                   </li>
                   <li>
                     <a href="#">
-                      <i className="fas fa-map-marker-alt"></i> 20 Rue Wellington Sud,
-                      Sherbrooke, Québec, Canada, J1H 5C7
-                    </a>
+                      <i className="fas fa-map-marker-alt"></i> 455 Rue King Ouest, 6ème étage (REGUS),
+                      Sherbrooke, Qc, Canada 
+                    </a><br></br>
+                    <a href="#"><i className="fas fa-map-marker-alt"></i> Angré Djorogté 1, Cocody, Abj, Côte d'ivoire</a>
                   </li>
                   <li>
                     <a href="tel:+18199194544">
-                      <i className="fas fa-phone"></i> +1 819-919-4544
+                      <i className="fas fa-phone"></i> +1 819-919-4544 / +225 070-787-7956
                     </a>
                   </li>
                 </ul>

@@ -138,14 +138,12 @@ const Contact = () => {
                       <i className="fas fa-map-marker-alt"></i>
                     </div>
                     <div className="cda-content-inner">
-                      <h4>Localisation</h4>
+                      <h4> Localisation</h4>
                       <p>
-                        <ul>
-                          <li>Abidjan, Cocody Angré, Djorogobité 1, Côte d'ivoire</li>
-                          <li>20 Rue Wellington Sud, Sherbrooke, Québec, Canada, J1H 5C7,
+                          <li> 455 Rue King Ouest, 6ème étage (REGUS),
+                      Sherbrooke, Qc, Canada 
                             </li>
-                            </ul>
-                        
+                          <li> Angré Djorogobité 1, Cocody, Abj, Côte d'ivoire</li>   
                       </p>
                     </div>
                   </div>
