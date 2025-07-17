@@ -1,7 +1,42 @@
 
 import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
 
 const Header = () => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+  };
+
+  // Fermer le menu si on clique en dehors
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (isMobileMenuOpen && !event.target.closest('.menu-wrapper') && !event.target.closest('.menu-toggle')) {
+        setIsMobileMenuOpen(false);
+      }
+    };
+
+    document.addEventListener('click', handleClickOutside);
+    return () => document.removeEventListener('click', handleClickOutside);
+  }, [isMobileMenuOpen]);
+
+  // Empêcher le scroll du body quand le menu est ouvert
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isMobileMenuOpen]);
   
   return (
     <>
@@ -52,15 +87,15 @@ const Header = () => {
               <span className="logo-txt"></span>
             </Link>
           </div>
-          <div className="menu-toggle">
-            <span className="open_bar">
+          <div className="menu-toggle" onClick={toggleMobileMenu}>
+            <span className={`open_bar ${isMobileMenuOpen ? 'hidden' : ''}`}>
               <i className="fas fa-bars"></i>
             </span>
-            <span className="close_bar">
+            <span className={`close_bar ${isMobileMenuOpen ? 'visible' : ''}`}>
               <i className="fas fa-times"></i>
             </span>
           </div>
-          <div className="menu-wrapper">
+          <div className={`menu-wrapper ${isMobileMenuOpen ? 'active-nav' : ''}`}>
             <div className="row align-items-center d-flex">
               <div className="col-lg-3">
                 <div className="header-logo">
@@ -76,7 +111,7 @@ const Header = () => {
                 <div className="header-menu">
                   <ul>
                     <li>
-                      <Link to="/">
+                      <Link to="/" onClick={closeMobileMenu}>
                         Accueil
                         <span className="mobile-menu-icon">
                           <i className="fas fa-angle-right"></i>
@@ -84,7 +119,7 @@ const Header = () => {
                       </Link>
                     </li>
                     <li>
-                      <Link to="/canada">
+                      <Link to="/canada" onClick={closeMobileMenu}>
                         CANADA
                         <span className="mobile-menu-icon">
                           <i className="fas fa-angle-right"></i>
@@ -100,17 +135,17 @@ const Header = () => {
                       </Link>
                       <div className="sub-menu">
                         <ul>
-                          <li><Link to="/business">Business</Link></li>
-                          <li><Link to="/education-visa">Education Visa</Link></li>
-                          <li><Link to="/resident-return-visas">Resident Return Visas</Link></li>
-                          <li><Link to="/skilled-immigration">Skilled Immigration</Link></li>
-                          <li><Link to="/spouse-family-visas">Spouse Family Visas</Link></li>
-                          <li><Link to="/tourist-visitor-visas">Tourist & Visitor Visas</Link></li>
+                          <li><Link to="/business" onClick={closeMobileMenu}>Business</Link></li>
+                          <li><Link to="/education-visa" onClick={closeMobileMenu}>Education Visa</Link></li>
+                          <li><Link to="/resident-return-visas" onClick={closeMobileMenu}>Resident Return Visas</Link></li>
+                          <li><Link to="/skilled-immigration" onClick={closeMobileMenu}>Skilled Immigration</Link></li>
+                          <li><Link to="/spouse-family-visas" onClick={closeMobileMenu}>Spouse Family Visas</Link></li>
+                          <li><Link to="/tourist-visitor-visas" onClick={closeMobileMenu}>Tourist & Visitor Visas</Link></li>
                         </ul>
                       </div>
                     </li>
                     <li>
-                      <Link to="/about">
+                      <Link to="/about" onClick={closeMobileMenu}>
                         À propos
                         <span className="mobile-menu-icon">
                           <i className="fas fa-angle-right"></i>
@@ -118,21 +153,22 @@ const Header = () => {
                       </Link>
                     </li>
                     <li>
-                      <Link to="/blog">
+                      <Link to="/blog" onClick={closeMobileMenu}>
                         Blog
                         <span className="mobile-menu-icon">
                           <i className="fas fa-angle-right"></i>
                         </span>
                       </Link>
                     </li>
-                    <li><Link to="/contact">Contact</Link></li>
-                    <li><Link to="/formations">Formations</Link></li>
+                    <li><Link to="/contact" onClick={closeMobileMenu}>Contact</Link></li>
+                    <li><Link to="/formations" onClick={closeMobileMenu}>Formations</Link></li>
                   </ul>
                   <div className="header-button">
                     <a
                       href="https://secure.officio.ca/qnr?id=4401&hash=9f47269263b777258a373dce155edb02"
                       target="_blank"
                       rel="noopener noreferrer"
+                      onClick={closeMobileMenu}
                     >
                       Évaluation gratuite en ligne
                     </a>
