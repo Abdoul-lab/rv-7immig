@@ -1,7 +1,38 @@
 
 import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
 
 const Header = () => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isSticky, setIsSticky] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsSticky(window.scrollY > 100);
+    };
+
+    const handleResize = () => {
+      if (window.innerWidth > 991) {
+        setIsMobileMenuOpen(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+  };
   
   return (
     <>
@@ -45,22 +76,22 @@ const Header = () => {
       
 
       {/* Header Main Menu */}
-      <div className="header-area transparent" id="sticky-header">
+      <div className={`header-area transparent ${isSticky ? 'sticky-nav' : ''}`} id="sticky-header">
         <div className="container">
           <div className="m-logo">
             <Link to="/">
               <span className="logo-txt"></span>
             </Link>
           </div>
-          <div className="menu-toggle">
-            <span className="open_bar">
+          <div className="menu-toggle" onClick={toggleMobileMenu}>
+            <span className={`open_bar ${isMobileMenuOpen ? 'd-none' : ''}`}>
               <i className="fas fa-bars"></i>
             </span>
-            <span className="close_bar">
+            <span className={`close_bar ${!isMobileMenuOpen ? 'd-none' : ''}`}>
               <i className="fas fa-times"></i>
             </span>
           </div>
-          <div className="menu-wrapper">
+          <div className={`menu-wrapper ${isMobileMenuOpen ? 'active-nav' : ''}`}>
             <div className="row align-items-center d-flex">
               <div className="col-lg-3">
                 <div className="header-logo">
@@ -76,7 +107,7 @@ const Header = () => {
                 <div className="header-menu">
                   <ul>
                     <li>
-                      <Link to="/">
+                      <Link to="/" onClick={closeMobileMenu}>
                         Accueil
                         <span className="mobile-menu-icon">
                           <i className="fas fa-angle-right"></i>
@@ -84,7 +115,7 @@ const Header = () => {
                       </Link>
                     </li>
                     <li>
-                      <Link to="/canada">
+                      <Link to="/canada" onClick={closeMobileMenu}>
                         CANADA
                         <span className="mobile-menu-icon">
                           <i className="fas fa-angle-right"></i>
@@ -100,17 +131,17 @@ const Header = () => {
                       </Link>
                       <div className="sub-menu">
                         <ul>
-                          <li><Link to="/business">Business</Link></li>
-                          <li><Link to="/education-visa">Education Visa</Link></li>
-                          <li><Link to="/resident-return-visas">Resident Return Visas</Link></li>
-                          <li><Link to="/skilled-immigration">Skilled Immigration</Link></li>
-                          <li><Link to="/spouse-family-visas">Spouse Family Visas</Link></li>
-                          <li><Link to="/tourist-visitor-visas">Tourist & Visitor Visas</Link></li>
+                          <li><Link to="/business" onClick={closeMobileMenu}>Business</Link></li>
+                          <li><Link to="/education-visa" onClick={closeMobileMenu}>Education Visa</Link></li>
+                          <li><Link to="/resident-return-visas" onClick={closeMobileMenu}>Resident Return Visas</Link></li>
+                          <li><Link to="/skilled-immigration" onClick={closeMobileMenu}>Skilled Immigration</Link></li>
+                          <li><Link to="/spouse-family-visas" onClick={closeMobileMenu}>Spouse Family Visas</Link></li>
+                          <li><Link to="/tourist-visitor-visas" onClick={closeMobileMenu}>Tourist & Visitor Visas</Link></li>
                         </ul>
                       </div>
                     </li>
                     <li>
-                      <Link to="/about">
+                      <Link to="/about" onClick={closeMobileMenu}>
                         À propos
                         <span className="mobile-menu-icon">
                           <i className="fas fa-angle-right"></i>
@@ -118,15 +149,15 @@ const Header = () => {
                       </Link>
                     </li>
                     <li>
-                      <Link to="/blog">
+                      <Link to="/blog" onClick={closeMobileMenu}>
                         Blog
                         <span className="mobile-menu-icon">
                           <i className="fas fa-angle-right"></i>
                         </span>
                       </Link>
                     </li>
-                    <li><Link to="/contact">Contact</Link></li>
-                    <li><Link to="/formations">Formations</Link></li>
+                    <li><Link to="/contact" onClick={closeMobileMenu}>Contact</Link></li>
+                    <li><Link to="/formations" onClick={closeMobileMenu}>Formations</Link></li>
                   </ul>
                   <div className="header-button">
                     <a
