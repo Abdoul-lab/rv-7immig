@@ -60,7 +60,7 @@ const TouristVisitorVisas = () => {
       </div>
 
       <div className="sideber-thumb">
-        <img src="/rv-7immig/images/sideber.jpg" alt="" />
+        <img src="/images/sideber.jpg" alt="" />
       </div>
 
       <div className="sideber-visa-content">
@@ -119,7 +119,7 @@ const TouristVisitorVisas = () => {
 
     <div className="col-lg-8 pt-30">
       <div className="tofel-thumb">
-        <img src="/rv-7immig/images/tofel.jpg" alt="" />
+        <img src="/images/tofel.jpg" alt="" />
       </div>
 
       <div className="tofel-content">
@@ -183,7 +183,7 @@ const TouristVisitorVisas = () => {
       <div className="row">
         <div className="col-lg-6 pt-20">
           <div className="tofel-thumb-2">
-            <img src="/rv-7immig/images/tofel2.jpg" alt="" />
+            <img src="/images/tofel2.jpg" alt="" />
           </div>
         </div>
         <div className="col-lg-6 pt-20">
@@ -250,7 +250,7 @@ const TouristVisitorVisas = () => {
         <div className="col-lg-4">
           <div className="dreamit-single-team">
             <div className="team-member-thumb">
-              <img src="/rv-7immig/images/team3.jpg" alt="" />
+              <img src="/images/team3.jpg" alt="" />
               <div className="dreamit-team-social-icon">
                 <div className="dreamit-team-social-icon-inner">
                   <a href="#"><i className="fab fa-twitter"></i></a>
@@ -270,7 +270,7 @@ const TouristVisitorVisas = () => {
         <div className="col-lg-4 col-md-6 col-sm-12">
           <div className="dreamit-single-team">
             <div className="team-member-thumb">
-              <img src="/rv-7immig/images/team2.jpg" alt="" />
+              <img src="/images/team2.jpg" alt="" />
               <div className="dreamit-team-social-icon">
                 <div className="dreamit-team-social-icon-inner">
                   <a href="#"><i className="fab fa-twitter"></i></a>
@@ -290,7 +290,7 @@ const TouristVisitorVisas = () => {
         <div className="col-lg-4 col-md-6 col-sm-12">
           <div className="dreamit-single-team">
             <div className="team-member-thumb">
-              <img src="/rv-7immig/images/team1.jpg" alt="" />
+              <img src="/images/team1.jpg" alt="" />
               <div className="dreamit-team-social-icon">
                 <div className="dreamit-team-social-icon-inner">
                   <a href="#"><i className="fab fa-twitter"></i></a>

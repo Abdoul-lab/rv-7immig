@@ -8,7 +8,7 @@ const testimonials = [
     id: 1,
     name: "Shene Watsan",
     visa: "Singapore PR Visa",
-    img: "/rv-7immig/images/client8.jpg",
+    img: "/images/client8.jpg",
     text:
       "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form...",
   },
@@ -16,7 +16,7 @@ const testimonials = [
     id: 2,
     name: "Ellen Erye",
     visa: "France Working Visa",
-    img: "/rv-7immig/images/client9.jpg",
+    img: "/images/client9.jpg",
     text:
       "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form...",
   },
@@ -24,7 +24,7 @@ const testimonials = [
     id: 3,
     name: "John Dome",
     visa: "USA Student Visa",
-    img: "/rv-7immig/images/client8.jpg",
+    img: "/images/client8.jpg",
     text:
       "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form...",
   },

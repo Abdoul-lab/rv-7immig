@@ -1,13 +1,20 @@
+##version du bolt avec ia en bas tes different de mopn local
+
+
+
 import { useState, useEffect, useRef } from "react";
 
 const AssistantChat = () => {
   const [isOpen, setIsOpen] = useState(true);
-  const [activeTab, setActiveTab] = useState('accueil');
-  const [messages, setMessages] = useState([]);
-  const [userInput, setUserInput] = useState("");
-  const [isLoading, setIsLoading] = useState(false);
-  const [form, setForm] = useState({});
+  const [messages, setMessages] = useState([
+    { sender: "bot", text: "Bonjour et bienvenue à Septimmigration🍁 ! 👋 Je suis Marie, votre conseillère virtuelle. Je suis là pour vous accompagner dans votre projet d'immigration au Canada." }
+  ]);
   const [step, setStep] = useState(0);
+  const [userInput, setUserInput] = useState("");
+  const [form, setForm] = useState({});
+  const [isLoading, setIsLoading] = useState(false);
+  const [conversationMode, setConversationMode] = useState('form'); // 'form' ou 'ai'
+  const [hasDeclined, setHasDeclined] = useState(false);
   const chatBoxRef = useRef(null);
   const [hasPlayedSound, setHasPlayedSound] = useState(false);
 
@@ -41,40 +48,48 @@ const AssistantChat = () => {
     }
   ];
 
-  const welcomeMessages = [
-    { sender: "bot", text: "Bonjour et bienvenue à Septimmigration🍁 ! 👋" },
-    { sender: "bot", text: "Je suis Marie, votre conseillère virtuelle spécialisée en immigration canadienne." },
-    { sender: "bot", text: "🎯 Nous vous accompagnons dans toutes vos démarches d'immigration vers le Canada !" },
-    { sender: "bot", text: "✨ Nos services incluent :" },
-    { sender: "bot", text: "• Évaluation gratuite de votre profil\n• Accompagnement personnalisé\n• Préparation des dossiers\n• Formations linguistiques (IELTS, TEF)\n• Suivi jusqu'à l'obtention de votre visa" },
-    { sender: "bot", text: "📞 Contactez-nous :\n• Téléphone : +1 819-919-4544\n• Email : info@septimmigration.com\n• Bureaux : Sherbrooke (Canada) & Abidjan (Côte d'Ivoire)" },
-    { sender: "bot", text: "🌟 Avec plus de 10 ans d'expérience et 370+ visas obtenus, nous sommes votre partenaire de confiance pour réaliser votre rêve canadien !" }
+  const encouragingMessages = [
+    "C'est une excellente information ! 😊",
+    "Parfait, je note cela ! 📝",
+    "Très bien, continuons ! 👍",
+    "Merci pour cette précision ! 🙏",
+    "Super, j'ai bien noté ! ✨"
   ];
 
   // Détection des refus ou questions hors sujet
   const analyzeUserInput = (input) => {
     const lowerInput = input.toLowerCase();
     
+    // Mots-clés de refus
     const refusalKeywords = [
       'non', 'pas maintenant', 'plus tard', 'pas intéressé', 'arrêter', 'stop',
       'ne veux pas', 'pas envie', 'laisser tranquille', 'fermer', 'partir',
       'pas le temps', 'occupé', 'rappeler', 'pas prêt'
     ];
 
+    // Questions générales sur l'immigration
     const immigrationKeywords = [
       'visa', 'immigration', 'canada', 'permis', 'résidence', 'citoyenneté',
       'express entry', 'pcp', 'étudiant', 'travail', 'famille', 'conjoint',
       'délai', 'coût', 'prix', 'document', 'exigence', 'condition',
-      'ielts', 'français', 'anglais', 'diplôme', 'expérience', 'province',
-      'québec', 'ontario', 'alberta', 'colombie', 'manitoba', 'saskatchewan'
+      'ielts', 'français', 'anglais', 'diplôme', 'expérience'
+    ];
+
+    // Questions hors sujet
+    const offTopicKeywords = [
+      'météo', 'sport', 'politique', 'actualité', 'restaurant', 'voyage',
+      'film', 'musique', 'jeu', 'shopping', 'santé', 'médecin'
     ];
 
     const hasRefusal = refusalKeywords.some(keyword => lowerInput.includes(keyword));
     const hasImmigrationTopic = immigrationKeywords.some(keyword => lowerInput.includes(keyword));
+    const hasOffTopic = offTopicKeywords.some(keyword => lowerInput.includes(keyword));
 
     return {
       isRefusal: hasRefusal,
-      isImmigrationQuestion: hasImmigrationTopic
+      isImmigrationQuestion: hasImmigrationTopic,
+      isOffTopic: hasOffTopic,
+      isFormRelated: !hasRefusal && !hasImmigrationTopic && !hasOffTopic
     };
   };
 
@@ -83,34 +98,54 @@ const AssistantChat = () => {
     const lowerInput = input.toLowerCase();
     
     if (lowerInput.includes('visa') || lowerInput.includes('permis')) {
-      return "Il existe plusieurs types de visas pour le Canada :\n\n🎓 **Permis d'études** : Pour étudier dans une institution canadienne\n💼 **Permis de travail** : Temporaire ou fermé à un employeur\n🏠 **Résidence permanente** : Via Entrée Express, PCP, ou regroupement familial\n👥 **Visa visiteur** : Pour le tourisme ou visites familiales\n\nChaque programme a ses propres exigences. Quel type vous intéresse le plus ? 🤔";
+      return "Il existe plusieurs types de visas pour le Canada : visa de visiteur, permis d'études, permis de travail, et résidence permanente. Chacun a ses propres exigences. Souhaitez-vous que je vous aide à identifier le meilleur programme pour votre situation ? 🍁";
     }
     
     if (lowerInput.includes('délai') || lowerInput.includes('temps') || lowerInput.includes('combien')) {
-      return "⏰ **Délais de traitement approximatifs** :\n\n• **Entrée Express** : 6 mois\n• **PCP** : 12-18 mois\n• **Permis d'études** : 4-12 semaines\n• **Permis de travail** : 2-16 semaines\n• **Regroupement familial** : 12-24 mois\n\nCes délais peuvent varier selon votre pays et la complexité du dossier. Voulez-vous des détails sur un programme spécifique ? 📋";
+      return "Les délais varient selon le programme : Entrée Express (6 mois), PCP (12-18 mois), permis d'études (4-12 semaines). Pour une évaluation précise de votre dossier, nos conseillers peuvent vous donner un calendrier personnalisé. Voulez-vous continuer notre évaluation ? ⏰";
     }
     
     if (lowerInput.includes('coût') || lowerInput.includes('prix') || lowerInput.includes('cher')) {
-      return "💰 **Frais gouvernementaux principaux** :\n\n• **Entrée Express** : 1,365$ CAD\n• **Permis d'études** : 150$ CAD\n• **Permis de travail** : 155$ CAD\n• **Visa visiteur** : 100$ CAD\n\n+ Frais biométriques (85$ CAD)\n+ Examens médicaux (200-400$ CAD)\n+ Tests de langue (300-400$ CAD)\n\nNos services d'accompagnement sont en plus. Souhaitez-vous un devis personnalisé ? 📊";
+      return "Les frais gouvernementaux varient : Entrée Express (1,365$ CAD), permis d'études (150$ CAD), plus les frais de nos services d'accompagnement. Nos conseillers peuvent vous détailler tous les coûts. Continuons-nous votre évaluation ? 💰";
     }
     
     if (lowerInput.includes('document') || lowerInput.includes('papier')) {
-      return "📄 **Documents généralement requis** :\n\n✅ **Identité** : Passeport, acte de naissance\n✅ **Éducation** : Diplômes, relevés de notes, ECA\n✅ **Expérience** : Lettres d'employeurs, contrats\n✅ **Langue** : IELTS, CELPIP, TEF, TCF\n✅ **Financier** : Relevés bancaires, preuves de fonds\n✅ **Médical** : Examens médicaux\n✅ **Sécurité** : Certificats de police\n\nLa liste exacte dépend de votre programme. Quel est votre projet ? 🎯";
+      return "Les documents requis dépendent de votre programme : passeport, diplômes, relevés de notes, preuves d'expérience, tests de langue, etc. Je peux vous aider à identifier exactement ce dont vous avez besoin. Reprenons votre évaluation ? 📄";
     }
     
     if (lowerInput.includes('ielts') || lowerInput.includes('français') || lowerInput.includes('anglais')) {
-      return "🗣️ **Tests de langue requis** :\n\n**Anglais** :\n• IELTS General Training\n• CELPIP General\n\n**Français** :\n• TEF Canada\n• TCF Canada\n\n**Scores minimums** (varient selon le programme) :\n• **Entrée Express** : CLB 7+ (IELTS 6.0+)\n• **Permis d'études** : IELTS 6.0-6.5\n• **PCP** : Selon la province\n\n💡 Nous offrons des formations pour vous aider à atteindre le score requis ! Besoin d'aide pour la préparation ? 📚";
-    }
-
-    if (lowerInput.includes('province') || lowerInput.includes('pcp') || lowerInput.includes('québec') || lowerInput.includes('ontario')) {
-      return "🍁 **Programmes des Candidats des Provinces (PCP)** :\n\n• **Ontario** : OINP - Tech, French Speaker, Masters\n• **Québec** : PEIQ - Système unique avec CAQ\n• **Colombie-Britannique** : BC PNP - Tech, Healthcare\n• **Alberta** : AINP - Opportunity Stream\n• **Manitoba** : MPNP - Skilled Worker\n• **Saskatchewan** : SINP - Occupation In-Demand\n\nChaque province a ses critères spécifiques. Quelle province vous intéresse ? 🗺️";
-    }
-
-    if (lowerInput.includes('express entry') || lowerInput.includes('entrée express')) {
-      return "🚀 **Entrée Express - Le système le plus rapide** :\n\n**3 programmes inclus** :\n• Programme des travailleurs qualifiés fédéral\n• Programme des métiers spécialisés fédéral\n• Catégorie de l'expérience canadienne\n\n**Système de points (CRS)** :\n• Âge, éducation, expérience, langue\n• Score minimum récent : ~480-500 points\n• Invitations aux 2 semaines\n\n**Avantages** :\n• Traitement en 6 mois\n• Résidence permanente directe\n• Possibilité de travailler partout au Canada\n\nVoulez-vous évaluer votre score CRS ? 📊";
+      return "Les tests de langue sont essentiels : IELTS/CELPIP pour l'anglais, TEF/TCF pour le français. Les scores requis varient selon le programme. Nos formations peuvent vous aider à atteindre le niveau requis ! Continuons votre évaluation ? 🗣️";
     }
     
-    return "C'est une excellente question sur l'immigration au Canada ! 🍁\n\nJe peux vous aider avec des informations sur :\n• Les différents programmes d'immigration\n• Les exigences et documents\n• Les délais et coûts\n• Les tests de langue\n• Les provinces et leurs programmes\n\nQue souhaitez-vous savoir exactement ? 🤔";
+    return "C'est une excellente question sur l'immigration au Canada ! Nos conseillers experts peuvent vous donner des réponses détaillées et personnalisées. Souhaitez-vous que nous continuions votre évaluation pour mieux vous conseiller ? 🤔";
+  };
+
+  // Réponses pour les sujets hors immigration
+  const getOffTopicResponse = () => {
+    const responses = [
+      "Je suis spécialisée dans l'immigration au Canada 🍁. Comment puis-je vous aider avec votre projet d'immigration ?",
+      "C'est intéressant, mais je suis là pour vous accompagner dans votre immigration au Canada ! Avez-vous des questions sur les visas ou programmes d'immigration ? 😊",
+      "Je me concentre sur l'immigration canadienne. Parlons plutôt de votre projet : quel type de visa vous intéresse ? 🎯"
+    ];
+    return responses[Math.floor(Math.random() * responses.length)];
+  };
+
+  // Réponses pour les refus
+  const getRefusalResponse = () => {
+    const responses = [
+      "Je comprends parfaitement ! 😊 Si vous changez d'avis ou avez des questions sur l'immigration au Canada, n'hésitez pas à revenir me voir. Bonne journée ! 👋",
+      "Pas de problème du tout ! Je reste disponible si vous souhaitez des informations sur l'immigration canadienne plus tard. À bientôt ! 🍁",
+      "C'est tout à fait normal de prendre son temps. Je suis là quand vous serez prêt(e) à explorer vos options d'immigration. Excellente journée ! ✨"
+    ];
+    return responses[Math.floor(Math.random() * responses.length)];
+  };
+
+  const sendMessage = (sender, text) => {
+    setMessages((prev) => [...prev, { sender, text }]);
+  };
+
+  const getRandomEncouragement = () => {
+    return encouragingMessages[Math.floor(Math.random() * encouragingMessages.length)];
   };
 
   const playNotificationSound = () => {
@@ -150,69 +185,59 @@ const AssistantChat = () => {
     }
   }, [hasPlayedSound]);
 
-  const sendMessage = (sender, text) => {
-    setMessages((prev) => [...prev, { sender, text }]);
-  };
-
-  const handleTabChange = (tab) => {
-    setActiveTab(tab);
-    setMessages([]);
-    setUserInput("");
-    setIsLoading(false);
-    
-    if (tab === 'accueil') {
-      setTimeout(() => {
-        welcomeMessages.forEach((msg, index) => {
-          setTimeout(() => {
-            sendMessage(msg.sender, msg.text);
-          }, index * 1000);
-        });
-      }, 500);
-    } else if (tab === 'ia') {
-      setTimeout(() => {
-        sendMessage("bot", "Bonjour ! 👋 Je suis Marie, votre conseillère IA spécialisée en immigration canadienne.");
-        setTimeout(() => {
-          sendMessage("bot", "Posez-moi toutes vos questions sur l'immigration au Canada : visas, délais, coûts, documents, tests de langue, provinces... Je suis là pour vous aider ! 🍁");
-        }, 1500);
-      }, 500);
-    } else if (tab === 'contact') {
-      setStep(0);
-      setForm({});
-      setTimeout(() => {
-        sendMessage("bot", "Parfait ! Je vais vous poser quelques questions pour mieux vous conseiller et vous mettre en contact avec nos experts. 📋");
-        setTimeout(() => {
-          sendMessage("bot", questions[0].text);
-        }, 1500);
-      }, 500);
-    }
-  };
-
   const handleUserSubmit = (e) => {
     e.preventDefault();
     if (!userInput.trim()) return;
 
     sendMessage("user", userInput);
+    const analysis = analyzeUserInput(userInput);
+    
     setIsLoading(true);
 
     setTimeout(() => {
       setIsLoading(false);
       
-      if (activeTab === 'ia') {
-        const analysis = analyzeUserInput(userInput);
+      // Gestion des refus
+      if (analysis.isRefusal) {
+        setHasDeclined(true);
+        setConversationMode('ai');
+        sendMessage("bot", getRefusalResponse());
+        setUserInput("");
+        return;
+      }
+
+      // Gestion des questions d'immigration hors formulaire
+      if (analysis.isImmigrationQuestion && conversationMode === 'form') {
+        setConversationMode('ai');
+        sendMessage("bot", getImmigrationResponse(userInput));
         
-        if (analysis.isRefusal) {
-          sendMessage("bot", "Je comprends parfaitement ! 😊 Si vous changez d'avis ou avez d'autres questions sur l'immigration au Canada, n'hésitez pas à revenir me voir. Bonne journée ! 👋");
-        } else {
-          sendMessage("bot", getImmigrationResponse(userInput));
-        }
-      } else if (activeTab === 'contact') {
+        setTimeout(() => {
+          if (!hasDeclined) {
+            sendMessage("bot", "Si vous souhaitez une évaluation personnalisée gratuite, je peux vous poser quelques questions rapides. Êtes-vous d'accord ? 😊");
+            setConversationMode('form');
+          }
+        }, 2000);
+        setUserInput("");
+        return;
+      }
+
+      // Gestion des sujets hors immigration
+      if (analysis.isOffTopic) {
+        setConversationMode('ai');
+        sendMessage("bot", getOffTopicResponse());
+        setUserInput("");
+        return;
+      }
+
+      // Mode formulaire normal
+      if (conversationMode === 'form' && step < questions.length) {
         const currentKey = questions[step]?.key;
         if (currentKey) {
           setForm((prev) => ({ ...prev, [currentKey]: userInput }));
         }
 
         if (step < questions.length - 1) {
-          sendMessage("bot", "Parfait, je note cela ! 📝");
+          sendMessage("bot", getRandomEncouragement());
           
           setTimeout(() => {
             const nextStep = step + 1;
@@ -242,22 +267,33 @@ const AssistantChat = () => {
   }, [messages, isLoading]);
 
   useEffect(() => {
-    if (activeTab === 'accueil') {
-      handleTabChange('accueil');
+    if (messages.length === 1 && step === 0 && conversationMode === 'form') {
+      setTimeout(() => {
+        sendMessage("bot", questions[0].text);
+      }, 6000);
     }
-  }, []);
+  }, [messages, step, conversationMode]);
+
+  const googleFormURL =
+    `https://docs.google.com/forms/d/e/1FAIpQLSft6cT6hHWkXV-THzxZIAkoyOrlqneL2k5tV78dt3yybwiMJA/viewform?usp=pp_url` +
+    `&entry.583938010=${encodeURIComponent(form.name || "")}` +
+    `&entry.403275790=${encodeURIComponent(form.status || "")}` +
+    `&entry.1000627390=${encodeURIComponent(form.email || "")}` +
+    `&entry.1338088088=${encodeURIComponent(form.phone || "")}` +
+    `&entry.213167345=${encodeURIComponent(form.program || "")}`;
 
   const renderInput = () => {
-    if (activeTab === 'accueil') return null;
+    if (hasDeclined) return null;
     
-    if (activeTab === 'ia') {
+    // Mode IA - input libre
+    if (conversationMode === 'ai') {
       return (
         <form onSubmit={handleUserSubmit} style={styles.form}>
           <input
             type="text"
             value={userInput}
             onChange={(e) => setUserInput(e.target.value)}
-            placeholder="Posez votre question sur l'immigration..."
+            placeholder="Posez-moi votre question..."
             style={styles.input}
             autoFocus
           />
@@ -273,8 +309,8 @@ const AssistantChat = () => {
       );
     }
 
-    if (activeTab === 'contact' && step >= questions.length) return null;
-    
+    // Mode formulaire
+    if (step >= questions.length) return null;
     const currentQuestion = questions[step];
     if (!currentQuestion) return null;
 
@@ -325,14 +361,6 @@ const AssistantChat = () => {
     );
   };
 
-  const googleFormURL =
-    `https://docs.google.com/forms/d/e/1FAIpQLSft6cT6hHWkXV-THzxZIAkoyOrlqneL2k5tV78dt3yybwiMJA/viewform?usp=pp_url` +
-    `&entry.583938010=${encodeURIComponent(form.name || "")}` +
-    `&entry.403275790=${encodeURIComponent(form.status || "")}` +
-    `&entry.1000627390=${encodeURIComponent(form.email || "")}` +
-    `&entry.1338088088=${encodeURIComponent(form.phone || "")}` +
-    `&entry.213167345=${encodeURIComponent(form.program || "")}`;
-
   return (
     <>
       <button
@@ -350,37 +378,6 @@ const AssistantChat = () => {
             👩‍💼 Marie - Conseillère Immigration IA
           </h3>
 
-          {/* Onglets de navigation */}
-          <div style={styles.tabContainer}>
-            <button
-              onClick={() => handleTabChange('accueil')}
-              style={{
-                ...styles.tab,
-                ...(activeTab === 'accueil' ? styles.activeTab : {})
-              }}
-            >
-              🏠 Accueil
-            </button>
-            <button
-              onClick={() => handleTabChange('ia')}
-              style={{
-                ...styles.tab,
-                ...(activeTab === 'ia' ? styles.activeTab : {})
-              }}
-            >
-              🤖 IA Chat
-            </button>
-            <button
-              onClick={() => handleTabChange('contact')}
-              style={{
-                ...styles.tab,
-                ...(activeTab === 'contact' ? styles.activeTab : {})
-              }}
-            >
-              📞 Contact
-            </button>
-          </div>
-
           <div style={styles.chatBox} ref={chatBoxRef} tabIndex={-1}>
             {messages.map((msg, index) => (
               <div
@@ -390,7 +387,6 @@ const AssistantChat = () => {
                   alignSelf: msg.sender === "user" ? "flex-end" : "flex-start",
                   backgroundColor: msg.sender === "user" ? "#DCF8C6" : "#F1F1F1",
                   borderRadius: msg.sender === "user" ? "18px 18px 5px 18px" : "18px 18px 18px 5px",
-                  whiteSpace: "pre-line"
                 }}
               >
                 {msg.text}
@@ -412,7 +408,7 @@ const AssistantChat = () => {
 
           {!isLoading && renderInput()}
 
-          {activeTab === 'contact' && step === questions.length && (
+          {step === questions.length && !hasDeclined && (
             <div style={{ marginTop: "1rem", textAlign: "center" }}>
               <a
                 href={googleFormURL}
@@ -420,10 +416,18 @@ const AssistantChat = () => {
                 rel="noopener noreferrer"
                 style={styles.formLink}
               >
-                📋 Voir mon formulaire de contact
+                📋 Voir mon formulaire de prise de contact
               </a>
               <p style={styles.footerText}>
                 Un conseiller vous contactera sous 24h ! 🕐
+              </p>
+            </div>
+          )}
+
+          {hasDeclined && (
+            <div style={{ marginTop: "1rem", textAlign: "center" }}>
+              <p style={styles.footerText}>
+                Merci de votre visite ! N'hésitez pas à revenir quand vous voulez. 😊
               </p>
             </div>
           )}
@@ -459,8 +463,8 @@ const styles = {
     bottom: 90,
     right: 20,
     width: "90%",
-    maxWidth: 400,
-    maxHeight: 650,
+    maxWidth: 380,
+    maxHeight: 600,
     borderRadius: 16,
     overflow: "hidden",
     boxShadow: "0 8px 32px rgba(0,0,0,0.15)",
@@ -481,28 +485,6 @@ const styles = {
     fontWeight: "600",
     textAlign: "center",
   },
-  tabContainer: {
-    display: "flex",
-    borderBottom: "1px solid #e5e7eb",
-    backgroundColor: "#f9fafb",
-  },
-  tab: {
-    flex: 1,
-    padding: "12px 8px",
-    border: "none",
-    backgroundColor: "transparent",
-    cursor: "pointer",
-    fontSize: "0.85rem",
-    fontWeight: "500",
-    color: "#6b7280",
-    transition: "all 0.2s ease",
-    borderBottom: "2px solid transparent",
-  },
-  activeTab: {
-    color: "#10B981",
-    borderBottomColor: "#10B981",
-    backgroundColor: "white",
-  },
   chatBox: {
     flex: 1,
     padding: "16px",
@@ -510,7 +492,7 @@ const styles = {
     display: "flex",
     flexDirection: "column",
     gap: "12px",
-    maxHeight: "350px",
+    maxHeight: "300px",
     backgroundColor: "#f9fafb",
   },
   message: {

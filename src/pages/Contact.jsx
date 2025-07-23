@@ -67,7 +67,7 @@ const Contact = () => {
                         <input
                           type="text"
                           name="name"
-                          placeholder="Naom"
+                          placeholder="Nom"
                           value={formData.name}
                           onChange={handleChange}
                         />
@@ -95,17 +95,7 @@ const Contact = () => {
                         />
                       </div>
                     </div>
-                    <div className="col-lg-6">
-                      <div className="form_box mb-30">
-                        <input
-                          type="text"
-                          name="web"
-                          placeholder="site internet"
-                          value={formData.web}
-                          onChange={handleChange}
-                        />
-                      </div>
-                    </div>
+                    
                     <div className="col-lg-12">
                       <div className="form_box mb-30">
                         <textarea
@@ -159,7 +149,7 @@ const Contact = () => {
                       <p>
                         + 1 81 99 19 4544
                         <br />
-                        + 225 07 07 877 956
+                        + 225 07 08 927 114
                       </p>
                     </div>
                   </div>

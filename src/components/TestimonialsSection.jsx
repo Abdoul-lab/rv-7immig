@@ -8,25 +8,25 @@ const testimonials = [
   {
     name: "Shene Watsan",
     visa: "Singapur PR Visa",
-    image: "/rv-7immig/images/client3.jpg",
+    image: "/images/client3.jpg",
     text: `Sorem ipsum dolor sit amet there any consectetur adipisicing eliter sed do the eiusmod tempor asem incididunt ut labore dolore magna aliqua. Ut enim adern minim.`,
   },
   {
     name: "Ellen Erye",
     visa: "France Working Visa",
-    image: "/rv-7immig/images/client2.jpg",
+    image: "/images/client2.jpg",
     text: `Sorem ipsum dolor sit amet there any consectetur adipisicing eliter sed do the eiusmod tempor asem incididunt ut labore dolore magna aliqua. Ut enim adern minim.`,
   },
   {
     name: "John Dome",
     visa: "USA Student Visa",
-    image: "/rv-7immig/images/client1.jpg",
+    image: "/images/client1.jpg",
     text: `Sorem ipsum dolor sit amet there any consectetur adipisicing eliter sed do the eiusmod tempor asem incididunt ut labore dolore magna aliqua. Ut enim adern minim.`,
   },
   {
     name: "Shene Watsan",
     visa: "France Working Visa",
-    image: "/rv-7immig/images/client1.jpg",
+    image: "/images/client1.jpg",
     text: `Sorem ipsum dolor sit amet there any consectetur adipisicing eliter sed do the eiusmod tempor asem incididunt ut labore dolore magna aliqua. Ut enim adern minim.`,
   },
 ];

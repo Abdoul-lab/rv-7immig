@@ -1,12 +1,12 @@
 import React from 'react';
 
 const countries = [
-  { name: 'Bangladesh', image: '/rv-7immig/images/img1.jpg', animation: 'fadeInLeft' },
-  { name: 'Australia', image: '/rv-7immig/images/img2.jpg', animation: 'fadeInUp' },
-  { name: 'Canada', image: '/rv-7immig/images/img3.jpg', animation: 'fadeInRight' },
-  { name: 'Brazil', image: '/rv-7immig/images/img4.jpg', animation: 'fadeInLeft' },
-  { name: 'England', image: '/rv-7immig/images/img5.jpg', animation: 'fadeInUp' },
-  { name: 'USA', image: '/rv-7immig/images/img6.jpg', animation: 'fadeInRight' },
+  { name: 'Bangladesh', image: '/images/img1.jpg', animation: 'fadeInLeft' },
+  { name: 'Australia', image: '/images/img2.jpg', animation: 'fadeInUp' },
+  { name: 'Canada', image: '/images/img3.jpg', animation: 'fadeInRight' },
+  { name: 'Brazil', image: '/images/img4.jpg', animation: 'fadeInLeft' },
+  { name: 'England', image: '/images/img5.jpg', animation: 'fadeInUp' },
+  { name: 'USA', image: '/images/img6.jpg', animation: 'fadeInRight' },
 ];
 
 const CountrySection = () => {

@@ -42,7 +42,7 @@ const App = () => {
       </Routes>
 
       <Footer />
-      {/* ✅ L'assistante est ici : visible partout */}
+      {/* L'assistante est ici : visible partout */}
       <Assistant />
     </>
   );

@@ -34,7 +34,7 @@ const Footer = () => {
             <div className="col-lg-3 col-md-6">
               <div className="footer-content mb-30">
                 <div className="footer-logo">
-                  <img src="/rv-7immig/images/logost1.png" alt="Logo" />
+                  <img src="/images/logost1.png" alt="Logo" />
                 </div>
                 <div className="dreamit-footer-social-address">
                   <ul>
@@ -72,18 +72,17 @@ const Footer = () => {
                   <h2>Adresse</h2>
                 </div>
                 <div className="footer-adderss">
-                  <p>
-                    <b>Adresse:</b>
-                    <span> 20 Rue Wellington Sud, Sherbrooke, Québec, Canada, J1H 5C7</span>
-                  </p>
-                  <p>
-                    <b>Téléphone:</b>
-                    <span> +1 819-919-4544 / 225 070-787-7956 </span>
-                  </p>
-                  <p>
+                  <div>
+                    <ul className="text-white">
+                      <li>455 Rue King Ouest, 6ème étage (REGUS), Sherbrooke, Qc, Canada</li>
+                      <li>Angré Djorogté 1, Cocody, Abj, Côte d'Ivoire</li>
+                    <br></br>
+                    <b>Téléphone:</b><br></br>
+                    <span> +1 819-919-4544 / 225 070-892-7114 </span>
                     <b>Email:</b>
                     <span> info@septimmigration.com </span>
-                  </p>
+                  </ul>
+                  </div>
                 </div>
               </div>
             </div>

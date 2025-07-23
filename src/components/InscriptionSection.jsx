@@ -1,5 +1,4 @@
 
-
 const InscriptionSection = () => {
   return (
     <div className="about-area style-four pb-65 pt-100">
@@ -12,7 +11,7 @@ const InscriptionSection = () => {
             data-wow-duration="1500ms"
           >
             <div className="dreamit-thumb">
-              <img src="/rv-7immig/images/new5.png" alt="about" />
+              <img src="/images/new5.png" alt="about" />
             </div>
           </div>
 

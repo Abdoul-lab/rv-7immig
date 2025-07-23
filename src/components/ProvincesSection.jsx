@@ -6,36 +6,36 @@ import "swiper/css/pagination";
 const provinces = [
   {
     name: "Ottawa",
-    image: "/rv-7immig/images/bangladesh.jpg",
-    flag: "/rv-7immig/images/canada-flag.gif",
+    image: "/images/bangladesh.jpg",
+    flag: "/images/canada-flag.gif",
     description:
       "Lorem ipsum dolor sit amet, consec anglse sicing elite sombar, sed do incididunt ut labore",
   },
   {
     name: "Sheerbrooke",
-    image: "/rv-7immig/images/australia.jpg",
-    flag: "/rv-7immig/images/canada-flag.gif",
+    image: "/images/australia.jpg",
+    flag: "/images/canada-flag.gif",
     description:
       "Lorem ipsum dolor sit amet, consec anglse sicing elite sombar, sed do incididunt ut labore",
   },
   {
     name: "Alberta",
-    image: "/rv-7immig/images/brazil.jpg",
-    flag: "/rv-7immig/images/canada-flag.gif",
+    image: "/images/brazil.jpg",
+    flag: "/images/canada-flag.gif",
     description:
       "Lorem ipsum dolor sit amet, consec anglse sicing elite sombar, sed do incididunt ut labore",
   },
   {
     name: "Québec",
-    image: "/rv-7immig/images/brazil.jpg",
-    flag: "/rv-7immig/images/canada-flag.gif",
+    image: "/images/brazil.jpg",
+    flag: "/images/canada-flag.gif",
     description:
       "Lorem ipsum dolor sit amet, consec anglse sicing elite sombar, sed do incididunt ut labore",
   },
   {
     name: "Ontario",
-    image: "/rv-7immig/images/brazil.jpg",
-    flag: "/rv-7immig/images/canada-flag.gif",
+    image: "/images/brazil.jpg",
+    flag: "/images/canada-flag.gif",
     description:
       "Lorem ipsum dolor sit amet, consec anglse sicing elite sombar, sed do incididunt ut labore",
   },

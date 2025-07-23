@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 
 const slides = [
   {
-    image: '/rv-7immig/images/slick5.jpg',
+    image: '/images/slick5.jpg',
     titleSmall: 'World Best Agency',
     titleMain: 'Visa & Immigration',
     titleSub: 'Consultant Agent',
@@ -15,7 +15,7 @@ const slides = [
     buttonLink: '#formations',
   },
   {
-    image: '/rv-7immig/images/slick6.jpg',
+    image: '/images/slick6.jpg',
     titleSmall: 'World Best Agency',
     titleMain: 'Visa & Immigration',
     titleSub: 'Consultant Agent',

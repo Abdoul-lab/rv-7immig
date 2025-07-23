@@ -39,7 +39,7 @@ const Canada = () => {
           </div>
         </div>
         <div className="sideber-thumb">
-          <img src="/rv-7immig/images/sideber.jpg" alt="" />
+          <img src="/images/sideber.jpg" alt="" />
         </div>
         <div className="sideber-visa-content">
           <div className="thumb-title">
@@ -95,7 +95,7 @@ const Canada = () => {
       </div>
       <div className="col-lg-8 pt-30">
         <div className="tofel-thumb">
-          <img src="/rv-7immig/images/education.jpg" alt="" />
+          <img src="/images/education.jpg" alt="" />
         </div>
         <div className="tofel-content">
           <div className="tofel-title">
@@ -155,7 +155,7 @@ const Canada = () => {
         <div className="row">
           <div className="col-lg-6 pt-20">
             <div className="tofel-thumb-2">
-              <img src="/rv-7immig/images/tofel2.jpg" alt="" />
+              <img src="/images/tofel2.jpg" alt="" />
             </div>
           </div>
           <div className="col-lg-6 pt-20">

@@ -37,7 +37,7 @@ export default function VisaServiceSection() {
       <div className="container-fluid">
         <div className="flag-shape">
           <div className="flag-shape-inner">
-            <img src="/rv-7immig/images/canada-flag.gif" alt="Drapeau du Canada" />
+            <img src="/images/canada-flag.gif" alt="Drapeau du Canada" />
           </div>
         </div>
         <div className="row">

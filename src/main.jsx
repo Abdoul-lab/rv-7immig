@@ -20,7 +20,7 @@ import './assets/css/widget.css';
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <BrowserRouter basename="/rv-7immig">
+  <BrowserRouter>
     <App />
   </BrowserRouter>
 );

@@ -1,27 +1,70 @@
-
-import OwlCarousel from "react-owl-carousel";
-import "owl.carousel/dist/assets/owl.carousel.css";
-import "owl.carousel/dist/assets/owl.theme.default.css";
-
-const options = {
-  items: 1,
-  loop: true,
-  autoplay: true,
-  autoplayTimeout: 5000,
-  nav: false,
-  dots: true,
-  animateOut: 'fadeOut'
-};
+import React, { useRef, useEffect } from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 export default function HeroCarousel() {
+  const sliderRef = useRef(null);
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+
+    const handlePlay = () => {
+      sliderRef.current?.slickPause();
+    };
+
+    const handlePauseOrEnd = () => {
+      sliderRef.current?.slickPlay();
+    };
+
+    if (video) {
+      video.addEventListener("play", handlePlay);
+      video.addEventListener("pause", handlePauseOrEnd);
+      video.addEventListener("ended", handlePauseOrEnd);
+
+      // Forcera la lecture automatique si possible (sans son)
+      video.play().catch((e) => {
+        console.warn("Autoplay bloqué :", e);
+      });
+    }
+
+    return () => {
+      if (video) {
+        video.removeEventListener("play", handlePlay);
+        video.removeEventListener("pause", handlePauseOrEnd);
+        video.removeEventListener("ended", handlePauseOrEnd);
+      }
+    };
+  }, []);
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false
+  };
+
   return (
-    <OwlCarousel className="owl-theme" {...options}>
+    <Slider ref={sliderRef} {...settings}>
       {/* Slide 1 - Vidéo */}
       <div className="slider-area d-flex align-items-center">
         <div className="container">
           <div className="dreamit-slider-content">
-            <video width="100%" height="auto" controls autoPlay>
-              <source src="src/assets/video.mp4" type="video/mp4" />
+            <video
+              ref={videoRef}
+              width="100%"
+              height="auto"
+              muted // Nécessaire pour autoplay
+              autoPlay
+              playsInline
+              controls
+            >
+              <source src="/images/videos/video.mp4" type="video/mp4" />
               Votre navigateur ne supporte pas la lecture de vidéos.
             </video>
           </div>
@@ -41,10 +84,10 @@ export default function HeroCarousel() {
             <div className="rs-video">
               <div className="animate-border">
                 <a
-                  className="video-vemo-icon venobox vbox-item"
-                  data-vbtype="youtube"
-                  data-autoplay="true"
-                  href="https://www.youtube.com/watch?v=BsTpnBtqBOU&ab_channel=WsCubeTech"
+                  className="video-vemo-icon"
+                  href="https://www.youtube.com/watch?v=BsTpnBtqBOU"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <i className="fa fa-play"></i>
                 </a>
@@ -54,6 +97,6 @@ export default function HeroCarousel() {
           </div>
         </div>
       </div>
-    </OwlCarousel>
+    </Slider>
   );
 }
