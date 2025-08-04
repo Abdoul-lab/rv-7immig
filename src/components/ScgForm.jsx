@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 
 export default function ScgForm({ onSubmit }) {
   const [form, setForm] = useState({
@@ -22,7 +22,7 @@ export default function ScgForm({ onSubmit }) {
 
   const [step, setStep] = useState(0);
 
-  const steps = [
+  const baseSteps = [
     {
       label: "Quel est votre état matrimonial ?",
       name: "maritalStatus",
@@ -33,6 +33,8 @@ export default function ScgForm({ onSubmit }) {
       label: "Quel est votre âge ?",
       name: "age",
       type: "number",
+      min: 18,
+      max: 65,
     },
     {
       label: "Quel est votre plus haut niveau d'études ?",
@@ -48,28 +50,28 @@ export default function ScgForm({ onSubmit }) {
       ]
     },
     {
-      label: "Quel est votre niveau en compréhension orale ?",
+      label: "Quel est votre niveau en compréhension orale (IELTS/CELPIP) ?",
       name: "listening",
       type: "select",
-      options: ["NCLC 7", "NCLC 8", "NCLC 9", "NCLC 10+"],
+      options: ["CLB 4", "CLB 5", "CLB 6", "CLB 7", "CLB 8", "CLB 9", "CLB 10+"],
     },
     {
-      label: "Quel est votre niveau en expression orale ?",
+      label: "Quel est votre niveau en expression orale (IELTS/CELPIP) ?",
       name: "speaking",
       type: "select",
-      options: ["NCLC 7", "NCLC 8", "NCLC 9", "NCLC 10+"],
+      options: ["CLB 4", "CLB 5", "CLB 6", "CLB 7", "CLB 8", "CLB 9", "CLB 10+"],
     },
     {
-      label: "Quel est votre niveau en lecture ?",
+      label: "Quel est votre niveau en lecture (IELTS/CELPIP) ?",
       name: "reading",
       type: "select",
-      options: ["NCLC 7", "NCLC 8", "NCLC 9", "NCLC 10+"],
+      options: ["CLB 4", "CLB 5", "CLB 6", "CLB 7", "CLB 8", "CLB 9", "CLB 10+"],
     },
     {
-      label: "Quel est votre niveau en écriture ?",
+      label: "Quel est votre niveau en écriture (IELTS/CELPIP) ?",
       name: "writing",
       type: "select",
-      options: ["NCLC 7", "NCLC 8", "NCLC 9", "NCLC 10+"],
+      options: ["CLB 4", "CLB 5", "CLB 6", "CLB 7", "CLB 8", "CLB 9", "CLB 10+"],
     },
     {
       label: "Quelle est votre expérience de travail au Canada ?",
@@ -84,35 +86,37 @@ export default function ScgForm({ onSubmit }) {
         "5 ans ou plus"
       ],
     },
-    ...(form.maritalStatus === 'Marié(e) ou conjoint(e) de fait'
-      ? [
-          {
-            label: "Quel est le niveau d'études de votre conjoint(e) ?",
-            name: "spouseEducation",
-            type: "select",
-            options: [
-              "Secondaire ou moins",
-              "Études postsecondaires de 1 an",
-              "Diplôme de 2 ans ou plus",
-              "Baccalauréat",
-              "Master",
-              "Doctorat"
-            ],
-          },
-          {
-            label: "Quel est le niveau linguistique de votre conjoint(e) ?",
-            name: "spouseLanguage",
-            type: "select",
-            options: ["NCLC 4-5", "NCLC 6", "NCLC 7"],
-          },
-          {
-            label: "Quelle est son expérience de travail au Canada ?",
-            name: "spouseWorkExperience",
-            type: "select",
-            options: ["Aucune", "1 an", "2 ans ou plus"],
-          },
-        ]
-      : []),
+  ];
+
+  const spouseSteps = [
+    {
+      label: "Quel est le niveau d'études de votre conjoint(e) ?",
+      name: "spouseEducation",
+      type: "select",
+      options: [
+        "Secondaire ou moins",
+        "Études postsecondaires de 1 an",
+        "Diplôme de 2 ans ou plus",
+        "Baccalauréat",
+        "Master",
+        "Doctorat"
+      ],
+    },
+    {
+      label: "Quel est le niveau linguistique de votre conjoint(e) ?",
+      name: "spouseLanguage",
+      type: "select",
+      options: ["CLB 4", "CLB 5", "CLB 6", "CLB 7", "CLB 8", "CLB 9"],
+    },
+    {
+      label: "Quelle est son expérience de travail au Canada ?",
+      name: "spouseWorkExperience",
+      type: "select",
+      options: ["Aucune", "1 an", "2 ans ou plus"],
+    },
+  ];
+
+  const additionalSteps = [
     {
       label: "Avez-vous un frère ou une sœur citoyen(ne) canadien(ne) ou résident(e) permanent(e) au Canada ?",
       name: "hasSibling",
@@ -120,7 +124,7 @@ export default function ScgForm({ onSubmit }) {
       options: ["Oui", "Non"]
     },
     {
-      label: "Avez-vous étudié au Canada ?",
+      label: "Avez-vous étudié au Canada (programme d'au moins 2 ans) ?",
       name: "studiedInCanada",
       type: "select",
       options: ["Oui", "Non"]
@@ -132,18 +136,30 @@ export default function ScgForm({ onSubmit }) {
       options: ["Oui", "Non"]
     },
     {
-      label: "Avez-vous reçu une nomination d’une province ou d’un territoire ?",
+      label: "Avez-vous reçu une nomination d'une province ou d'un territoire ?",
       name: "nomination",
       type: "select",
       options: ["Oui", "Non"]
     },
     {
-      label: "Avez-vous une connaissance fonctionnelle d’une seconde langue officielle (anglais/français) ?",
+      label: "Avez-vous une connaissance fonctionnelle d'une seconde langue officielle (français/anglais) ?",
       name: "secondLanguage",
       type: "select",
       options: ["Oui", "Non"]
     },
   ];
+
+  const steps = useMemo(() => {
+    let allSteps = [...baseSteps];
+    
+    if (form.maritalStatus === 'Marié(e) ou conjoint(e) de fait') {
+      allSteps = [...allSteps, ...spouseSteps];
+    }
+    
+    allSteps = [...allSteps, ...additionalSteps];
+    
+    return allSteps;
+  }, [form.maritalStatus]);
 
   const currentStep = steps[step];
 
@@ -154,50 +170,98 @@ export default function ScgForm({ onSubmit }) {
 
   const handleNext = (e) => {
     e.preventDefault();
-    if (!form[currentStep.name]) return alert("Veuillez répondre à la question.");
-    if (step < steps.length - 1) setStep(step + 1);
-    else onSubmit(form);
+    if (!form[currentStep.name]) {
+      alert("Veuillez répondre à la question.");
+      return;
+    }
+    
+    if (step < steps.length - 1) {
+      setStep(step + 1);
+    } else {
+      onSubmit(form);
+    }
   };
 
+  const handlePrevious = () => {
+    if (step > 0) {
+      setStep(step - 1);
+    }
+  };
+
+  const progressPercentage = ((step + 1) / steps.length) * 100;
+
   return (
-    <form onSubmit={handleNext} className="space-y-4">
-      <div>
-        <label className="block font-medium mb-2">{currentStep.label}</label>
+    <div className="max-w-md mx-auto bg-white p-6 rounded-lg shadow-lg">
+      {/* Progress bar */}
+      <div className="mb-6">
+        <div className="flex justify-between text-sm text-gray-600 mb-2">
+          <span>Étape {step + 1} sur {steps.length}</span>
+          <span>{Math.round(progressPercentage)}%</span>
+        </div>
+        <div className="w-full bg-gray-200 rounded-full h-2">
+          <div 
+            className="bg-green-600 h-2 rounded-full transition-all duration-300"
+            style={{ width: `${progressPercentage}%` }}
+          ></div>
+        </div>
+      </div>
 
-        {currentStep.type === "select" ? (
-          <select
-            name={currentStep.name}
-            value={form[currentStep.name]}
-            onChange={handleChange}
-            className="border p-2 rounded w-full"
-            required
+      <form onSubmit={handleNext} className="space-y-6">
+        <div>
+          <label className="block text-lg font-medium mb-4 text-gray-800">
+            {currentStep.label}
+          </label>
+
+          {currentStep.type === "select" ? (
+            <select
+              name={currentStep.name}
+              value={form[currentStep.name]}
+              onChange={handleChange}
+              className="w-full border-2 border-gray-300 p-3 rounded-lg focus:border-green-500 focus:outline-none transition-colors"
+              required
+            >
+              <option value="">-- Sélectionnez une option --</option>
+              {currentStep.options.map((opt, i) => (
+                <option key={i} value={opt}>{opt}</option>
+              ))}
+            </select>
+          ) : (
+            <input
+              type={currentStep.type}
+              name={currentStep.name}
+              value={form[currentStep.name]}
+              onChange={handleChange}
+              min={currentStep.min}
+              max={currentStep.max}
+              className="w-full border-2 border-gray-300 p-3 rounded-lg focus:border-green-500 focus:outline-none transition-colors"
+              placeholder={currentStep.type === "number" ? "Entrez votre âge" : ""}
+              required
+            />
+          )}
+        </div>
+
+        <div className="flex justify-between items-center pt-4">
+          <button
+            type="button"
+            onClick={handlePrevious}
+            disabled={step === 0}
+            className={`px-6 py-2 rounded-lg font-medium transition-colors ${
+              step === 0 
+                ? 'bg-gray-200 text-gray-400 cursor-not-allowed' 
+                : 'bg-gray-500 text-white hover:bg-gray-600'
+            }`}
           >
-            <option value="">-- Sélectionnez --</option>
-            {currentStep.options.map((opt, i) => (
-              <option key={i} value={opt}>{opt}</option>
-            ))}
-          </select>
-        ) : (
-          <input
-            type={currentStep.type}
-            name={currentStep.name}
-            value={form[currentStep.name]}
-            onChange={handleChange}
-            className="border p-2 rounded w-full"
-            required
-          />
-        )}
-      </div>
-
-      <div className="flex justify-between items-center">
-        <span className="text-sm text-gray-600">Étape {step + 1} / {steps.length}</span>
-        <button
-          type="submit"
-          className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700"
-        >
-          {step === steps.length - 1 ? "Calculer le score" : "Suivant"}
-        </button>
-      </div>
-    </form>
+            Précédent
+          </button>
+          
+          <button
+            type="submit"
+            className="bg-green-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-green-700 transition-colors"
+          >
+            {step === steps.length - 1 ? "Calculer le score" : "Suivant"}
+          </button>
+        </div>
+      </form>
+    </div>
   );
 }

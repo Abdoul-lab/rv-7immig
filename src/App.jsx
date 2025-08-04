@@ -16,6 +16,7 @@ import SpouseFamilyVisas from "./pages/SpouseFamilyVisas";
 import TouristVisitorVisas from "./pages/TouristVisitorVisas";
 import Blog from "./pages/Blog";
 import Formations from "./pages/Formations";
+import ScgCalculator from "./pages/ScgCalculator";
 
 
 const App = () => {
@@ -28,6 +29,7 @@ const App = () => {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/canada" element={<Canada />} />
+        <Route path="/scgCalculator" element={<ScgCalculator />} />
         <Route path="/business" element={<Business />} />
         <Route path="/education-visa" element={<EducationVisa />} />
         <Route path="/resident-return-visas" element={<ResidentReturnVisas />} />
