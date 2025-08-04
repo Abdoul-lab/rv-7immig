@@ -80,7 +80,7 @@ const Header = () => {
                       <i className="fas fa-map-marker-alt"></i> 455 Rue King Ouest, 6ème étage (REGUS), Sherbrooke, Qc, Canada
                     </a><br />
                     <a href="#">
-                      <i className="fas fa-map-marker-alt"></i> Angré Djorogté 1, Cocody, Abj, Côte d'Ivoire
+                      <i className="fas fa-map-marker-alt"></i> Angré Djorogobité 1, Cocody, Abj, Côte d'Ivoire
                     </a>
                   </li>
                   <li>
@@ -145,6 +145,7 @@ const Header = () => {
                 <div className="header-menu">
                   <ul>
                     <li><Link to="/" onClick={closeMobileMenu}>Accueil</Link></li>
+                    <li><Link to="/scgCalculator" onClick={closeMobileMenu}>CalcoSCG</Link></li>
                     <li><Link to="/canada" onClick={closeMobileMenu}>CANADA</Link></li>
                     <li>
                       <button
@@ -167,7 +168,7 @@ const Header = () => {
                     <li><Link to="/about" onClick={closeMobileMenu}>À propos</Link></li>
                     <li><Link to="/blog" onClick={closeMobileMenu}>Blog</Link></li>
                     <li><Link to="/contact" onClick={closeMobileMenu}>Contact</Link></li>
-                    <li><Link to="/formations" onClick={closeMobileMenu}>Formations</Link></li>
+                    <li><Link to="/formations" onClick={closeMobileMenu}>Formation</Link></li>
                   </ul>
 
                   <div className="header-button">
