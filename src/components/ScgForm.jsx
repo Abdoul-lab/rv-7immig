@@ -151,13 +151,10 @@ export default function ScgForm({ onSubmit }) {
 
   const steps = useMemo(() => {
     let allSteps = [...baseSteps];
-    
     if (form.maritalStatus === 'Marié(e) ou conjoint(e) de fait') {
       allSteps = [...allSteps, ...spouseSteps];
     }
-    
     allSteps = [...allSteps, ...additionalSteps];
-    
     return allSteps;
   }, [form.maritalStatus]);
 
@@ -174,7 +171,6 @@ export default function ScgForm({ onSubmit }) {
       alert("Veuillez répondre à la question.");
       return;
     }
-    
     if (step < steps.length - 1) {
       setStep(step + 1);
     } else {
@@ -191,24 +187,28 @@ export default function ScgForm({ onSubmit }) {
   const progressPercentage = ((step + 1) / steps.length) * 100;
 
   return (
-    <div className="max-w-md mx-auto bg-white p-6 rounded-lg shadow-lg">
+    <div className="card shadow p-4 mx-auto" style={{ maxWidth: '600px' }}>
       {/* Progress bar */}
-      <div className="mb-6">
-        <div className="flex justify-between text-sm text-gray-600 mb-2">
+      <div className="mb-4">
+        <div className="d-flex justify-content-between text-muted small mb-1">
           <span>Étape {step + 1} sur {steps.length}</span>
           <span>{Math.round(progressPercentage)}%</span>
         </div>
-        <div className="w-full bg-gray-200 rounded-full h-2">
-          <div 
-            className="bg-green-600 h-2 rounded-full transition-all duration-300"
+        <div className="progress" style={{ height: '6px' }}>
+          <div
+            className="progress-bar bg-success"
+            role="progressbar"
             style={{ width: `${progressPercentage}%` }}
+            aria-valuenow={progressPercentage}
+            aria-valuemin="0"
+            aria-valuemax="100"
           ></div>
         </div>
       </div>
 
-      <form onSubmit={handleNext} className="space-y-6">
-        <div>
-          <label className="block text-lg font-medium mb-4 text-gray-800">
+      <form onSubmit={handleNext}>
+        <div className="mb-4">
+          <label className="form-label fw-semibold fs-5">
             {currentStep.label}
           </label>
 
@@ -217,7 +217,7 @@ export default function ScgForm({ onSubmit }) {
               name={currentStep.name}
               value={form[currentStep.name]}
               onChange={handleChange}
-              className="w-full border-2 border-gray-300 p-3 rounded-lg focus:border-green-500 focus:outline-none transition-colors"
+              className="form-select"
               required
             >
               <option value="">-- Sélectionnez une option --</option>
@@ -227,36 +227,32 @@ export default function ScgForm({ onSubmit }) {
             </select>
           ) : (
             <input
-              type={currentStep.type}
+              type="number"
               name={currentStep.name}
               value={form[currentStep.name]}
               onChange={handleChange}
               min={currentStep.min}
               max={currentStep.max}
-              className="w-full border-2 border-gray-300 p-3 rounded-lg focus:border-green-500 focus:outline-none transition-colors"
-              placeholder={currentStep.type === "number" ? "Entrez votre âge" : ""}
+              className="form-control"
+              placeholder="Entrez votre âge"
               required
             />
           )}
         </div>
 
-        <div className="flex justify-between items-center pt-4">
+        <div className="d-flex justify-content-between pt-3">
           <button
             type="button"
             onClick={handlePrevious}
             disabled={step === 0}
-            className={`px-6 py-2 rounded-lg font-medium transition-colors ${
-              step === 0 
-                ? 'bg-gray-200 text-gray-400 cursor-not-allowed' 
-                : 'bg-gray-500 text-white hover:bg-gray-600'
-            }`}
+            className={`btn ${step === 0 ? 'btn-secondary disabled' : 'btn-secondary'}`}
           >
             Précédent
           </button>
-          
+
           <button
             type="submit"
-            className="bg-green-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-green-700 transition-colors"
+            className="btn btn-success"
           >
             {step === steps.length - 1 ? "Calculer le score" : "Suivant"}
           </button>
