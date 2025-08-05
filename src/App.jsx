@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Assistant from "./components/Assistant"
+import ScgCalculator from "./pages/ScgCalculator";
 
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -16,7 +17,6 @@ import SpouseFamilyVisas from "./pages/SpouseFamilyVisas";
 import TouristVisitorVisas from "./pages/TouristVisitorVisas";
 import Blog from "./pages/Blog";
 import Formations from "./pages/Formations";
-import ScgCalculator from "./pages/ScgCalculator";
 
 
 const App = () => {
@@ -26,10 +26,10 @@ const App = () => {
 
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/scgCalculator" element={<ScgCalculator/>} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/canada" element={<Canada />} />
-        <Route path="/scgCalculator" element={<ScgCalculator />} />
         <Route path="/business" element={<Business />} />
         <Route path="/education-visa" element={<EducationVisa />} />
         <Route path="/resident-return-visas" element={<ResidentReturnVisas />} />
