@@ -2,6 +2,11 @@
 /*-====================================
 	header-top-area-------------------
 	-==================================*/
+
+.card, .card * {
+  color: #000 !important;
+}
+
 .header-menu {
 	text-align: right;
 }
