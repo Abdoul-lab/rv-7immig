@@ -145,7 +145,6 @@ const Header = () => {
                 <div className="header-menu">
                   <ul>
                     <li><Link to="/" onClick={closeMobileMenu}>Accueil</Link></li>
-                    <li><Link to="/scgCalculator" onClick={closeMobileMenu}>CalcoSCG</Link></li>
                     <li><Link to="/canada" onClick={closeMobileMenu}>CANADA</Link></li>
                     <li>
                       <button
@@ -169,17 +168,8 @@ const Header = () => {
                     <li><Link to="/blog" onClick={closeMobileMenu}>Blog</Link></li>
                     <li><Link to="/contact" onClick={closeMobileMenu}>Contact</Link></li>
                     <li><Link to="/formations" onClick={closeMobileMenu}>Formation</Link></li>
+                    <li><Link to="/scgCalculator" onClick={closeMobileMenu}>Évaluation gratuite en ligne</Link></li>
                   </ul>
-
-                  <div className="header-button">
-                    <a
-                      href="https://secure.officio.ca/qnr?id=4401&hash=9f47269263b777258a373dce155edb02"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Évaluation gratuite en ligne
-                    </a>
-                  </div>
 
                   {/* Social for mobile */}
                   <div className="mobile-menu-social-icon d-lg-none mt-40">
