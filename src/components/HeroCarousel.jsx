@@ -1,7 +1,57 @@
 import React, { useRef, useEffect } from "react";
 import Slider from "react-slick";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import MiniFaq from "./MiniFaq";
+
+function NextArrow({ onClick }) {
+  return (
+    <div
+      onClick={onClick}
+      style={{
+        position: "absolute",
+        right: "20px",
+        top: "50%",
+        transform: "translateY(-50%)",
+        zIndex: 2,
+        cursor: "pointer",
+        fontSize: "2rem",
+        color: "#10B981",
+        background: "white",
+        padding: "8px",
+        borderRadius: "50%",
+        boxShadow: "0 2px 6px rgba(0,0,0,0.2)"
+      }}
+    >
+      <FaArrowRight />
+    </div>
+  );
+}
+
+function PrevArrow({ onClick }) {
+  return (
+    <div
+      onClick={onClick}
+      style={{
+        position: "absolute",
+        left: "20px",
+        top: "50%",
+        transform: "translateY(-50%)",
+        zIndex: 2,
+        cursor: "pointer",
+        fontSize: "2rem",
+        color: "#10B981",
+        background: "white",
+        padding: "8px",
+        borderRadius: "50%",
+        boxShadow: "0 2px 6px rgba(0,0,0,0.2)"
+      }}
+    >
+      <FaArrowLeft />
+    </div>
+  );
+}
 
 export default function HeroCarousel() {
   const sliderRef = useRef(null);
@@ -23,7 +73,6 @@ export default function HeroCarousel() {
       video.addEventListener("pause", handlePauseOrEnd);
       video.addEventListener("ended", handlePauseOrEnd);
 
-      // Forcera la lecture automatique si possible (sans son)
       video.play().catch((e) => {
         console.warn("Autoplay bloqué :", e);
       });
@@ -46,7 +95,9 @@ export default function HeroCarousel() {
     autoplaySpeed: 5000,
     slidesToShow: 1,
     slidesToScroll: 1,
-    arrows: false
+    arrows: true,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />
   };
 
   return (
@@ -59,10 +110,11 @@ export default function HeroCarousel() {
               ref={videoRef}
               width="100%"
               height="auto"
-              muted // Nécessaire pour autoplay
+              muted
               autoPlay
               playsInline
               controls
+              style={{ borderRadius: "10px" }}
             >
               <source src="/images/videos/video.mp4" type="video/mp4" />
               Votre navigateur ne supporte pas la lecture de vidéos.
@@ -71,29 +123,21 @@ export default function HeroCarousel() {
         </div>
       </div>
 
-      {/* Slide 2 - Texte */}
+      {/* Slide 2 - Texte + Mini FAQ */}
       <div className="slider-area style-two d-flex align-items-center">
         <div className="container">
           <div className="dreamit-slider-content">
-            <h4>Welcome to Septimmigration</h4>
-            <h1>Immigration & Visa</h1>
-            <h3>Consultant Agent</h3>
+            <h4>Bienvenue chez Septimmigration</h4>
+            <h1>Services Conseils en immigration</h1>
+            <h3>Consultant CRIC</h3>
             <p>
-              Pellentesque at posuere tellus phasellus scelerisque porem.
+              M Septime Alexandre DODDE, Consultant Réglementé en Immigration Canadienne
             </p>
             <div className="rs-video">
-              <div className="animate-border">
-                <a
-                  className="video-vemo-icon"
-                  href="https://www.youtube.com/watch?v=BsTpnBtqBOU"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <i className="fa fa-play"></i>
-                </a>
-              </div>
-              <span>See Our Introduction</span>
+              <div className="animate-border"></div>
+              <span>Découvrez nos services</span>
             </div>
+            <MiniFaq />
           </div>
         </div>
       </div>

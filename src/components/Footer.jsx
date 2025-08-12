@@ -57,9 +57,9 @@ const Footer = () => {
                 </div>
                 <div className="footer-menu">
                   <ul>
-                    <li><Link to="#">Services Clients</Link></li>
+                    <li><Link to="/canada">Services Clients</Link></li>
                     <li><Link to="/about">À propos</Link></li>
-                    <li><Link to="#">Prendre rendez-vous</Link></li>
+                    <li><Link to="/contact">Prendre rendez-vous</Link></li>
                   </ul>
                 </div>
               </div>
@@ -75,11 +75,11 @@ const Footer = () => {
                   <div>
                     <ul className="text-white">
                       <li>455 Rue King Ouest, 6ème étage (REGUS), Sherbrooke, Qc, Canada</li>
-                      <li>Angré Djorogté 1, Cocody, Abj, Côte d'Ivoire</li>
+                      <li>Angré Djorogobité 1, Cocody, Abj, Côte d'Ivoire</li>
                     <br></br>
                     <b>Téléphone:</b><br></br>
-                    <span> +1 819-919-4544 / 225 070-892-7114 </span>
-                    <b>Email:</b>
+                    <span> +1 819-919-4544 / 225 070-892-7114 </span><br></br>
+                    <b>Email:</b><br></br>
                     <span> info@septimmigration.com </span>
                   </ul>
                   </div>
@@ -123,7 +123,7 @@ const Footer = () => {
                 <ul>
                   <li><Link to="/about">À propos de Nous</Link></li>
                   <li><Link to="#">Politique de confidentialité</Link></li>
-                  <li><Link to="/canada">Services</Link></li>
+                  <li><Link to="/formation">Services</Link></li>
                 </ul>
               </div>
             </div>

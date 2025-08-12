@@ -34,7 +34,7 @@ const Canada = () => {
         <div className="sidebar-box">
           <div className="sidebar-single-category">
             <ul>
-              <li><a href="Canada.html">Canada<i className="fas fa-angle-right"></i></a></li>
+              <li><a href="https://www.canada.ca/">site officiel du Canada<i className="fas fa-angle-right"></i></a></li>
             </ul>
           </div>
         </div>

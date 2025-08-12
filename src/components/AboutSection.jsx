@@ -25,13 +25,14 @@ export default function AboutSection() {
             </div>
             <div className="dreamit-single-counter" ref={ref}>
               <div className="counter-text">
+                <h3>+</h3>
                 <h1 className="counter dis">
                   {inView ? <CountUp end={370} duration={3} /> : "0"}
                 </h1>
-                <h3>+</h3>
+                
               </div>
               <div className="counter-title">
-                <h4>completed visa</h4>
+                <h4>visas obtenus</h4>
               </div>
             </div>
           </div>

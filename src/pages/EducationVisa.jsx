@@ -9,11 +9,11 @@ const EducationVisa = () => {
 				<div className="col-lg-12">
 					<div className="breatcome-content text-center">
 						<div className="breatcome-content-title">
-							<h1>Education Visa</h1>
+							<h1>Canada</h1>
 						</div>
 						<div className="breatcome-content-text">
 							<ul>
-								<li><a href="index.html">Home </a> <i className="fas fa-chevron-right"></i> <span>Education Visa</span></li>
+								<li><a href="/">Home </a> <i className="fas fa-chevron-right"></i> <span>Canada</span></li>
 							</ul>
 						</div>
 					</div>
@@ -29,12 +29,12 @@ const EducationVisa = () => {
       <div className="sidebar-box">
         <div className="sidebar-single-category">
           <ul>
-            <li><a href="business-visa.html">Business Visa <i className="fas fa-angle-right"></i></a></li>
-            <li><a href="education-visa.html">Education Visa<i className="fas fa-angle-right"></i></a></li>
-            <li><a href="spouse-family-visas.html">Spouse/Family Visas <i className="fas fa-angle-right"></i></a></li>
-            <li><a href="risedent-return-visas.html">Resident Return Visas<i className="fas fa-angle-right"></i></a></li>
-            <li><a href="skilled-immigration.html">Skilled Immigration<i className="fas fa-angle-right"></i></a></li>
-            <li><a href="tourist-&-visitor-visas.html">Tourist & Visitor Visas<i className="fas fa-angle-right"></i></a></li>
+            <li><a href="#">Business Visa <i className="fas fa-angle-right"></i></a></li>
+            <li><a href="#">Education Visa<i className="fas fa-angle-right"></i></a></li>
+            <li><a href="#">Spouse/Family Visas <i className="fas fa-angle-right"></i></a></li>
+            <li><a href="#">Resident Return Visas<i className="fas fa-angle-right"></i></a></li>
+            <li><a href="#">Skilled Immigration<i className="fas fa-angle-right"></i></a></li>
+            <li><a href="#">Tourist & Visitor Visas<i className="fas fa-angle-right"></i></a></li>
           </ul>
         </div>
       </div>

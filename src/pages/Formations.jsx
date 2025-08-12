@@ -8,7 +8,7 @@ import FlipxSection from "../components/FlipxSection";
 import HeroSlider from "../components/HeroSlider";
 import InscriptionSection from "../components/InscriptionSection";
 import Testimonials from "../components/Testimonials";
-import CallDoSection from "../components/callDosection";
+import CallDoSection from "../components/callDoSection";
 import CallToAction from "../components/callToAction";
 
 export default function Formations() {

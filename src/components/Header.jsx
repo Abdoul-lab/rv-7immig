@@ -80,7 +80,7 @@ const Header = () => {
                       <i className="fas fa-map-marker-alt"></i> 455 Rue King Ouest, 6ème étage (REGUS), Sherbrooke, Qc, Canada
                     </a><br />
                     <a href="#">
-                      <i className="fas fa-map-marker-alt"></i> Angré Djorogté 1, Cocody, Abj, Côte d'Ivoire
+                      <i className="fas fa-map-marker-alt"></i> Angré Djorogobité 1, Cocody, Abj, Côte d'Ivoire
                     </a>
                   </li>
                   <li>
@@ -145,8 +145,9 @@ const Header = () => {
                 <div className="header-menu">
                   <ul>
                     <li><Link to="/" onClick={closeMobileMenu}>Accueil</Link></li>
-                    <li><Link to="/canada" onClick={closeMobileMenu}>CANADA</Link></li>
-                    <li>
+                    <li><Link to="/education-visa" onClick={closeMobileMenu}>CANADA</Link></li>
+                    <li><Link to="/scgCalculator" onClick={closeMobileMenu}>Entrée express </Link></li>
+                    {/* <li>
                       <button
                         className="nav-button"
                         onClick={toggleVisaSubmenu}
@@ -163,22 +164,13 @@ const Header = () => {
                           <li><Link to="/tourist-visitor-visas" onClick={closeMobileMenu}>Tourist & Visitor Visas</Link></li>
                         </ul>
                       </div>
-                    </li>
+                    </li> */}
                     <li><Link to="/about" onClick={closeMobileMenu}>À propos</Link></li>
                     <li><Link to="/blog" onClick={closeMobileMenu}>Blog</Link></li>
                     <li><Link to="/contact" onClick={closeMobileMenu}>Contact</Link></li>
-                    <li><Link to="/formations" onClick={closeMobileMenu}>Formations</Link></li>
+                    <li><Link to="/formations" onClick={closeMobileMenu}>Formation</Link></li>
+                    
                   </ul>
-
-                  <div className="header-button">
-                    <a
-                      href="https://secure.officio.ca/qnr?id=4401&hash=9f47269263b777258a373dce155edb02"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Évaluation gratuite en ligne
-                    </a>
-                  </div>
 
                   {/* Social for mobile */}
                   <div className="mobile-menu-social-icon d-lg-none mt-40">

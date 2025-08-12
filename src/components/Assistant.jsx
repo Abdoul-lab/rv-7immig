@@ -14,12 +14,12 @@ const AssistantChat = () => {
   const questions = [
     { 
       key: "name", 
-      text: "Pour mieux vous conseiller, j'aimerais d'abord apprendre à vous connaître. Quel est votre prénom et nom ?", 
+      text: "Quel est votre prénom et nom ?", 
       type: "text" 
     },
     {
       key: "status",
-      text: "Enchanté(e) ! Maintenant, pouvez-vous me dire quelle est votre situation professionnelle actuelle ?",
+      text: " Maintenant, veuillez selectionner dans la liste ci-après votre situation professionnelle actuelle ?",
       type: "select",
       options: ["Élève / étudiant(e)", "Employé(e)", "Travailleur indépendant", "Sans emploi", "Retraité(e)", "Autre"]
     },
@@ -30,25 +30,24 @@ const AssistantChat = () => {
     },
     { 
       key: "phone", 
-      text: "Merci ! Et votre numéro de téléphone ? (avec l'indicatif pays si vous n'êtes pas au Canada)", 
+      text: "Et votre numéro de téléphone ? (avec l'indicatif pays si vous n'êtes pas au Canada)", 
       type: "text" 
     },
     {
       key: "program",
-      text: "Excellent ! Maintenant, parlons de vos objectifs. Quel type de programme d'immigration vous intéresse le plus ?",
+      text: "Maintenant, parlons de vos objectifs. Quel type de programme d'immigration vous intéresse le plus ?",
       type: "select",
       options: ["Entrée express", "Programme des candidats des provinces (PCP)", "Permis d'études", "Regroupement familial", "Visa de travail temporaire", "Je ne sais pas encore", "Autre"]
     }
   ];
 
   const welcomeMessages = [
-    { sender: "bot", text: "Bonjour et bienvenue à Septimmigration🍁 ! 👋" },
-    { sender: "bot", text: "Je suis Marie, votre conseillère virtuelle spécialisée en immigration canadienne." },
-    { sender: "bot", text: "🎯 Nous vous accompagnons dans toutes vos démarches d'immigration vers le Canada !" },
-    { sender: "bot", text: "✨ Nos services incluent :" },
-    { sender: "bot", text: "• Évaluation gratuite de votre profil\n• Accompagnement personnalisé\n• Préparation des dossiers\n• Formations linguistiques (IELTS, TEF)\n• Suivi jusqu'à l'obtention de votre visa" },
-    { sender: "bot", text: "📞 Contactez-nous :\n• Téléphone : +1 819-919-4544\n• Email : info@septimmigration.com\n• Bureaux : Sherbrooke (Canada) & Abidjan (Côte d'Ivoire)" },
-    { sender: "bot", text: "🌟 Avec plus de 10 ans d'expérience et 370+ visas obtenus, nous sommes votre partenaire de confiance pour réaliser votre rêve canadien !" }
+    { sender: "bot", text: "Bonjour et bienvenue à Septimmigration🍁 ! 👋 " },
+    
+    { sender: "bot", text: "✨ Nos services incluent :\n • Évaluation de votre profil\n• Accompagnement personnalisé\n• Préparation des dossiers\n• Suivi jusqu'à l'obtention de votre visa" },
+    
+    { sender: "bot", text: "📞 Contactez-nous :\n• Téléphone :\n +1 819-919-4544 /+225 07 08 92 71 14\n• Email : info@septimmigration.com\n• Bureaux : Sherbrooke (Canada) & Abidjan (Côte d'Ivoire)" }
+    
   ];
 
   // Détection des refus ou questions hors sujet
@@ -63,7 +62,7 @@ const AssistantChat = () => {
 
     const immigrationKeywords = [
       'visa', 'immigration', 'canada', 'permis', 'résidence', 'citoyenneté',
-      'express entry', 'pcp', 'étudiant', 'travail', 'famille', 'conjoint',
+      ' entrée express', 'pcp', 'étudiant', 'travail', 'famille', 'conjoint',
       'délai', 'coût', 'prix', 'document', 'exigence', 'condition',
       'ielts', 'français', 'anglais', 'diplôme', 'expérience', 'province',
       'québec', 'ontario', 'alberta', 'colombie', 'manitoba', 'saskatchewan'
@@ -82,12 +81,12 @@ const AssistantChat = () => {
   const getImmigrationResponse = (input) => {
     const lowerInput = input.toLowerCase();
     
-    if (lowerInput.includes('visa') || lowerInput.includes('permis')) {
-      return "Il existe plusieurs types de visas pour le Canada :\n\n🎓 **Permis d'études** : Pour étudier dans une institution canadienne\n💼 **Permis de travail** : Temporaire ou fermé à un employeur\n🏠 **Résidence permanente** : Via Entrée Express, PCP, ou regroupement familial\n👥 **Visa visiteur** : Pour le tourisme ou visites familiales\n\nChaque programme a ses propres exigences. Quel type vous intéresse le plus ? 🤔";
+    if (lowerInput.includes('visa') || lowerInput.includes('permis') || lowerInput.includes('programme')) {
+      return "Il existe plusieurs types de visas pour le Canada :\n\n🎓 **Permis d'études** : Pour étudier dans une institution canadienne\n💼 **Permis de travail** : Temporaire ou fermé à un employeur\n🏠 **Résidence permanente** : Via Entrée Express, PCP, ou regroupement familial\n👥 **Visa visiteur** : Pour le tourisme ou visites familiales\n\nChaque programme a ses propres exigences. Veuillez prendre rendez-vous pour de plus ample s informations sur le type de visas qui vous intéresse le plus ? ";
     }
     
     if (lowerInput.includes('délai') || lowerInput.includes('temps') || lowerInput.includes('combien')) {
-      return "⏰ **Délais de traitement approximatifs** :\n\n• **Entrée Express** : 6 mois\n• **PCP** : 12-18 mois\n• **Permis d'études** : 4-12 semaines\n• **Permis de travail** : 2-16 semaines\n• **Regroupement familial** : 12-24 mois\n\nCes délais peuvent varier selon votre pays et la complexité du dossier. Voulez-vous des détails sur un programme spécifique ? 📋";
+      return "⏰ **Délais de traitement approximatifs (ses temps peuvent plus ou moins variés)** :\n\n• **Entrée Express** : 6 mois\n• **PCP** : 12-18 mois\n• **Permis d'études** : 4-12 semaines\n• **Permis de travail** : 2-16 semaines\n• **Regroupement familial** : 12-24 mois\n\nCes délais peuvent varier selon votre pays et la complexité du dossier.";
     }
     
     if (lowerInput.includes('coût') || lowerInput.includes('prix') || lowerInput.includes('cher')) {
@@ -99,18 +98,18 @@ const AssistantChat = () => {
     }
     
     if (lowerInput.includes('ielts') || lowerInput.includes('français') || lowerInput.includes('anglais')) {
-      return "🗣️ **Tests de langue requis** :\n\n**Anglais** :\n• IELTS General Training\n• CELPIP General\n\n**Français** :\n• TEF Canada\n• TCF Canada\n\n**Scores minimums** (varient selon le programme) :\n• **Entrée Express** : CLB 7+ (IELTS 6.0+)\n• **Permis d'études** : IELTS 6.0-6.5\n• **PCP** : Selon la province\n\n💡 Nous offrons des formations pour vous aider à atteindre le score requis ! Besoin d'aide pour la préparation ? 📚";
+      return "🗣️ **Tests de langue requis** :\n\n**Anglais** :\n• IELTS General Training\n• CELPIP General\n\n**Français** :\n• TEF Canada\n• TCF Canada\n\n**Scores minimums** (varient selon le programme) :\n• **Entrée Express** : CLB 7+ (IELTS 6.0+)\n• **Permis d'études** : IELTS 6.0-6.5\n• **PCP** : Selon la province";
     }
 
     if (lowerInput.includes('province') || lowerInput.includes('pcp') || lowerInput.includes('québec') || lowerInput.includes('ontario')) {
-      return "🍁 **Programmes des Candidats des Provinces (PCP)** :\n\n• **Ontario** : OINP - Tech, French Speaker, Masters\n• **Québec** : PEIQ - Système unique avec CAQ\n• **Colombie-Britannique** : BC PNP - Tech, Healthcare\n• **Alberta** : AINP - Opportunity Stream\n• **Manitoba** : MPNP - Skilled Worker\n• **Saskatchewan** : SINP - Occupation In-Demand\n\nChaque province a ses critères spécifiques. Quelle province vous intéresse ? 🗺️";
+      return "🍁 **Programmes des Candidats des Provinces (PCP)** :\n\n• **Ontario** : OINP - Tech, French Speaker, Masters\n• **Québec** : PSTQ - Système unique avec CAQ\n• **Colombie-Britannique** : BC PNP - Tech, Healthcare\n• **Alberta** : AINP - Opportunity Stream\n• **Manitoba** : MPNP - Skilled Worker\n• **Saskatchewan** : SINP - Occupation In-Demand\n\nChaque province a ses critères spécifiques. ";
     }
 
     if (lowerInput.includes('express entry') || lowerInput.includes('entrée express')) {
-      return "🚀 **Entrée Express - Le système le plus rapide** :\n\n**3 programmes inclus** :\n• Programme des travailleurs qualifiés fédéral\n• Programme des métiers spécialisés fédéral\n• Catégorie de l'expérience canadienne\n\n**Système de points (CRS)** :\n• Âge, éducation, expérience, langue\n• Score minimum récent : ~480-500 points\n• Invitations aux 2 semaines\n\n**Avantages** :\n• Traitement en 6 mois\n• Résidence permanente directe\n• Possibilité de travailler partout au Canada\n\nVoulez-vous évaluer votre score CRS ? 📊";
+      return "🚀 **Entrée Express - Le système le plus rapide** :\n\n**3 programmes inclus** :\n• Programme des travailleurs qualifiés fédéral\n• Programme des métiers spécialisés fédéral\n• Catégorie de l'expérience canadienne\n\n**Système de points (CRS)** :\n• Âge, éducation, expérience, langue\n• Score minimum récent : ~480-500 points\n• Invitations aux 2 semaines\n\n**Avantages** :\n• Traitement en 6 mois\n• Résidence permanente directe\n• Possibilité de travailler partout au Canada\n\nJ'espère que cela repond à votre question📊";
     }
     
-    return "C'est une excellente question sur l'immigration au Canada ! 🍁\n\nJe peux vous aider avec des informations sur :\n• Les différents programmes d'immigration\n• Les exigences et documents\n• Les délais et coûts\n• Les tests de langue\n• Les provinces et leurs programmes\n\nQue souhaitez-vous savoir exactement ? 🤔";
+    return "Je peux vous aider avec des informations sur :\n• Les différents programmes d'immigration\n• Les exigences et documents\n• Les délais et coûts\n• Les tests de langue\n• Les provinces et leurs programmes\n\nQue souhaitez-vous savoir exactement ? 🤔";
   };
 
   const playNotificationSound = () => {
@@ -170,7 +169,7 @@ const AssistantChat = () => {
       }, 500);
     } else if (tab === 'ia') {
       setTimeout(() => {
-        sendMessage("bot", "Bonjour ! 👋 Je suis Marie, votre conseillère IA spécialisée en immigration canadienne.");
+        sendMessage("bot", "Bonjour ! 👋 Je suis Marie, votre assistante virtuelle.");
         setTimeout(() => {
           sendMessage("bot", "Posez-moi toutes vos questions sur l'immigration au Canada : visas, délais, coûts, documents, tests de langue, provinces... Je suis là pour vous aider ! 🍁");
         }, 1500);
@@ -257,7 +256,7 @@ const AssistantChat = () => {
             type="text"
             value={userInput}
             onChange={(e) => setUserInput(e.target.value)}
-            placeholder="Posez votre question sur l'immigration..."
+            placeholder="Posez votre question ici"
             style={styles.input}
             autoFocus
           />
@@ -347,39 +346,8 @@ const AssistantChat = () => {
       {isOpen && (
         <div style={styles.container} role="dialog" aria-modal="true" aria-labelledby="chat-header">
           <h3 id="chat-header" style={styles.header}>
-            👩‍💼 Marie - Conseillère Immigration IA
+            👩‍💼 Marie - Conseillère Immigration
           </h3>
-
-          {/* Onglets de navigation */}
-          <div style={styles.tabContainer}>
-            <button
-              onClick={() => handleTabChange('accueil')}
-              style={{
-                ...styles.tab,
-                ...(activeTab === 'accueil' ? styles.activeTab : {})
-              }}
-            >
-              🏠 Accueil
-            </button>
-            <button
-              onClick={() => handleTabChange('ia')}
-              style={{
-                ...styles.tab,
-                ...(activeTab === 'ia' ? styles.activeTab : {})
-              }}
-            >
-              🤖 IA Chat
-            </button>
-            <button
-              onClick={() => handleTabChange('contact')}
-              style={{
-                ...styles.tab,
-                ...(activeTab === 'contact' ? styles.activeTab : {})
-              }}
-            >
-              📞 Contact
-            </button>
-          </div>
 
           <div style={styles.chatBox} ref={chatBoxRef} tabIndex={-1}>
             {messages.map((msg, index) => (
@@ -409,7 +377,7 @@ const AssistantChat = () => {
               </div>
             )}
           </div>
-
+          
           {!isLoading && renderInput()}
 
           {activeTab === 'contact' && step === questions.length && (
@@ -427,6 +395,37 @@ const AssistantChat = () => {
               </p>
             </div>
           )}
+
+          {/* Onglets de navigation */}
+          <div style={styles.tabContainer}>
+            <button
+              onClick={() => handleTabChange('accueil')}
+              style={{
+                ...styles.tab,
+                ...(activeTab === 'accueil' ? styles.activeTab : {})
+              }}
+            >
+              🏠 Accueil
+            </button>
+            <button
+              onClick={() => handleTabChange('ia')}
+              style={{
+                ...styles.tab,
+                ...(activeTab === 'ia' ? styles.activeTab : {})
+              }}
+            >
+              💬 Conversation
+            </button>
+            <button
+              onClick={() => handleTabChange('contact')}
+              style={{
+                ...styles.tab,
+                ...(activeTab === 'contact' ? styles.activeTab : {})
+              }}
+            >
+              📋 prendre RDV
+            </button>
+          </div>
         </div>
       )}
     </>
@@ -436,8 +435,8 @@ const AssistantChat = () => {
 const styles = {
   chatButton: {
     position: "fixed",
-    bottom: 40,
-    right: 20,
+    bottom: 50,
+    right: 10,
     zIndex: 1100,
     backgroundColor: "#10B981",
     border: "none",
@@ -483,7 +482,7 @@ const styles = {
   },
   tabContainer: {
     display: "flex",
-    borderBottom: "1px solid #e5e7eb",
+    borderTop: "1px solid #e5e7eb",
     backgroundColor: "#f9fafb",
   },
   tab: {
@@ -500,8 +499,9 @@ const styles = {
   },
   activeTab: {
     color: "#10B981",
-    borderBottomColor: "#10B981",
+    borderTopColor: "#10B981",
     backgroundColor: "white",
+    borderTop: "2px solid #10B981",
   },
   chatBox: {
     flex: 1,

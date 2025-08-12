@@ -7,7 +7,7 @@ export default function FeatureSection() {
       number: "01",
       title: "Prenez Rendez-Vous",
       content:
-        "N’hésitez pas à prendre un rendez-vous pour poser des questions d’ordre générales tout à fait GRATUITEMENT ou prendre un rendez-vous pour une consultation plus approfondie de vos besoins personnels et AVOIR des propositions de programmes d’immigration à votre image.",
+        "vous pouvez prendre rendez-vous via l'assistante virtuelle Marie depuis l'onglet 📋prendre RDV, c'est le bouton vert avec ce symbole de messagerie💬 qui se situe au bas à droite la page.",
     },
     {
       icon: "flaticon-lifebuoy",

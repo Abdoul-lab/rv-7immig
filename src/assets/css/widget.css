@@ -34,7 +34,12 @@
 }
 .sidebar-category ul li {
     list-style: none;
-    border-top: 1px solid #E8E8E8;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: #E8E8E8;
     padding: 15px 0;
     transition: .3s;
 }
@@ -65,7 +70,12 @@
 .sidebar-archives ul li {
     list-style: none;
     display: block;
-    border-top: 1px solid #E8E8E8;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: #E8E8E8;
     padding: 15px 0;
 }
 .sidebar-archives ul li a {
@@ -78,7 +88,12 @@
 .sidebar-meta ul li {
     list-style: none;
     display: block;
-    border-top: 1px solid #E8E8E8;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: #E8E8E8;
     padding: 15px 0;
 }
 .sidebar-meta ul li a {
