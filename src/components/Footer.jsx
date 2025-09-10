@@ -34,15 +34,15 @@ const Footer = () => {
             <div className="col-lg-3 col-md-6">
               <div className="footer-content mb-30">
                 <div className="footer-logo">
-                  <img src="/images/logost1.png" alt="Logo" />
+                  <img src="/images/logo7immig.png" alt="Logo" />
                 </div>
                 <div className="dreamit-footer-social-address">
                   <ul>
                     <li>
-                      <a href="#"><i className="fab fa-facebook-f"></i></a>
+                      <a href="https://www.facebook.com/Septimmigration/" ><i className="fab fa-facebook-f"></i></a>
                     </li>
                     <li>
-                      <a href="#"><i className="fab fa-twitter"></i></a>
+                      <a href="https://www.linkedin.com/in/septime-alexandre-dodd%C3%A9-m-sc-cric-b68555101/"><i className="fab fa-linkedin"></i></a>
                     </li>
                   </ul>
                 </div>
@@ -73,14 +73,14 @@ const Footer = () => {
                 </div>
                 <div className="footer-adderss">
                   <div>
-                    <ul className="text-white">
+                    <ul>
                       <li>455 Rue King Ouest, 6ème étage (REGUS), Sherbrooke, Qc, Canada</li>
                       <li>Angré Djorogobité 1, Cocody, Abj, Côte d'Ivoire</li>
                     <br></br>
                     <b>Téléphone:</b><br></br>
-                    <span> +1 819-919-4544 / 225 070-892-7114 </span><br></br>
+                     +1 819-919-4544 <br></br> +225 070-892-7114 <br></br>
                     <b>Email:</b><br></br>
-                    <span> info@septimmigration.com </span>
+                     info@septimmigration.com 
                   </ul>
                   </div>
                 </div>

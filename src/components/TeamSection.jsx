@@ -1,5 +1,5 @@
 const TeamSection = () => (
-  <div className="team-member-area style-three pb-80">
+  <div className="team-member-area style-three pb-0">
         <div className="container">
           <div className="row">
             <div className="col-lg-12 text-center">
@@ -10,10 +10,10 @@ const TeamSection = () => (
           </div>
           <div className="row">
             {[
-              { name: "Mme Dodde", role: "Gestionnaire Principal", img: "/images/team3.jpg" },
-              { name: "Alexandre Dodde", role: "Manager général", img: "/images/team2.jpg" },
-              { name: "Mme Tchétché", role: "Comptable", img: "/images/team1.jpg" },
-              { name: "Mutiu Abayomi", role: "Responsable informatique", img: "/images/team2.jpg" },
+              { name: "Alexandre Doddé", role: "Gestionnaire Principal", img: "/images/team2.jpeg" },
+              { name: "Mutiyu Abayomi", role: "Manager général", img: "/images/team1.png" },
+              { name: "Francesca N'Guéssan", role: "Comptable", img: "/images/team4.jpg" },
+              { name: "Abdoul-Sobr Gbadamosi", role: "Responsable informatique", img: "/images/team3.png" },
             ].map((member, index) => (
               <div key={index} className="col-lg-3 col-md-6 col-sm-12">
                 <div className="dreamit-single-team">
@@ -28,8 +28,8 @@ const TeamSection = () => (
                     </div>
                   </div>
                   <div className="dreamit-team-content">
-                    <h2>{member.name}</h2>
-                    <h3>{member.role}</h3>
+                    <h3>{member.name}</h3>
+                    <h4>{member.role}</h4>
                   </div>
                 </div>
               </div>

@@ -7,43 +7,33 @@ import "swiper/css/autoplay";
 const blogPosts = [
   {
     id: 1,
-    title: "What visa do you need to work legally in Singapore?",
-    category: ["Working Visa", "Working Visa"],
-    date: "March 24, 2023",
+    title: "Entrée Express : Comment réussir sa demande en 2025",
+    category: ["Working Visa"],
+    date: "14 Août, 2025",
     author: "Septimmigration",
-    image: "/images/blog1.jpg",
+    image: "/images/EntréeExpress.jpeg",
     excerpt:
-      "Meh synth Schlitz,tempor duis single-origin coffee ea next level ethnic fingerstache.",
+      "Le guide complet pour réussir sa demande d'Entrée express en 2025.",
   },
   {
     id: 2,
-    title: "What visa do you need to work legally in Singapore?",
-    category: ["Student Visa"],
-    date: "March 24, 2023",
+    title: "PSTQ : Nouveau programmes d’immigration au Canada",
+    category: [""],
+    date: "12 Août, 2023",
     author: "Septimmigration",
-    image: "/images/bol.jpg",
+    image: "/images/PSTQ.png",
     excerpt:
-      "Meh synth Schlitz,tempor duis single-origin coffee ea next level ethnic fingerstache.",
+      "Votre petit guide pour vous aider à comprendre 🧏🏾‍♀️ éviter les erreurs 🙅🏾‍♂️ augmenter vos chances 🍀 d’immigrer au Québec",
   },
   {
     id: 3,
-    title: "What visa do you need to work legally in Singapore?",
+    title: "Pourquoi immigrer au Canada ?",
     category: ["Immigration Visa"],
     date: "March 24, 2023",
     author: "Septimmigration",
     image: "/images/bol2.jpg",
     excerpt:
-      "Meh synth Schlitz,tempor duis single-origin coffee ea next level ethnic fingerstache.",
-  },
-  {
-    id: 4,
-    title: "What visa do you need to work legally in Singapore?",
-    category: ["Student Visa"],
-    date: "March 24, 2023",
-    author: "Septimmigration",
-    image: "/images/bol.jpg",
-    excerpt:
-      "Meh synth Schlitz,tempor duis single-origin coffee ea next level ethnic fingerstache.",
+      "Découvrez les avantages d'immigrer au Canada et comment Septimmigration peut vous aider dans votre parcours.",
   },
 ];
 
@@ -54,15 +44,13 @@ const BlogSection2 = () => {
         <div className="row">
           <div className="col-lg-6 col-md-6">
             <div className="dreamit-section-main-title-2">
-              <h2>Resources & Latest News</h2>
+              <h2>Informations diverses & Actualités</h2>
             </div>
           </div>
           <div className="col-lg-6 col-md-6">
             <div className="title-content pb-4">
               <p>
-                Cursus porta, feugiat primis in ultrice ligula risus auctor
-                tempus dolor feugiat, felis lacinia risus interdum auctor id
-                viverra dolo.
+                Cette section regroupe des actualités fiables et des informations pratiques concernant l’immigration au Canada, afin de vous tenir informé des évolutions récentes et de vous accompagner dans vos démarches.
               </p>
             </div>
           </div>
@@ -110,7 +98,7 @@ const BlogSection2 = () => {
                     </div>
                     <div className="dreamit-blog-button">
                       <a href="#">
-                        read more <i className="fas fa-chevron-right"></i>
+                        En savoir plus <i className="fas fa-chevron-right"></i>
                       </a>
                     </div>
                   </div>

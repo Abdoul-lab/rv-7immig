@@ -93,8 +93,9 @@ const Header = () => {
             </div>
             <div className="col-lg-4">
               <div className="header-top-social">
-                <a href="#"><i className="fab fa-facebook-f"></i></a>
-                <a href="#"><i className="fab fa-twitter"></i></a>
+                <a href="https://www.facebook.com/Septimmigration/"><i className="fab fa-facebook-f"></i>acebook </a>
+                <a href="#"><i className="fas fa-map-marke-alt"></i> </a>
+                <a href="https://www.linkedin.com/in/septime-alexandre-dodd%C3%A9-m-sc-cric-b68555101/"><i className="fab fa-linkedin"></i> LinkedIn </a>
               </div>
             </div>
           </div>
@@ -134,10 +135,10 @@ const Header = () => {
               <div className="col-lg-3">
                 <div className="header-logo">
                   <Link className="main-logo" to="/" onClick={closeMobileMenu}>
-                    <img src="/images/logost1.png" alt="Logo" />
+                    <img src="/images/logo7immig.png" alt="Logo" />
                   </Link>
                   <Link className="stiky-logo" to="/" onClick={closeMobileMenu}>
-                    <img src="/images/logost1.png" alt="Logo" />
+                    <img src="/images/logo7immig.png" alt="Logo" />
                   </Link>
                 </div>
               </div>
@@ -145,7 +146,7 @@ const Header = () => {
                 <div className="header-menu">
                   <ul>
                     <li><Link to="/" onClick={closeMobileMenu}>Accueil</Link></li>
-                    <li><Link to="/education-visa" onClick={closeMobileMenu}>CANADA</Link></li>
+                    {/* <li><Link to="/education-visa" onClick={closeMobileMenu}>CANADA</Link></li> */}
                     <li><Link to="/scgCalculator" onClick={closeMobileMenu}>Entrée express </Link></li>
                     {/* <li>
                       <button
@@ -166,9 +167,9 @@ const Header = () => {
                       </div>
                     </li> */}
                     <li><Link to="/about" onClick={closeMobileMenu}>À propos</Link></li>
-                    <li><Link to="/blog" onClick={closeMobileMenu}>Blog</Link></li>
+                    {/* <li><Link to="/blog" onClick={closeMobileMenu}>Blog</Link></li> */}
                     <li><Link to="/contact" onClick={closeMobileMenu}>Contact</Link></li>
-                    <li><Link to="/formations" onClick={closeMobileMenu}>Formation</Link></li>
+                    {/* <li><Link to="/formations" onClick={closeMobileMenu}>Formation</Link></li> */}
                     
                   </ul>
 

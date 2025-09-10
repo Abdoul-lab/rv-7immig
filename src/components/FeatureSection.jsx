@@ -12,9 +12,9 @@ export default function FeatureSection() {
     {
       icon: "flaticon-lifebuoy",
       number: "02",
-      title: "Experts en Immigration",
+      title: "Expert en Immigration",
       content:
-        "N’hésitez pas à prendre un rendez-vous pour poser des questions d’ordre générales tout à fait GRATUITEMENT ou prendre un rendez-vous pour une consultation plus approfondie de vos besoins personnels et AVOIR des propositions de programmes d’immigration à votre image.",
+        "N’hésitez pas à prendre un rendez-vous pour poser des questions d’ordre générales ou prendre un rendez-vous pour une consultation plus approfondie de vos besoins personnels et AVOIR des propositions de programmes d’immigration vous correspondant.",
     },
     {
       icon: "flaticon-content-writing",

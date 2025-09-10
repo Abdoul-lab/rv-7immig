@@ -24,12 +24,10 @@ export default function AboutSection() {
               <img src="/images/about-pic.png" alt="À propos" />
             </div>
             <div className="dreamit-single-counter" ref={ref}>
-              <div className="counter-text">
-                <h3>+</h3>
-                <h1 className="counter dis">
-                  {inView ? <CountUp end={370} duration={3} /> : "0"}
-                </h1>
-                
+              <div className="counter-title">
+                <h4 >
+                 + {inView ? <CountUp end={300} duration={3} /> : "0"}
+                </h4>
               </div>
               <div className="counter-title">
                 <h4>visas obtenus</h4>
@@ -40,7 +38,7 @@ export default function AboutSection() {
           {/* Colonne droite - texte */}
           <div className="col-lg-6 pl-5 pt-50">
             <div className="dreamit-section-title pb-30">
-              <div className="dreamit-section-sub-title">
+              <div className="dreamzit-section-sub-title">
                 <h5>LE MEILLEUR CONSEILLER EN IMMIGRATION</h5>
               </div>
               <div className="dreamit-section-main-title">
@@ -78,11 +76,11 @@ export default function AboutSection() {
             </div>
 
             {/* Bouton */}
-            <div className="about-button pt-4">
+            {/* <div className="about-button pt-4">
               <a href="#">
                 Découvrir plus <i className="fas fa-chevron-right"></i>
               </a>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

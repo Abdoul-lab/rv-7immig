@@ -1,204 +1,182 @@
-import React from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
+import articles from "../data/articlesData";
 
 const Blog = () => {
+  // Trier les articles par date (plus récent en premier)
+  const sortedArticles = [...articles].sort(
+    (a, b) => new Date(b.date) - new Date(a.date)
+  );
+
+  // États pour recherche, filtre et pagination
+  const [searchTerm, setSearchTerm] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState("Tous");
+  const [currentPage, setCurrentPage] = useState(1);
+  const articlesPerPage = 6;
+
+  // Récupérer toutes les catégories uniques
+  const categories = ["Tous", ...new Set(articles.map((a) => a.category))];
+
+  // Filtrer les articles
+  const filteredArticles = sortedArticles.filter((article) => {
+    const matchesCategory =
+      selectedCategory === "Tous" || article.category === selectedCategory;
+    const matchesSearch = article.title
+      .toLowerCase()
+      .includes(searchTerm.toLowerCase());
+    return matchesCategory && matchesSearch;
+  });
+
+  // Pagination
+  const totalPages = Math.ceil(filteredArticles.length / articlesPerPage);
+  const indexOfLastArticle = currentPage * articlesPerPage;
+  const indexOfFirstArticle = indexOfLastArticle - articlesPerPage;
+  const currentArticles = filteredArticles.slice(
+    indexOfFirstArticle,
+    indexOfLastArticle
+  );
+
+  // Formater la date
+  const formatDate = (dateString) =>
+    new Date(dateString).toLocaleDateString("fr-FR", {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    });
+
   return (
-    <>
-    {/*==================================================*/}
-{/* start Septimmigration breatcome Area */}
-{/*==================================================*/}
-<div className="breatcome-area d-flex align-items-center">
-  <div className="container">
-    <div className="row">
-      <div className="col-lg-12">
-        <div className="breatcome-content text-center">
-          <div className="breatcome-content-title">
-            <h1>Blog</h1>
-          </div>
-          <div className="breatcome-content-text">
-            <ul>
-              <li>
-                <a href="index.html">Home </a>
-                <i className="fas fa-chevron-right"></i> <span>Blog Grid</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+    <div className="blog-area py-5">
+      <div className="container">
+        <h1 className="text-center mb-5">Nos articles</h1>
 
-{/*==================================================*/}
-{/* // start Septimmigration----BLOG---- Area */}
-{/*==================================================*/}
-<div className="blog-area style-five pt-65 pb-60">
-  <div className="container">
-    <div className="row pt-20">
-      <div className="col-lg-4 col-md-6">
-        <div className="dreamit-single-blog-box">
-          <div className="dreamit-blog-thumb">
-            <a href="#"><img src="/images/blog1.jpg" alt="" /></a>
-            <div className="post-catgory">
-              <a href="#">Working Visa</a>
-              <a href="#">Working Visa</a>
-            </div>
+        {/* Barre de recherche et filtre */}
+        <div className="row mb-4 g-2">
+          <div className="col-md-6 col-sm-12">
+            <input
+              type="text"
+              placeholder="Rechercher par titre..."
+              className="form-control"
+              value={searchTerm}
+              onChange={(e) => {
+                setSearchTerm(e.target.value);
+                setCurrentPage(1);
+              }}
+            />
           </div>
-          <div className="dreamit-meta-box">
-            <a href="#">Septimmigration</a>
-            <h3>March 24, 2023</h3>
+          <div className="col-md-6 col-sm-12">
+            <select
+              className="form-select"
+              value={selectedCategory}
+              onChange={(e) => {
+                setSelectedCategory(e.target.value);
+                setCurrentPage(1);
+              }}
+            >
+              {categories.map((cat, i) => (
+                <option key={i} value={cat}>
+                  {cat}
+                </option>
+              ))}
+            </select>
           </div>
+        </div>
 
-          <div className="dreamit-blog-content">
-            <div className="dreamit-blog-title">
-              <h2>
-                <a href="blog-details.html">What visa do you need to work legally in Singapore?</a>
-              </h2>
-            </div>
-            <div className="dreamit-blog-text">
-              <p>Meh synth Schlitz,tempor duis single-origin coffee ea next level ethnic fingerstache.</p>
-            </div>
-          </div>
+        {/* Liste d’articles */}
+        <div className="row">
+          {currentArticles.length > 0 ? (
+            currentArticles.map((article) => (
+              <div key={article.slug} className="col-lg-4 col-md-6 mb-4">
+                <div className="card h-100 shadow-sm">
+                  <img
+                    src={article.mainImage}
+                    alt={article.title}
+                    className="card-img-top"
+                    style={{ height: "200px", objectFit: "cover" }}
+                  />
+                  <div className="card-body d-flex flex-column">
+                    <p className="text-muted small mb-2">
+                      <span className="badge bg-secondary me-2">
+                        {article.category}
+                      </span>
+                      {formatDate(article.date)}
+                    </p>
+                    <h5 className="card-title">{article.title}</h5>
+                    <p className="card-text flex-grow-1">
+                      {article.intro.length > 100
+                        ? article.intro.substring(0, 100) + "..."
+                        : article.intro}
+                    </p>
+                    <Link
+                      to={`/blog/${article.slug}`}
+                      className="btn btn-primary mt-auto"
+                    >
+                      Lire la suite →
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            ))
+          ) : (
+            <p className="text-center">Aucun article trouvé.</p>
+          )}
         </div>
-      </div>
-      <div className="col-lg-4 col-md-6">
-        <div className="dreamit-single-blog-box">
-          <div className="dreamit-blog-thumb">
-            <a href="#"><img src="/images/bol.jpg" alt="" /></a>
-            <div className="post-catgory">
-              <a href="#">Student Visa</a>
-            </div>
+
+        {/* Pagination */}
+        {totalPages > 1 && (
+          <div className="d-flex justify-content-center mt-4">
+            <nav>
+              <ul className="pagination flex-wrap">
+                <li
+                  className={`page-item ${
+                    currentPage === 1 ? "disabled" : ""
+                  }`}
+                >
+                  <button
+                    className="page-link"
+                    onClick={() =>
+                      setCurrentPage((prev) => Math.max(prev - 1, 1))
+                    }
+                  >
+                    ← Précédent
+                  </button>
+                </li>
+
+                {[...Array(totalPages)].map((_, index) => (
+                  <li
+                    key={index}
+                    className={`page-item ${
+                      currentPage === index + 1 ? "active" : ""
+                    }`}
+                  >
+                    <button
+                      className="page-link"
+                      onClick={() => setCurrentPage(index + 1)}
+                    >
+                      {index + 1}
+                    </button>
+                  </li>
+                ))}
+
+                <li
+                  className={`page-item ${
+                    currentPage === totalPages ? "disabled" : ""
+                  }`}
+                >
+                  <button
+                    className="page-link"
+                    onClick={() =>
+                      setCurrentPage((prev) => Math.min(prev + 1, totalPages))
+                    }
+                  >
+                    Suivant →
+                  </button>
+                </li>
+              </ul>
+            </nav>
           </div>
-          <div className="dreamit-meta-box">
-            <a href="#">Septimmigration</a>
-            <h3>March 24, 2023</h3>
-          </div>
-          <div className="dreamit-blog-content">
-            <div className="dreamit-blog-title">
-              <h2>
-                <a href="blog-details.html">What visa do you need to work legally in Singapore?</a>
-              </h2>
-            </div>
-            <div className="dreamit-blog-text">
-              <p>Meh synth Schlitz,tempor duis single-origin coffee ea next level ethnic fingerstache.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="col-lg-4 col-md-6">
-        <div className="dreamit-single-blog-box">
-          <div className="dreamit-blog-thumb">
-            <a href="#"><img src="/images/bol2.jpg" alt="" /></a>
-            <div className="post-catgory">
-              <a href="#">Immigration Visa</a>
-            </div>
-          </div>
-          <div className="dreamit-meta-box">
-            <a href="#">Septimmigration</a>
-            <h3>March 24, 2023</h3>
-          </div>
-          <div className="dreamit-blog-content">
-            <div className="dreamit-blog-title">
-              <h2>
-                <a href="blog-details.html">What visa do you need to work legally in Singapore?</a>
-              </h2>
-            </div>
-            <div className="dreamit-blog-text">
-              <p>Meh synth Schlitz,tempor duis single-origin coffee ea next level ethnic fingerstache.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="col-lg-4 col-md-6">
-        <div className="dreamit-single-blog-box">
-          <div className="dreamit-blog-thumb">
-            <a href="#"><img src="/images/bol2.jpg" alt="" /></a>
-            <div className="post-catgory">
-              <a href="#">Immigration Visa</a>
-            </div>
-          </div>
-          <div className="dreamit-meta-box">
-            <a href="#">Septimmigration</a>
-            <h3>March 24, 2023</h3>
-          </div>
-          <div className="dreamit-blog-content">
-            <div className="dreamit-blog-title">
-              <h2>
-                <a href="blog-details.html">What visa do you need to work legally in Singapore?</a>
-              </h2>
-            </div>
-            <div className="dreamit-blog-text">
-              <p>Meh synth Schlitz,tempor duis single-origin coffee ea next level ethnic fingerstache.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="col-lg-4 col-md-6">
-        <div className="dreamit-single-blog-box">
-          <div className="dreamit-blog-thumb">
-            <a href="#"><img src="/images/bol2.jpg" alt="" /></a>
-            <div className="post-catgory">
-              <a href="#">Immigration Visa</a>
-            </div>
-          </div>
-          <div className="dreamit-meta-box">
-            <a href="#">Septimmigration</a>
-            <h3>March 24, 2023</h3>
-          </div>
-          <div className="dreamit-blog-content">
-            <div className="dreamit-blog-title">
-              <h2>
-                <a href="blog-details.html">What visa do you need to work legally in Singapore?</a>
-              </h2>
-            </div>
-            <div className="dreamit-blog-text">
-              <p>Meh synth Schlitz,tempor duis single-origin coffee ea next level ethnic fingerstache.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="col-lg-4 col-md-6">
-        <div className="dreamit-single-blog-box">
-          <div className="dreamit-blog-thumb">
-            <a href="#"><img src="/images/bol2.jpg" alt="" /></a>
-            <div className="post-catgory">
-              <a href="#">Immigration Visa</a>
-            </div>
-          </div>
-          <div className="dreamit-meta-box">
-            <a href="#">Septimmigration</a>
-            <h3>March 24, 2023</h3>
-          </div>
-          <div className="dreamit-blog-content">
-            <div className="dreamit-blog-title">
-              <h2>
-                <a href="blog-details.html">What visa do you need to work legally in Singapore?</a>
-              </h2>
-            </div>
-            <div className="dreamit-blog-text">
-              <p>Meh synth Schlitz,tempor duis single-origin coffee ea next level ethnic fingerstache.</p>
-            </div>
-          </div>
-        </div>
+        )}
       </div>
     </div>
-    {/* pagination */}
-    <div className="row">
-      <div className="col-lg-12">
-        <div className="pagiation">
-          <div className="page-number pt-30">
-            <ul>
-            <li><Link className="active" to="/blog">1</Link></li>
-            <li><Link to="/blog">2</Link></li>
-            <li><Link to="/blog">3</Link></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-</>
   );
 };
 

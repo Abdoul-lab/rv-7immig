@@ -1,7 +1,8 @@
-import AboutSection from "../components/AboutSection";
+// import AboutSection from "../components/AboutSection";
 import Breadcrumb from "../components/BreadCrumb";
 import CallToAction from "../components/callToAction";
-import ExperienceSection from "../components/ExperienceSection";
+// import ExperienceSection from "../components/ExperienceSection";
+import VisaAssessmentSection from "../components/VisaAssessmentSection";
 import TeamSection from "../components/TeamSection";
 import TestimonialsSection from "../components/TestimonialsSection";
 import WhyChooseUs from "../components/WhyChooseUs";
@@ -15,13 +16,12 @@ const About = () => (
       { label: "À propos" }
     ]}
   />
-  <AboutSection />
-  <CallToAction />
-  <ExperienceSection />
   <TeamSection />
+  <CallToAction />
+  <VisaAssessmentSection />
   <WhyChooseUs />
-  <TestimonialsSection />
   
+  {/* <TestimonialsSection /> */}
 </>
 ); 
 

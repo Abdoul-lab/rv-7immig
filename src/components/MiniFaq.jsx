@@ -1,6 +1,5 @@
-// src/components/MiniFaq.jsx
-
 import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 
 const MiniFaq = () => {
   return (
@@ -14,8 +13,8 @@ const MiniFaq = () => {
         <li>📌 Dois-je passer un test de langue (TEF, IELTS) ?</li>
         <li>📌 Puis-je venir au Canada avec ma famille ?</li>
       </ul>
-      <Link
-        to="/scgCalculator"
+      <HashLink
+        to="/scgCalculator#faq"
         style={{
           marginTop: '1rem',
           display: 'inline-block',
@@ -28,7 +27,7 @@ const MiniFaq = () => {
         }}
       >
         Voir toutes les questions →
-      </Link>
+      </HashLink>
     </section>
   );
 };

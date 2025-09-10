@@ -124,39 +124,8 @@ export default function ScgResults({ scoreBreakdown }) {
 
       <div className="bg-light rounded p-4">
         <h5 className="fw-semibold mb-2">📊 Historique des tirages récents</h5>
-        <p className="text-muted small mb-3">
-          Scores minimaux des derniers tirages Entrée Express (indicatif) :
-        </p>
-
-        <div className="row text-center g-3">
-          <div className="col-6 col-md-3">
-            <div className="bg-white p-3 border rounded">
-              <div className="fw-bold fs-5">485</div>
-              <div className="text-muted small">Dernier tirage</div>
-            </div>
-          </div>
-          <div className="col-6 col-md-3">
-            <div className="bg-white p-3 border rounded">
-              <div className="fw-bold fs-5">478</div>
-              <div className="text-muted small">Moyenne 2024</div>
-            </div>
-          </div>
-          <div className="col-6 col-md-3">
-            <div className="bg-white p-3 border rounded">
-              <div className="fw-bold fs-5">490</div>
-              <div className="text-muted small">Maximum 2024</div>
-            </div>
-          </div>
-          <div className="col-6 col-md-3">
-            <div className="bg-white p-3 border rounded">
-              <div className="fw-bold fs-5">464</div>
-              <div className="text-muted small">Minimum 2024</div>
-            </div>
-          </div>
-        </div>
-
-        <p className="text-muted small mt-3">
-          * Ces données sont approximatives et peuvent changer. Consultez le site officiel d'IRCC pour les données exactes.
+        <p className="text-muted small">
+          Consultez <a href='https://www.canada.ca/fr/immigration-refugies-citoyennete/services/immigrer-canada/entree-express/rondes-invitations.html' target="_blank" rel="noopener noreferrer">le site officiel d'IRCC</a> pour les données exactes.
         </p>
       </div>
     </div>

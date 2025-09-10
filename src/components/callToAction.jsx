@@ -2,7 +2,7 @@ import React from 'react';
 
 const CallToAction = () => {
   return (
-    <div className="call-do-action pt-220 pb-185">
+    <div className="call-do-action pt-220 pb-18">
       <div className="container">
         <div className="row">
           <div
@@ -19,7 +19,7 @@ const CallToAction = () => {
                     className="video-vemo-icon venobox vbox-item"
                     data-vbtype="youtube"
                     data-autoplay="true"
-                    href="https://www.youtube.com/watch?v=BsTpnBtqBOU&ab_channel=WsCubeTech"
+                    href=""
                   >
                     <i className="far fa-play-circle"></i>
                   </a>
@@ -28,21 +28,20 @@ const CallToAction = () => {
 
               {/* Titres */}
               <div className="dreamit-section-main-title">
-                <h1 className="text-white">Unparalleled Consultancy from</h1>
-                <h2 className="text-white">Best Experienced Lawyers</h2>
+                <h1 className="text-white">✨ Un accompagnement d’excellence</h1>
+                <h2 className="text-white">avec nos experts spécialisés</h2>
               </div>
 
               {/* Texte */}
               <div className="dreamit-contet-text">
                 <p>
-                  Septimmigration gives their consultancy by a registered and
-                  experienced lawyer. For your immigration.
+                  Chez Septimmigration, nos services sont assurés par des consultant inscrits et expérimentés, afin de vous guider en toute sécurité dans vos démarches d’immigration au Canada.
                 </p>
               </div>
 
               {/* Bouton */}
               <div className="call-to-action-btn">
-                <a href="#">Meet With A Lawyer</a>
+                <a href="#">RDV avec un consultant</a>
               </div>
 
             </div>

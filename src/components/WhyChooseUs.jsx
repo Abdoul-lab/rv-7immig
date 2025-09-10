@@ -3,7 +3,7 @@ import CounterSection from "./CounterSection";
 export default function WhyChooseUs() {
 
   return (
-    <div className="counter-area pt-65">
+    <div className="counter-area pt-65 pb-0">
       <div className="container">
         <div className="row">
           <div className="col-lg-12">

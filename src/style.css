@@ -4,7 +4,7 @@
 	-==================================*/
 
 .card, .card * {
-  color: #000 !important;
+  color: #000000 !important;
 }
 
 .header-menu {
@@ -26,7 +26,7 @@
 	z-index: -1;
 	transform: skew(-26deg);
 	padding-left: 20px;
-	background: #F12A02;
+	background: #f00;
 }
 .header-top-address a i {
     margin-right: 10px;
@@ -44,7 +44,7 @@
 	font-weight: 400;
 	margin-right: 20px;
 }
-.hrader-top-social {
+.header-top-social {
 	text-align: right;
 }
 .hrader-top-social a {
@@ -61,7 +61,7 @@
 .header-menu .sub-menu {
     height: auto;
     width: 230px;
-    background: #fff;
+    background: #f4f7fc;
     box-shadow: 0 0 5px rgba(0,0, 0,0.2);
     position: absolute;
     text-align: left;
@@ -78,7 +78,7 @@
 }
 .header-area .sub-menu ul li a {
      position: relative;
-     color: #000;
+     color: #006ae7;
      margin: 10px 8px 10px 20px;
 }
 .header-menu ul li:hover .sub-menu{
@@ -137,7 +137,7 @@ display: block !important;
 	start-header-area-------------------------
 	-=========================================*/
 .header-area.transparent {
-	background-color: rgba(17,26,58,0.4);
+	background-color: #f4f7fc;
 	position: relative;
 	margin-bottom: -94px;
 	z-index: 22;
@@ -165,11 +165,11 @@ border-top: 1px dotted rgba(120, 125, 130, .8);
 }
 .header-menu ul li a {
 	display: inline-block;
-	font-size: 15px;
+	font-size: 17px;
 	margin: 35px 8px;
 	text-transform: capitalize;
-	font-weight: 400;
-	color: #fff;
+	font-weight: 500;
+	color: #1f1e50;
 }
 .header-menu ul li a i {
 	opacity: 0.7;
@@ -483,7 +483,7 @@ start search Popup Css
     animation: 300ms ease-in-out 0s normal none 1 running fadeInDown;
     -webkit-box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1);
     transition: .5s !important;
-    background: #f12a02 !important;
+    background: #ffffff !important;
     animation-name: slideInDown;
     animation-duration: 1.5s;
 }
@@ -3791,9 +3791,10 @@ span.fill {
 }
 .country-content-text p {
     color: gray;
-    width: 80%;
+    width: 100%;
     margin: auto;
     padding-bottom: 15px;
+    text-align: justify;
 }
 .country-button {
     display: inline-block;
@@ -4185,6 +4186,7 @@ span.fill {
 }
 .counter-title-style-2 h4 {
     text-transform: capitalize;
+    text-align: justify;
     font-size: 30px;
     margin-top: 2px;
     font-weight: 300;
@@ -4194,7 +4196,7 @@ span.fill {
 
 /*counter section*/
 .counter-section .single-counter-text {
-    background: transparent;
+    background: white;
     border-radius: 7px;
     box-shadow: none;
     margin-bottom: 30px;
@@ -5658,11 +5660,12 @@ margin-bottom: 0;
 		Start-Footer-area
 	-=========================================*/
 .footer-area {
-    background: #111a3a;
-    padding-top: 85px;
+    /* background: #111a3a; */
+    background: #f4f7fc;
+    padding-top: 65px;
 }
 .dreamit-footer-content p {
-    color: rgba(255,255,255,0.80);
+    color: #000000;
     margin-top: 28px;
     font-size: 17px;
 }
@@ -5677,18 +5680,18 @@ margin-bottom: 0;
     width: 35px;
     line-height: 35px;
     font-size: 15px;
-    border: 1px solid #fff;
+    border: 1px solid #dd3333;
     text-align: center;
     display: block;
     margin-right: 5px;
     border-radius: 3px;
     transition: .5s;
     margin-top: 16px;
-    color: #fff;
+    color: #1838ac;
 }
 .dreamit-footer-social-address ul li a i:hover{
-	background: #dc3545;
-	border-color:#dc3545;
+	background: #006ae7;
+	border-color:#006ae7;
 }
 /*-============footer-title-=========*/
 .footer-content {
@@ -5697,7 +5700,7 @@ margin-bottom: 0;
 }
 .footer-title h2 {
     font-size: 22px;
-    color: #f8f9fe;
+    color: #1838ac;
     margin-bottom: 35px;
 }
 .footer-menu ul li {
@@ -5705,7 +5708,7 @@ margin-bottom: 0;
 }
 .footer-menu ul li a {
     font-size: 16px;
-    color: rgba(255,255,255,0.80);
+    color: #000000;
     display: inline-block;
     position: relative;
     margin-left: 25px;
@@ -5720,7 +5723,7 @@ margin-bottom: 0;
     left: -24px;
     height: 1px;
     width: 13px;
-    background: #fff;
+    background: #006ae7;
 }
 .footer-menu ul li a:hover{
 	color:  #dc3545;
@@ -5729,21 +5732,21 @@ margin-bottom: 0;
 /*-=======middle-footer-title--========*/
 .footer-title p {
     font-size: 17px;
-    color: rgba(255,255,255,0.80);
+    color: #000000;
     font-weight: 400;
 }
 .footer-adderss h2 {
     font-size: 20px;
-    color: #6c757d;
+    color: #000000;
 }
 .footer-adderss p b {
-    color: rgba(255,255,255,0.80);
+    color: #000000;
     text-transform: capitalize;
     font-size: 18px;
 }
 .footer-adderss p span {
     font-size: 16px;
-    color: rgba(255,255,255,0.80);
+    color: #000000;
     font-weight: 600;
 }
 /*-======footer style 4-=========*/
@@ -5793,7 +5796,7 @@ button.subscribe-button i {
     margin-top: 37px;
 }
 .copy-right-text p {
-    color: #f8f9fe;
+    color: #000000;
     margin-top: 1px;
 }
 .footer-text-menu {
@@ -5806,35 +5809,35 @@ button.subscribe-button i {
 .footer-text-menu ul li a {
     display: inline-block;
     margin-left: 19px;
-    color: #f8f9fe;
+    color: #000000;
     font-size: 14px;
 }
 /* placeholder-area----*/
 .subscribe-area input::-moz-placeholder {
-	color: #fff;
+	color: #000000;
 	font-size: 17px;
 }
 .subscribe-area ::-webkit-input-placeholder {
 	/* Chrome/Opera/Safari */
-	color: #fff !important;
+	color: #000000 !important;
 	font-size: 16px;
 	font-weight:400;
 }
 .subscribe-area ::-moz-placeholder {
 	/* Firefox 19+ */
-	color: #fff !important;
+	color: #000000 !important;
 	font-size: 16px;
 	font-weight:400;
 }
 .subscribe-area :-ms-input-placeholder {
 	/* IE 10+ */
-	color: #fff !important;
+	color: #000000 !important;
 	font-size: 16px;
 	font-weight:400;
 }
 .subscribe-area :-moz-placeholder {
 	/* Firefox 18- */
-	color: #fff !important;
+	color: #000000 !important;
 	font-size: 16px;
 	font-weight:400;
 }

@@ -34,10 +34,10 @@ const Counter = ({ value, delay }) => {
 };
 
 const counters = [
-  { icon: 'flaticon-ui', value: 480, label: 'student', delay: 0 },
-  { icon: 'flaticon-global', value: 560, label: 'Immigration', delay: 0.2 },
-  { icon: 'flaticon-time', value: 15000, label: 'Universities', delay: 0.4 },
-  { icon: 'flaticon-compass', value: 200, label: 'Country', delay: 0.6 },
+  { icon: 'flaticon-ui', value: 150, label: 'étudiants accompagnés', delay: 0 },
+  { icon: 'flaticon-global', value: 300, label: 'projets d’immigration réussis', delay: 0.2 },
+  { icon: 'flaticon-time', value: 1600, label: 'établissements d\'enseignement désignés disponibles', delay: 0.4 },
+  { icon: 'flaticon-compass', value: 10, label: 'provinces de destination possibles', delay: 0.6 },
 ];
 
 const CounterSection = () => (
@@ -48,15 +48,15 @@ const CounterSection = () => (
           <div
             key={idx}
             className="col-lg-3 col-md-6 wow fadeInUp animated"
-            style={{ animationDuration: '1500ms' }}
+            style={{ animationDuration: '3500ms' }}
           >
             <div className="single-counter-text">
               <div className="counter-icon">
                 <i className={icon}></i>
               </div>
               <div className="counter-content d-flex align-items-end gap-1">
-                <Counter value={value} delay={delay} />
                 <h3>+</h3>
+                <Counter value={value} delay={delay} />
               </div>
               <div className="counter-title-style-2">
                 <h4>{label}</h4>

@@ -29,21 +29,21 @@ Marie vous posera quelques questions, puis vous recevrez un lien vers un formula
 • Résidence permanente 🏠`
   },
   {
-  question: "Quels sont les délais d’immigration ?",
-  answer: (
-    <div>
-      Cela dépend du programme, veuillez consulter les 
-      <a
-            href="https://www.canada.ca/fr/immigration-refugies-citoyennete/services/demande/verifier-delais-traitement.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            infos officielles
-          </a>
-    </div>
-  )
-},
-
+    question: "Quels sont les délais d’immigration ?",
+    answer: (
+      <div>
+        Cela dépend du programme, veuillez consulter les{" "}
+        <a
+          href="https://www.canada.ca/fr/immigration-refugies-citoyennete/services/demande/verifier-delais-traitement.html"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ color: "#1D4ED8", textDecoration: "underline" }}
+        >
+          infos officielles
+        </a>
+      </div>
+    )
+  },
   {
     question: "Combien ça coûte ?",
     answer: `Les frais varient selon le programme et ci-dessous vous avez une estimation des frais gouvernementaux qui sont susceptibles de varier, il faut également prévoir des frais de service par prestation de notre part:
@@ -77,17 +77,27 @@ const FaqAccordion = () => {
   };
 
   return (
-    <div style={styles.container}>
+    <div id="faq" style={styles.container}>
       <h2 style={styles.title}>📚 Foire aux questions (FAQ)</h2>
       {faqData.map((item, index) => (
         <div key={index} style={styles.item}>
           <button
             onClick={() => toggleIndex(index)}
-            style={styles.question}
+            style={{
+              ...styles.question,
+              color: openIndex === index ? "#1D4ED8" : "#111827"
+            }}
             aria-expanded={openIndex === index}
           >
             {item.question}
-            <span style={{ transform: openIndex === index ? "rotate(90deg)" : "rotate(0)", transition: "0.3s" }}>▶</span>
+            <span
+              style={{
+                ...styles.icon,
+                transform: openIndex === index ? "rotate(90deg)" : "rotate(0)"
+              }}
+            >
+              ▶
+            </span>
           </button>
           {openIndex === index && <div style={styles.answer}>{item.answer}</div>}
         </div>
@@ -98,20 +108,28 @@ const FaqAccordion = () => {
 
 const styles = {
   container: {
-    maxWidth: 700,
+    maxWidth: 800,
     margin: "2rem auto",
-    padding: "1rem",
-    fontFamily: "'Segoe UI', sans-serif"
+    padding: "1.5rem",
+    fontFamily: "'Segoe UI', sans-serif",
+    background: "#F9FAFB",
+    borderRadius: "12px",
+    boxShadow: "0 4px 12px rgba(0,0,0,0.1)"
   },
   title: {
-    fontSize: "1.5rem",
+    fontSize: "1.8rem",
     marginBottom: "1.5rem",
     textAlign: "center",
-    color: "#10B981"
+    fontWeight: "bold",
+    color: "#DC2626", // rouge Canada
+    borderBottom: "3px solid #1D4ED8", // bleu Canada
+    display: "inline-block",
+    paddingBottom: "0.3rem"
   },
   item: {
-    borderBottom: "1px solid #e5e7eb",
-    padding: "0.8rem 0"
+    borderBottom: "1px solid #E5E7EB",
+    padding: "0.8rem 0",
+    transition: "background 0.3s ease"
   },
   question: {
     width: "100%",
@@ -119,19 +137,29 @@ const styles = {
     background: "none",
     border: "none",
     padding: "0.5rem",
-    fontSize: "1rem",
-    fontWeight: "bold",
+    fontSize: "1.05rem",
+    fontWeight: "600",
     cursor: "pointer",
-    color: "#111827",
     display: "flex",
     justifyContent: "space-between",
-    alignItems: "center"
+    alignItems: "center",
+    transition: "color 0.3s ease"
+  },
+  icon: {
+    transition: "transform 0.3s ease",
+    color: "#1D4ED8",
+    fontWeight: "bold"
   },
   answer: {
-    padding: "0.5rem 1rem",
+    padding: "0.7rem 1rem",
     fontSize: "0.95rem",
-    color: "#4B5563",
-    whiteSpace: "pre-line"
+    color: "#374151",
+    whiteSpace: "pre-line",
+    lineHeight: "1.5",
+    background: "#FFFFFF",
+    borderRadius: "8px",
+    marginTop: "0.5rem",
+    boxShadow: "inset 0 1px 4px rgba(0,0,0,0.05)"
   }
 };
 
