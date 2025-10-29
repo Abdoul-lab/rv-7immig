@@ -166,8 +166,8 @@ const Header = () => {
                         </ul>
                       </div>
                     </li> */}
+                    <li><Link to="/blog" onClick={closeMobileMenu}>Blog</Link></li>
                     <li><Link to="/about" onClick={closeMobileMenu}>À propos</Link></li>
-                    {/* <li><Link to="/blog" onClick={closeMobileMenu}>Blog</Link></li> */}
                     <li><Link to="/contact" onClick={closeMobileMenu}>Contact</Link></li>
                     {/* <li><Link to="/formations" onClick={closeMobileMenu}>Formation</Link></li> */}
                     

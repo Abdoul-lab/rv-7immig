@@ -3,6 +3,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Assistant from "./components/Assistant";
+import ScgCalculator from "./pages/ScgCalculator";
 
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -36,6 +37,7 @@ const App = () => {
 
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/scgCalculator" element={<ScgCalculator />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
 

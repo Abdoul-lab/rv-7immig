@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import articles from "../data/articlesData";
+import Breadcrumb from "../components/BreadCrumb";
 
 const Blog = () => {
   // Trier les articles par date (plus récent en premier)
@@ -45,6 +46,14 @@ const Blog = () => {
     });
 
   return (
+    <>
+    <Breadcrumb
+    title="Blog"
+    links={[
+      { label: "Accueil", href: "/" },
+      { label: "Articles de Blog" }
+    ]}
+  />
     <div className="blog-area py-5">
       <div className="container">
         <h1 className="text-center mb-5">Nos articles</h1>
@@ -177,6 +186,7 @@ const Blog = () => {
         )}
       </div>
     </div>
+    </>
   );
 };
 

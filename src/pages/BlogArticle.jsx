@@ -1,4 +1,4 @@
-import React /*, { useState }*/ from "react";
+import React , { useState } from "react";
 import { Link } from "react-router-dom";
 
 const BlogArticle = ({
@@ -10,7 +10,7 @@ const BlogArticle = ({
   sections,
 }) => {
   // Commentaire frontend (désactivé, à activer plus tard)
-  /*
+  
   const [comments, setComments] = useState([]);
   const [name, setName] = useState("");
   const [message, setMessage] = useState("");
@@ -22,7 +22,7 @@ const BlogArticle = ({
     setName("");
     setMessage("");
   };
-  */
+  
 
   return (
     <>
@@ -83,7 +83,7 @@ const BlogArticle = ({
               </div>
               <div className="assesstment-form-box">
                 <div className="assesstment-form-title">
-                  <h2>Évaluation gratuite</h2>
+                  <h2>Pour un accompagnement personnalisé</h2>
                 </div>
                 <form action="mail.php">
                   <div className="row mt-20">
@@ -113,6 +113,7 @@ const BlogArticle = ({
                         <option>Visiteur</option>
                         <option>Travailleur</option>
                         <option>Regroupement familial</option>
+                        <option>Autre</option>
                       </select>
                     </div>
                     <div className="col-lg-12">
@@ -179,7 +180,7 @@ const BlogArticle = ({
                       <h3>{section.heading}</h3>
                     </div>
                     <div className="visa-content-inner">
-                      <p>{section.text}</p>
+                     <div dangerouslySetInnerHTML={{ __html: section.text }}></div>
                     </div>
                   </div>
                 ))}
@@ -192,7 +193,7 @@ const BlogArticle = ({
               </div>
 
               {/* Commentaires frontend (désactivé, à activer plus tard) */}
-              {/*
+              
               <div className="mt-5">
                 <h3>Laisser un commentaire</h3>
                 <form onSubmit={handleCommentSubmit} className="mb-4">
@@ -233,7 +234,7 @@ const BlogArticle = ({
                   ))}
                 </ul>
               </div>
-              */}
+             
             </div>
           </div>
         </div>

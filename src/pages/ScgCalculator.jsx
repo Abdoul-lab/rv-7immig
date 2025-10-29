@@ -39,6 +39,9 @@ export default function ScgCalculator() {
     };
     base += eduPoints[data.education] || 0;
 
+    // ✅ Gestion des langues uniquement si un test est choisi
+    let minLanguageLevel = 0;
+    if (data.languageTest && data.languageTest !== "Aucun") {
     const languageMap = {
       "CLB 4": 6,
       "CLB 5": 6,
@@ -49,7 +52,7 @@ export default function ScgCalculator() {
       "CLB 10+": 34,
     };
 
-    const minLanguageLevel = Math.min(
+      minLanguageLevel = Math.min(
       languageMap[data.listening] || 0,
       languageMap[data.speaking] || 0,
       languageMap[data.reading] || 0,
@@ -62,6 +65,7 @@ export default function ScgCalculator() {
         (languageMap[data.speaking] || 0) +
         (languageMap[data.reading] || 0) +
         (languageMap[data.writing] || 0);
+    }
     }
 
     const expMap = {
@@ -138,7 +142,7 @@ export default function ScgCalculator() {
         title="Entrée Express simulation"
         links={[
           { label: "Accueil", href: "/" },
-          { label: "Calculateur SCG", href: "/scg-calculator#calco" },
+          { label: "Calculateur SCG" },
           { label: "FAQ" }
         ]}
       />

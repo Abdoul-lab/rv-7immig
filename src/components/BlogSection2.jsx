@@ -7,33 +7,43 @@ import "swiper/css/autoplay";
 const blogPosts = [
   {
     id: 1,
-    title: "Entrée Express : Comment réussir sa demande en 2025",
-    category: ["Working Visa"],
-    date: "14 Août, 2025",
+    title: "Rédiger un CV adapté aux normes locales",
+    category: [""],//Conseils carrière
+    date: "29 Octobre, 2025",
     author: "Septimmigration",
-    image: "/images/EntréeExpress.jpeg",
-    excerpt:
-      "Le guide complet pour réussir sa demande d'Entrée express en 2025.",
+    image: "/images/CVcanada.png",
+    excerpt: "Apprenez à rédiger un CV canadien clair, concis et adapté aux attentes des recruteurs.",
+    link: '/blog/guide-cv-canadien',
   },
   {
     id: 2,
-    title: "PSTQ : Nouveau programmes d’immigration au Canada",
-    category: [""],
-    date: "12 Août, 2023",
+    title: "Les Marches Vers la Résidence Permanente au Canada",
+    category: [""],//immigration
+    date: "29 Octobre, 2025",
     author: "Septimmigration",
-    image: "/images/PSTQ.png",
-    excerpt:
-      "Votre petit guide pour vous aider à comprendre 🧏🏾‍♀️ éviter les erreurs 🙅🏾‍♂️ augmenter vos chances 🍀 d’immigrer au Québec",
+    image: "/images/ResidencePermanenteCanada.png",
+    excerpt: "Toutes les étapes pour obtenir la résidence permanente, de l’évaluation à la préparation au départ.",
+    link: '/blog/residence-permanente-canada',
   },
   {
     id: 3,
-    title: "Pourquoi immigrer au Canada ?",
-    category: ["Immigration Visa"],
-    date: "March 24, 2023",
+    title: "Deux réalités, Deux stratégies pour le Canada",
+    category: [""],//Immigration
+    date: "29 Octobre, 2025",
     author: "Septimmigration",
-    image: "/images/bol2.jpg",
-    excerpt:
-      "Découvrez les avantages d'immigrer au Canada et comment Septimmigration peut vous aider dans votre parcours.",
+    image: "/images/MetiersCanada.png",
+    excerpt: "Découvrez les opportunités pour les métiers qualifiés et peu qualifiés et les stratégies pour réussir votre projet d’immigration.",
+    link: '/blog/metiers-qualifies-vs-peu-qualifies',
+  },
+  {
+    id: 4,
+    title: "La première étape vers la résidence permanente au Canada",
+    category: [""],//immigration
+    date: "29 Octobre, 2025",
+    author: "Septimmigration",
+    image: "/images/PermisTravailCanada.png",
+    excerpt: "Comprendre l’importance du permis de travail comme tremplin vers la résidence permanente.",
+    link: '/blog/permis-travail-canada',
   },
 ];
 
@@ -90,15 +100,15 @@ const BlogSection2 = () => {
                   <div className="dreamit-blog-content">
                     <div className="dreamit-blog-title">
                       <h2>
-                        <a href="blog-details.html">{post.title}</a>
+                        <a href={post.link}>{post.title}</a>
                       </h2>
                     </div>
                     <div className="dreamit-blog-text">
                       <p>{post.excerpt}</p>
                     </div>
                     <div className="dreamit-blog-button">
-                      <a href="#">
-                        En savoir plus <i className="fas fa-chevron-right"></i>
+                      <a href="/blog">
+                        Consulter le Blog <i className="fas fa-chevron-right"></i>
                       </a>
                     </div>
                   </div>

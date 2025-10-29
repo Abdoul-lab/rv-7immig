@@ -57,7 +57,7 @@ const Footer = () => {
                 </div>
                 <div className="footer-menu">
                   <ul>
-                    <li><Link to="/canada">Services Clients</Link></li>
+                    <li><Link to="https://forms.gle/Le1otAb4s79QDqZJ7">Services Clients</Link></li>
                     <li><Link to="/about">À propos</Link></li>
                     <li><Link to="/contact">Prendre rendez-vous</Link></li>
                   </ul>

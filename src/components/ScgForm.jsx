@@ -5,6 +5,7 @@ export default function ScgForm({ onSubmit }) {
     maritalStatus: '',
     age: '',
     education: '',
+    languageTest: '',   // ✅ nouveau champ
     reading: '',
     writing: '',
     listening: '',
@@ -37,7 +38,7 @@ export default function ScgForm({ onSubmit }) {
       max: 65,
     },
     {
-      label: "Quel est votre plus haut niveau d'études ?",
+      label: "Quel est votre plus haut diplôme ?",
       name: "education",
       type: "select",
       options: [
@@ -50,29 +51,41 @@ export default function ScgForm({ onSubmit }) {
       ]
     },
     {
-      label: "Quel est votre niveau en compréhension orale lors du test d'anglais (IELTS/CELPIP) ?",
+      label: "Quel test de langue avez-vous effectué ?",
+      name: "languageTest",
+      type: "select",
+      options: ["IELTS / CELPIP (Anglais)", "TEF / TCF (Français)", "Aucun"],
+    },
+  ];
+
+  const languageSteps = [
+    {
+      label: "Quel est votre niveau en compréhension orale ?",
       name: "listening",
       type: "select",
-      options: ["pas de test d'anglais","CLB 4", "CLB 5", "CLB 6", "CLB 7", "CLB 8", "CLB 9", "CLB 10+"],
+      options: ["CLB 4", "CLB 5", "CLB 6", "CLB 7", "CLB 8", "CLB 9", "CLB 10+"],
     },
     {
-      label: "Quel est votre niveau en expression orale lors du test d'anglais (IELTS/CELPIP) ?",
+      label: "Quel est votre niveau en expression orale ?",
       name: "speaking",
       type: "select",
-      options: ["pas de test d'anglais","CLB 4", "CLB 5", "CLB 6", "CLB 7", "CLB 8", "CLB 9", "CLB 10+"],
+      options: ["CLB 4", "CLB 5", "CLB 6", "CLB 7", "CLB 8", "CLB 9", "CLB 10+"],
     },
     {
-      label: "Quel est votre niveau en lecture lors du test d'anglais (IELTS/CELPIP) ?",
+      label: "Quel est votre niveau en lecture ?",
       name: "reading",
       type: "select",
-      options: ["pas de test d'anglais","CLB 4", "CLB 5", "CLB 6", "CLB 7", "CLB 8", "CLB 9", "CLB 10+"],
+      options: ["CLB 4", "CLB 5", "CLB 6", "CLB 7", "CLB 8", "CLB 9", "CLB 10+"],
     },
     {
-      label: "Quel est votre niveau en écriture lors du test d'anglais(IELTS/CELPIP) ?",
+      label: "Quel est votre niveau en écriture ?",
       name: "writing",
       type: "select",
-      options: ["pas de test d'anglais","CLB 4", "CLB 5", "CLB 6", "CLB 7", "CLB 8", "CLB 9", "CLB 10+"],
+      options: ["CLB 4", "CLB 5", "CLB 6", "CLB 7", "CLB 8", "CLB 9", "CLB 10+"],
     },
+  ];
+
+  const workStep = [
     {
       label: "Quelle est votre expérience de travail au Canada ?",
       name: "workExperience",
@@ -90,7 +103,7 @@ export default function ScgForm({ onSubmit }) {
 
   const spouseSteps = [
     {
-      label: "Quel est le niveau d'études de votre conjoint(e) ?",
+      label: "Quel est le plus haut diplôme de votre conjoint(e) ?",
       name: "spouseEducation",
       type: "select",
       options: [
@@ -151,12 +164,21 @@ export default function ScgForm({ onSubmit }) {
 
   const steps = useMemo(() => {
     let allSteps = [...baseSteps];
+
+    // ✅ Ajouter étapes de langue si un test est choisi
+    if (form.languageTest && form.languageTest !== "Aucun") {
+      allSteps = [...allSteps, ...languageSteps];
+    }
+
+    allSteps = [...allSteps, ...workStep];
+
     if (form.maritalStatus === 'Marié(e) ou conjoint(e) de fait') {
       allSteps = [...allSteps, ...spouseSteps];
     }
+
     allSteps = [...allSteps, ...additionalSteps];
     return allSteps;
-  }, [form.maritalStatus]);
+  }, [form.languageTest, form.maritalStatus]);
 
   const currentStep = steps[step];
 

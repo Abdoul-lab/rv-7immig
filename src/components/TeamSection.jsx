@@ -11,9 +11,9 @@ const TeamSection = () => (
           <div className="row">
             {[
               { name: "Alexandre Doddé", role: "Gestionnaire Principal", img: "/images/team2.jpeg" },
-              { name: "Mutiyu Abayomi", role: "Manager général", img: "/images/team1.png" },
-              { name: "Francesca N'Guéssan", role: "Comptable", img: "/images/team4.jpg" },
-              { name: "Abdoul-Sobr Gbadamosi", role: "Responsable informatique", img: "/images/team3.png" },
+              { name: "Mutiyu Abayomi", role: "Manager Général", img: "/images/team1.png" },
+              { name: "Francesca N'Guéssan", role: "Adjointe Administrative", img: "/images/teamFrancesca.png" },
+              { name: "Abdoul-Sobr Gbadamosi", role: "Responsable Informatique", img: "/images/team3.png" },
             ].map((member, index) => (
               <div key={index} className="col-lg-3 col-md-6 col-sm-12">
                 <div className="dreamit-single-team">
