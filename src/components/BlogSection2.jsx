@@ -9,7 +9,7 @@ const blogPosts = [
     id: 1,
     title: "Rédiger un CV adapté aux normes locales",
     category: [""],//Conseils carrière
-    date: "29 Octobre, 2025",
+    date: "15 Octobre, 2025",
     author: "Septimmigration",
     image: "/images/CVcanada.png",
     excerpt: "Apprenez à rédiger un CV canadien clair, concis et adapté aux attentes des recruteurs.",
@@ -19,7 +19,7 @@ const blogPosts = [
     id: 2,
     title: "Les Marches Vers la Résidence Permanente au Canada",
     category: [""],//immigration
-    date: "29 Octobre, 2025",
+    date: "01 Octobre, 2025",
     author: "Septimmigration",
     image: "/images/ResidencePermanenteCanada.png",
     excerpt: "Toutes les étapes pour obtenir la résidence permanente, de l’évaluation à la préparation au départ.",
@@ -29,7 +29,7 @@ const blogPosts = [
     id: 3,
     title: "Deux réalités, Deux stratégies pour le Canada",
     category: [""],//Immigration
-    date: "29 Octobre, 2025",
+    date: "06 Octobre, 2025",
     author: "Septimmigration",
     image: "/images/MetiersCanada.png",
     excerpt: "Découvrez les opportunités pour les métiers qualifiés et peu qualifiés et les stratégies pour réussir votre projet d’immigration.",
@@ -39,7 +39,7 @@ const blogPosts = [
     id: 4,
     title: "La première étape vers la résidence permanente au Canada",
     category: [""],//immigration
-    date: "29 Octobre, 2025",
+    date: "09 Octobre, 2025",
     author: "Septimmigration",
     image: "/images/PermisTravailCanada.png",
     excerpt: "Comprendre l’importance du permis de travail comme tremplin vers la résidence permanente.",

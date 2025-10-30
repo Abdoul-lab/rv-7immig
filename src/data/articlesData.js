@@ -129,7 +129,7 @@ const articles = [
   title: "Guide du CV canadien : comment préparer son curriculum vitae aux normes canadiennes",
   breadcrumb: "Guide du CV canadien",
   category: "Emploi et intégration",
-  date: "2025-10-01",
+  date: "2025-10-15",
   mainImage: "/images/CVcanada.png",
   intro:
     "Rédiger un CV canadien demande de comprendre les attentes locales. Les recruteurs canadiens privilégient la clarté, la concision et la pertinence des informations. Ce guide vous explique comment créer un CV efficace, étape par étape.",
@@ -175,7 +175,7 @@ const articles = [
   title: "Travailler au Canada avec un permis de travail : la première étape vers la résidence permanente",
   breadcrumb: "Permis de travail Canada",
   category: "Immigration",
-  date: "2025-10-29",
+  date: "2025-10-09",
   mainImage: "/images/PermisTravailCanada.png",
   intro:
     "Immigrer au Canada est un projet ambitieux, souvent motivé par le désir de bâtir une vie stable et prospère. Si la résidence permanente est l’objectif final pour beaucoup, il est essentiel de comprendre que le permis de travail constitue souvent le véritable point de départ. Ce document n’est pas qu’une formalité : c’est une stratégie d’intégration, une preuve de votre capacité à contribuer au marché canadien, et une voie privilégiée vers la résidence permanente.",
@@ -221,7 +221,7 @@ const articles = [
   title: "Métiers qualifiés vs métiers peu qualifiés au Canada : deux réalités, deux stratégies pour réussir son projet d’immigration",
   breadcrumb: "Métiers qualifiés vs peu qualifiés",
   category: "Immigration",
-  date: "2025-10-29",
+  date: "2025-10-06",
   mainImage: "/images/MetiersCanada.png",
   intro:
     "Le marché canadien valorise fortement les métiers qualifiés, notamment dans les secteurs de la santé, du transport, de la construction et des technologies de l’information. Ces professions offrent souvent un accès direct à des programmes comme Entrée Express ou les Programmes des candidats des provinces (PNP), avec des scores élevés et des délais de traitement plus courts. Mais cela ne signifie pas que les métiers dits « peu qualifiés » sont exclus.",
@@ -259,7 +259,7 @@ const articles = [
   title: "Résidence Permanente au Canada : Le guide complet pour réussir votre projet",
   breadcrumb: "Résidence Permanente Canada",
   category: "Immigration",
-  date: "2025-10-29",
+  date: "2025-10-01",
   mainImage: "/images/ResidencePermanenteCanada.png",
   intro:
     "Obtenir la résidence permanente au Canada est un rêve partagé par des milliers de personnes chaque année. Mais entre les démarches administratives, les critères d’admissibilité et les coûts à prévoir, le parcours peut vite devenir complexe. Ce guide vous présente les étapes clés pour réussir votre projet, tout en soulignant l’importance d’un accompagnement professionnel.",
