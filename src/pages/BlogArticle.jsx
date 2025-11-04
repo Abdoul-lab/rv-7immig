@@ -191,8 +191,6 @@ const BlogArticle = ({
                   ← Retour aux articles
                 </Link>
               </div>
-
-              {/* Commentaires frontend (désactivé, à activer plus tard) */}
               
               <div className="mt-5">
                 <h3>Laisser un commentaire</h3>

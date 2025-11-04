@@ -49,18 +49,18 @@ const PDFArticle = ({ title, intro, pdfFile }) => {
         </Link>
       </div>
 
-      
       <div className="mt-3">
         <a
           href={pdfFile}
           target="_blank"
           rel="noopener noreferrer"
           className="btn btn-primary"
+          style={{ display: "inline-block", marginTop: "20px" }}
         >
           Télécharger le guide complet
         </a>
       </div>
-     
+      
     </div>
   );
 };

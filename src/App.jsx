@@ -1,4 +1,4 @@
-import { Routes, Route, useParams } from "react-router-dom"; // ✅ avec useParams
+import { Routes, Route, useParams, Navigate } from "react-router-dom"; // ✅ avec useParams
 import ScrollToTop from "./components/ScrollToTop";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -54,7 +54,7 @@ const App = () => {
         <Route path="/formations" element={<Formations />} />
 
         {/* fallback */}
-        <Route path="*" element={<Home />} />
+        <Route path="*" element={<Navigate to="/" />} />
       </Routes>
 
       <Footer />

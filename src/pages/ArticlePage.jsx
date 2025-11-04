@@ -1,4 +1,3 @@
-import React from "react";
 import { useParams } from "react-router-dom";
 import articles from "../data/articlesData";
 import BlogArticle from "./BlogArticle";
@@ -8,8 +7,11 @@ const ArticlePage = () => {
   const { slug } = useParams();
   const article = articles.find((a) => a.slug === slug);
 
-  if (!article) return <h2>Article introuvable</h2>;
+  if (!article) {
+    return <p>Article non trouvé.</p>;
+  }
 
+  // Rendu conditionnel selon le type
   if (article.type === "pdf") {
     return (
       <PDFArticle
@@ -20,7 +22,17 @@ const ArticlePage = () => {
     );
   }
 
-  return <BlogArticle {...article} />;
+  return (
+    <BlogArticle
+      title={article.title}
+      breadcrumb={article.breadcrumb}
+      mainImage={article.mainImage}
+      intro={article.intro}
+      highlights={article.highlights}
+      sections={article.sections}
+    />
+  );
 };
+
 
 export default ArticlePage;

@@ -156,7 +156,7 @@ const articles = [
       text: "“Gestionnaire de projet avec 5 ans d’expérience dans la coordination d’équipes internationales, expert en méthodologies Agile et en optimisation de processus.”"
     },
     {
-      heading: "5. Pourquoi se faire accompagner par un professionnel ?",
+      heading: "5. Pourquoi se faire accompagner par un professionnel en immigration canadienne agrée?",
       text: "Créer un CV canadien conforme aux attentes des recruteurs peut sembler simple, mais :<br><ul><li>Les exigences varient selon les provinces et les secteurs</li><li>Les recruteurs privilégient les profils adaptés au marché local</li><li>Une rédaction professionnelle maximise vos chances d’obtenir un entretien</li><li>Un accompagnement expert vous aide à mettre en valeur vos compétences et expériences de manière stratégique</li></ul><br>Se faire accompagner vous permet donc de gagner du temps, d’éviter les erreurs et d’optimiser vos chances de succès."
     },
     {
@@ -202,7 +202,7 @@ const articles = [
       text: "Travailler au Canada avec un permis temporaire, ce n’est pas une fin en soi. C’est un tremplin. Chaque année, des milliers de travailleurs étrangers obtiennent leur résidence permanente grâce à l’expérience acquise sur le sol canadien. Le système d’immigration valorise fortement cette expérience locale, qui témoigne de votre capacité à vous intégrer et à contribuer à l’économie du pays."
     },
     {
-      heading: "5. Pourquoi se faire accompagner par un cabinet d’immigration ?",
+      heading: "5. Pourquoi se faire accompagner par un cabinet d’immigration accrédité ?",
       text: "<ul><li>Identifier le type de permis adapté à votre situation</li><li>Préparer un dossier solide et conforme aux exigences</li><li>Anticiper les étapes vers la résidence permanente</li><li>Éviter les erreurs coûteuses et les délais inutiles</li></ul>"
     },
     {
@@ -306,7 +306,7 @@ const articles = [
       text: "<ul><li>Organisation du voyage, logement, intégration et emploi au Canada</li></ul>"
     },
     {
-      heading: "10. Budget à prévoir (à titre indicatif)",
+      heading: "10. Budget à prévoir (à titre indicatif car les montants varient d'une année à l'autre)",
       text: "<ul><li>Frais de traitement + droit de RP : 1 525 CAD</li><li>Évaluation des diplômes : 200–300 CAD</li><li>Test de langue : 300–450 CAD</li><li>Visite médicale : 150–250 CAD</li><li>Biométrie : 85 CAD</li><li>Total estimé : entre 2 300 et 2 600 CAD (hors billet d’avion et installation)</li></ul>"
     },
     {
@@ -327,6 +327,8 @@ const articles = [
   {
     slug: "pstq-guide",
     type: "pdf",
+    breadcrumb: "Guide PSTQ",
+    category: "Immigration",
     title: "Guide complet PSTQ",
     intro: "Un guide complet pour réussir votre demande d'immigration au Québec, illustré et détaillé.",
     pdfFile: "/pdf/GuidePSTQ.pdf",
