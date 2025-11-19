@@ -323,6 +323,88 @@ const articles = [
     }
   ]
 },
+{
+  slug: "immigration-canada-2026-2028",
+  type: "html",
+  title: "Immigration au Canada 2026-2028 : Tout ce qui change et stratégie pour réussir",
+  breadcrumb: "Immigration 2026-2028",
+  category: "Immigration",
+  date: "2026-01-01",
+  mainImage: "/images/Immigration2026.jpeg",
+  intro:
+    "Le Canada entre dans une nouvelle phase de gestion migratoire. Après une forte croissance du nombre d’étudiants internationaux, travailleurs temporaires et demandeurs d’asile, le pays annonce un nouvel équilibre axé sur la durabilité, la stratégie économique et l'intégration à long terme.",
+  highlights: [
+    { icon: "fas fa-chart-line", title: "Immigration durable", text: "Stabilisation des admissions et priorités économiques" },
+    { icon: "fas fa-user-tie", title: "Accent sur les travailleurs qualifiés", text: "Priorité aux secteurs en pénurie" },
+    { icon: "fas fa-graduation-cap", title: "Renforcement académique", text: "Sélectivité accrue pour les étudiants" }
+  ],
+  sections: [
+    {
+      heading: "🎯 Objectif principal : Un système d’immigration soutenable",
+      text:
+        "Selon le Budget 2025, l’objectif est de garder un système efficace, contrôlé et aligné avec la capacité économique, sociale et infrastructurelle du pays. La hausse rapide du nombre de résidents temporaires a exercé une pression importante sur le logement, la santé et l’éducation.",
+      images: ["/images/Immigration2026-img1.jpeg"]
+    },
+    {
+      heading: "📉 Baisse des admissions temporaires",
+      text:
+        "Les données montrent une réduction planifiée : <br>• Travailleurs étrangers temporaires : -50 % <br>• Étudiants internationaux : -60 % <br>• Demandes d’asile : -33 %",
+      images: ["/images/Immigration2026-img2.jpeg"]
+    },
+    {
+      heading: "📊 Niveaux d’immigration 2026-2028",
+      text:
+        "Les résidents permanents sont stabilisés à 380 000 par année pour 2026, 2027 et 2028, avec une plus grande proportion dédiée à l’immigration économique (64 %).",
+      images: ["/images/Immigration2026-img3.jpeg"]
+    },
+    {
+      heading: "🛠 Transition facilitée : 33 000 travailleurs vers la résidence permanente",
+      text:
+        "Le gouvernement favorisera l'accès accéléré à la résidence permanente pour les travailleurs étrangers déjà intégrés et contribuant activement à l’économie canadienne.",
+      images: ["/images/Immigration2026-img4.jpeg"]
+    },
+    {
+      heading: "🩺 Reconnaissance accélérée des diplômes étrangers",
+      text:
+        "97 millions de dollars seront investis pour améliorer le système de reconnaissance des titres étrangers, surtout dans les secteurs de la santé et de la construction.",
+      images: ["/images/Immigration2026-img5.jpeg"]
+    },
+    {
+      heading: "🌍 Attirer les talents mondiaux",
+      text:
+        "Une stratégie internationale vise à attirer chercheurs, innovateurs, professeurs et doctorants, avec un investissement de 1,7 milliard de dollars dans la recherche.",
+      images: ["/images/Immigration2026-img6.jpeg"]
+    },
+    {
+      heading: "📣 Impacts selon votre profil",
+      text:
+        "<ul><li>Étudiants internationaux : accès plus sélectif</li><li>Travailleurs qualifiés : plus grandes chances d'obtenir la résidence permanente</li><li>Secteurs santé / construction : reconnaissance accélérée des titres</li><li>Travailleurs temporaires déjà au Canada : possibilité de transition rapide vers la résidence permanente</li></ul>",
+      images: []
+    },
+    {
+      heading: "🔗 Rôle stratégique de l’EIMT",
+      text:
+        "L’EIMT devient un outil plus ciblé et orienté vers des secteurs critiques, constituant un levier d’accès à la résidence permanente lorsqu'elle est associée à une stratégie adéquate.",
+      images: []
+    },
+    {
+      heading: "📌 Conclusion",
+      text:
+        "Le Canada ne ferme pas ses portes : il redéfinit sa stratégie. La réussite dépend désormais d’une planification méthodique, de l’adéquation entre compétences et besoins nationaux, et de l'accompagnement professionnel."
+    },
+    {
+      heading: "Source",
+      text:
+        "Site officiel du budget canadien 2025."
+    },
+    {
+      heading: "Auteur & Contact",
+      text:
+        "Septimmigration – Toujours travailler dans l'intérêt supérieur de nos clients.<br><br>📩 Contact professionnel : <a href='https://forms.gle/jBGccinwS5TovNEUA' target='_blank'>Contactez-nous ici</a>"
+    }
+  ]
+}
+,
   // Nouvel article PDF
   {
     slug: "pstq-guide",
