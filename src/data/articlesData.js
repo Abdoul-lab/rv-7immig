@@ -141,7 +141,7 @@ const articles = [
   sections: [
     {
       heading: "1. Structure générale d’un CV canadien",
-      text: "Un CV canadien se compose généralement de sections claires :<br><br><strong>1. Coordonnées</strong><br><ul><li>Nom complet</li><li>Adresse (ville, province)</li><li>Téléphone</li><li>Email professionnel</li><li>LinkedIn (facultatif)</li></ul><br><strong>2. Titre ou objectif professionnel</strong><br><ul><li>Une phrase courte qui résume votre profil et votre objectif.</li><li>Ex. : “Développeur logiciel expérimenté spécialisé en Java et applications mobiles.”</li></ul><br><strong>3. Résumé de qualifications (Summary)</strong><br><ul><li>3 à 5 lignes mettant en avant vos compétences clés et réalisations principales.</li></ul><br><strong>4. Expérience professionnelle</strong><br><ul><li>Listée du plus récent au plus ancien</li><li>Inclure : poste, entreprise, lieu, dates (mois et année)</li><li>Décrire vos réalisations avec des verbes d’action et des résultats quantifiables.</li><li>Ex. : “Augmentation de 20 % des ventes grâce à l’optimisation du processus de suivi client.”</li></ul><br><strong>5. Formation académique</strong><br><ul><li>Diplômes obtenus, établissement, dates</li><li>Mentionner les certifications pertinentes</li></ul><br><strong>6. Compétences</strong><br><ul><li>Techniques : logiciels, outils, technologies</li><li>Linguistiques : niveau de maîtrise (anglais/français)</li></ul><br><strong>7. Autres sections optionnelles</strong><br><ul><li>Bénévolat, projets, prix, publications, affiliations professionnelles</li></ul>"
+      text: "Un CV canadien se compose généralement de sections claires :<br><br>1. Coordonnées</strong><br><ul><li>Nom complet</li><li>Adresse (ville, province)</li><li>Téléphone</li><li>Email professionnel</li><li>LinkedIn (facultatif)</li></ul><br>2. Titre ou objectif professionnel</strong><br><ul><li>Une phrase courte qui résume votre profil et votre objectif.</li><li>Ex. : “Développeur logiciel expérimenté spécialisé en Java et applications mobiles.”</li></ul><br>3. Résumé de qualifications (Summary)</strong><br><ul><li>3 à 5 lignes mettant en avant vos compétences clés et réalisations principales.</li></ul><br>4. Expérience professionnelle</strong><br><ul><li>Listée du plus récent au plus ancien</li><li>Inclure : poste, entreprise, lieu, dates (mois et année)</li><li>Décrire vos réalisations avec des verbes d’action et des résultats quantifiables.</li><li>Ex. : “Augmentation de 20 % des ventes grâce à l’optimisation du processus de suivi client.”</li></ul><br>5. Formation académique</strong><br><ul><li>Diplômes obtenus, établissement, dates</li><li>Mentionner les certifications pertinentes</li></ul><br>6. Compétences</strong><br><ul><li>Techniques : logiciels, outils, technologies</li><li>Linguistiques : niveau de maîtrise (anglais/français)</li></ul><br>7. Autres sections optionnelles</strong><br><ul><li>Bénévolat, projets, prix, publications, affiliations professionnelles</li></ul>"
     },
     {
       heading: "2. Conseils pour un CV canadien efficace",
@@ -329,7 +329,7 @@ const articles = [
   title: "Immigration au Canada 2026-2028 : Tout ce qui change et stratégie pour réussir",
   breadcrumb: "Immigration 2026-2028",
   category: "Immigration",
-  date: "2026-01-01",
+  date: "2025-11-10",
   mainImage: "/images/Immigration2026.jpeg",
   intro:
     "Le Canada entre dans une nouvelle phase de gestion migratoire. Après une forte croissance du nombre d’étudiants internationaux, travailleurs temporaires et demandeurs d’asile, le pays annonce un nouvel équilibre axé sur la durabilité, la stratégie économique et l'intégration à long terme.",
@@ -343,7 +343,7 @@ const articles = [
       heading: "🎯 Objectif principal : Un système d’immigration soutenable",
       text:
         "Selon le Budget 2025, l’objectif est de garder un système efficace, contrôlé et aligné avec la capacité économique, sociale et infrastructurelle du pays. La hausse rapide du nombre de résidents temporaires a exercé une pression importante sur le logement, la santé et l’éducation.",
-      images: ["/images/Immigration2026-img1.jpeg"]
+      images: ["/images/Immigration2026.jpeg"]
     },
     {
       heading: "📉 Baisse des admissions temporaires",
@@ -395,12 +395,88 @@ const articles = [
     {
       heading: "Source",
       text:
-        "Site officiel du budget canadien 2025."
+        "Site officiel du canada : <a href='https://budget.canada.ca/2025/report-rapport/chap1-fr.html' target='_blank'>Chapitre 1: Bâtir une économie canadienne plus forte | Budget 2025 </a>"
     },
     {
       heading: "Auteur & Contact",
       text:
-        "Septimmigration – Toujours travailler dans l'intérêt supérieur de nos clients.<br><br>📩 Contact professionnel : <a href='https://forms.gle/jBGccinwS5TovNEUA' target='_blank'>Contactez-nous ici</a>"
+        "Septimmigration – Toujours travailler dans l'intérêt supérieur de nos clients.<br><br>📩 Veuiller cliquez ici : <a href='https://forms.gle/jBGccinwS5TovNEUA' target='_blank'>Contactez-nous ici</a>"
+    }
+  ]
+}
+,
+{
+  "slug": "quebec-immigration-2025-2026",
+  "type": "html",
+  "title": "Québec 2025–2026 : Modification sur les règles d’immigration",
+  "breadcrumb": "Immigration Québec 2025–2026",
+  "category": "Immigration",
+  "date": "2025-11-20",
+  "mainImage": "/images/Quebec_Immigration2024.jpeg",
+  "intro":
+    "Le Québec vient d’adopter un règlement majeur modifiant les conditions d’immigration temporaire et permanente. Publié dans la Gazette officielle le 19 novembre 2025, ce changement impacte directement les travailleurs étrangers, les étudiants internationaux, les employeurs et le regroupement familial. Septimmigration vous propose une analyse claire, complète et orientée vers l’action.",
+  "highlights": [
+    { "icon": "fas fa-language", "title": "Exigences linguistiques accrues", "text": "Test de français obligatoire dans plusieurs cas" },
+    { "icon": "fas fa-user-shield", "title": "Protection renforcée", "text": "Contrats de travail plus détaillés et supervision accrue" },
+    { "icon": "fas fa-graduation-cap", "title": "Études au Québec", "text": "Nouveaux seuils financiers dès 2026" }
+  ],
+  "sections": [
+    {
+      "heading": "🎯 Objectif du règlement : Moderniser et encadrer l’immigration au Québec",
+      "text":
+        "Le gouvernement du Québec renforce les exigences afin d’améliorer l’intégration linguistique, la protection des travailleurs et la transparence des employeurs. Ces modifications s’inscrivent dans une volonté de mieux structurer l’immigration économique et d’assurer la sécurité des personnes vulnérables.",
+      "images": ["/images/Quebec_Immigration2024.jpeg"]
+    },
+    {
+      "heading": "🔍 1. Changements majeurs pour les travailleurs étrangers",
+      "text":
+        "Le règlement 2025 introduit plusieurs obligations nouvelles pour les travailleurs temporaires et les professions réglementées.<br><br>✔️ Exigence linguistique obligatoire</strong><br>Un travailleur étranger devra démontrer un niveau 4 de français oral s’il a cumulé trois années de séjour au Québec avec un permis de travail non agricole.<br><br>Exemptions :</strong><ul><li>emplois en agriculture primaire</li><li>diplomates</li><li>organismes internationaux</li></ul><br>✔️ Accès aux professions réglementées</strong><br>Pour pouvoir exercer une profession régie par un ordre professionnel, le travailleur devra soit :</li></ul><ul><li>détenir une autorisation d'exercice, ou</li><li>avoir un diplôme reconnu (partiellement ou totalement), avec possibilité de compléter les démarches au Québec.</li></ul><br>✔️ Contrat de travail renforcé</strong><br>Le contrat devra inclure : durée, assurances, CNESST, conditions évaluées par le ministère, normes du travail applicables. Ces mesures protègent les travailleurs et encadrent mieux les employeurs.",
+      "images": ["/images/Quebec_Workers2025.jpeg"]
+    },
+    {
+      "heading": "🎓 2. Nouveautés pour les étudiants étrangers (dès 1er janvier 2026)",
+      "text":
+        "Une nouvelle annexe C.1 fixe les montants financiers minimaux à démontrer pour obtenir un CAQ d’études.<br><br>Montants requis :</strong><ul><li>1 personne : 24 617 $/an</li><li>2 personnes : 34 814 $/an</li><li>4 personnes : 49 234 $/an</li></ul>Ces montants sont plus élevés qu’avant et doivent être strictement démontrés lors de la demande.",
+      "images": ["/images/Quebec_Students2026.jpeg"]
+    },
+    {
+      "heading": "🧭 3. Regroupement familial : règles renforcées",
+      "text":
+        "Pour devenir garant dans un parrainage, il ne faudra pas avoir été condamné pour certaines infractions graves durant les 5 dernières années. Le Québec renforce ainsi les règles de sécurité pour protéger les personnes vulnérables.",
+      "images": ["/images/Quebec_Family2025.jpeg"]
+    },
+    {
+      "heading": "🧑‍💼 4. Obligations accrues pour les employeurs",
+      "text":
+        "Les employeurs doivent désormais respecter des exigences plus strictes.<br><br>✔️ L’offre d’emploi doit inclure :<ul><li>tâches détaillées</li><li>salaire et horaire</li><li>avantages sociaux</li><li>conditions de logement (si fournies)</li><li>modalités de transport</li></ul><br>✔️ Déclaration obligatoire au ministère</strong><br>Toute modification importante doit être déclarée dans les 30 jours.",
+      "images": ["/images/Quebec_Employeurs2025.jpeg"]
+    },
+    {
+      "heading": "🕒 5. Dates d’entrée en vigueur",
+      "text":
+        "<ul><li>17 décembre 2025 : majorité des nouvelles règles</li><li>1er janvier 2026 :</strong> nouvelles exigences financières pour étudiants</li><li>17 décembre 2028 :</strong> extension des exigences linguistiques et dispositions pour travailleurs</li></ul>Il est crucial de vérifier quelle version du règlement s’applique selon la date de votre demande.",
+      "images": []
+    },
+    {
+      "heading": "📣 Impacts selon votre profil",
+      "text":
+        "<ul><li>Travailleurs étrangers : exigences linguistiques selon durée du séjour</li><li>Professions réglementées : accès facilité pour ceux ayant une reconnaissance partielle</li><li>Employeurs : obligations administratives accrues</li><li>Étudiants internationaux : seuils financiers plus élevés dès 2026</li><li>Familles : règles de sécurité renforcées pour devenir garant</li></ul>",
+      "images": []
+    },
+    {
+      "heading": "📌 Conclusion",
+      "text":
+        "Le Québec renforce sa politique d’immigration pour améliorer l’intégration, protéger les travailleurs et garantir une main-d’œuvre mieux qualifiée. Mais ces nouvelles exigences peuvent complexifier les démarches. Une stratégie claire et un accompagnement professionnel deviennent essentiels pour éviter les refus."
+    },
+    {
+      heading: "Source",
+      text:
+        "Site officiel du Québec : <a href='https://www.quebec.ca/nouvelles/actualites/details/modifications-reglementaires-reglement-immigration-67118'>Modifications réglementaires au Règlement sur l’immigration au Québec </a>"
+    },
+    {
+      "heading": "Auteur & Contact",
+      "text":
+        "Septimmigration – Toujours travailler dans l'intérêt supérieur de nos clients.<br><br>📩 Contactez-nous : <a href='https://forms.gle/jBGccinwS5TovNEUA' target='_blank'>Formulaire officiel ici</a>"
     }
   ]
 }
