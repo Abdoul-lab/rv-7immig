@@ -1,53 +1,37 @@
-import React from "react";
+import React, { useMemo } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/autoplay";
-
-const blogPosts = [
-  {
-    id: 1,
-    title: "Rédiger un CV adapté aux normes locales",
-    category: [""],//Conseils carrière
-    date: "15 Octobre, 2025",
-    author: "Septimmigration",
-    image: "/images/CVcanada.png",
-    excerpt: "Apprenez à rédiger un CV canadien clair, concis et adapté aux attentes des recruteurs.",
-    link: '/blog/guide-cv-canadien',
-  },
-  {
-    id: 2,
-    title: "Les Marches Vers la Résidence Permanente au Canada",
-    category: [""],//immigration
-    date: "01 Octobre, 2025",
-    author: "Septimmigration",
-    image: "/images/ResidencePermanenteCanada.png",
-    excerpt: "Toutes les étapes pour obtenir la résidence permanente, de l’évaluation à la préparation au départ.",
-    link: '/blog/residence-permanente-canada',
-  },
-  {
-    id: 3,
-    title: "Deux réalités, Deux stratégies pour le Canada",
-    category: [""],//Immigration
-    date: "06 Octobre, 2025",
-    author: "Septimmigration",
-    image: "/images/MetiersCanada.png",
-    excerpt: "Découvrez les opportunités pour les métiers qualifiés et peu qualifiés et les stratégies pour réussir votre projet d’immigration.",
-    link: '/blog/metiers-qualifies-vs-peu-qualifies',
-  },
-  {
-    id: 4,
-    title: "La première étape vers la résidence permanente au Canada",
-    category: [""],//immigration
-    date: "09 Octobre, 2025",
-    author: "Septimmigration",
-    image: "/images/PermisTravailCanada.png",
-    excerpt: "Comprendre l’importance du permis de travail comme tremplin vers la résidence permanente.",
-    link: '/blog/permis-travail-canada',
-  },
-];
+import articles from "../data/articlesData";
 
 const BlogSection2 = () => {
+  // Trier les articles par date décroissante et récupérer les 4 plus récents
+  const blogPosts = useMemo(() => {
+    return articles
+      .sort((a, b) => new Date(b.date) - new Date(a.date))
+      .slice(0, 4)
+      .map((article, index) => ({
+        id: index + 1,
+        title: article.title,
+        category: [article.category],
+        date: new Date(article.date).toLocaleDateString('fr-FR', {
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric'
+        }).replace(/^\w/, (c) => c.toUpperCase()),
+        author: "Septimmigration",
+        image: article.mainImage,
+        excerpt: article.intro,
+        // Extrait tronqué pour inciter au clic
+        excerptShort:
+          article.intro && article.intro.length > 100
+            ? article.intro.slice(0, 100).trim() + "..."
+            : article.intro,
+        link: `/blog/${article.slug}`,
+      }));
+  }, []);
+
   return (
     <div className="blog-area style-three upper pt-65">
       <div className="container">
@@ -60,7 +44,7 @@ const BlogSection2 = () => {
           <div className="col-lg-6 col-md-6">
             <div className="title-content pb-4">
               <p>
-                Cette section regroupe des actualités fiables et des informations pratiques concernant l’immigration au Canada, afin de vous tenir informé des évolutions récentes et de vous accompagner dans vos démarches.
+                Cette section regroupe des actualités fiables et des informations pratiques concernant l'immigration au Canada, afin de vous tenir informé des évolutions récentes et de vous accompagner dans vos démarches.
               </p>
             </div>
           </div>
@@ -104,10 +88,10 @@ const BlogSection2 = () => {
                       </h2>
                     </div>
                     <div className="dreamit-blog-text">
-                      <p>{post.excerpt}</p>
+                      <p>{post.excerptShort}</p>
                     </div>
                     <div className="dreamit-blog-button">
-                      <a href="/blog">
+                      <a href={post.link}>
                         Consulter le Blog <i className="fas fa-chevron-right"></i>
                       </a>
                     </div>
