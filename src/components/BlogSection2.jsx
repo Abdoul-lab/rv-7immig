@@ -65,9 +65,9 @@ const BlogSection2 = () => {
             {blogPosts.map((post) => (
               <SwiperSlide key={post.id}>
                 <div className="dreamit-single-blog-box">
-                  <div className="dreamit-blog-thumb">
+                  <div className="dreamit-blog-thumb" style={{ width: '100%', height: '220px', overflow: 'hidden' }}>
                     <a href="#">
-                      <img src={post.image} alt="blog" />
+                      <img src={post.image} alt="blog" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                     </a>
                     <div className="post-catgory">
                       {post.category.map((cat, index) => (

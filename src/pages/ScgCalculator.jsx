@@ -148,60 +148,121 @@ export default function ScgCalculator() {
       />
 
       <div className="py-5 bg-light min-vh-100">
-        <div className="container px-3">
-          <div className="mx-auto" style={{ maxWidth: '900px' }}>
-            <div className="text-center mb-4">
-              <h1 className="h3 fw-bold text-dark mb-3">
-                Calculateur SCG - Système de Classement Global
-              </h1>
-              <p className="lead text-secondary">
-                Calculez votre score pour le programme Entrée Express du Canada
-              </p>
-            </div>
-
-            <div className="alert alert-warning d-flex align-items-center mb-4" role="alert">
-              <svg xmlns="http://www.w3.org/2000/svg" width="90" height="40" fill="currentColor" className="bi bi-exclamation-triangle-fill me-2 text-warning" viewBox="0 0 16 16">
-                <path d="M8.982 1.566a1.13 1.13 0 0 0-1.964 0L.165 13.233c-.457.778.091 1.767.982 1.767h13.707c.89 0 1.438-.99.982-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1-2.002 0 1 1 0 0 1 2.002 0z"/>
-              </svg>
-              <div>
-                <strong className='text-danger'> Avis important : </strong> Cet outil est fourni à titre indicatif seulement. 
-                Les résultats peuvent différer du système officiel d'Immigration, Réfugiés et Citoyenneté Canada (IRCC).
+        <div className="container">
+          {!score ? (
+            <>
+              {/* Hero Section */}
+              <div className="text-center mb-5">
+                <h1 className="display-4 fw-bold text-dark mb-3">
+                  Calculateur SCG
+                </h1>
+                <h2 className="h4 text-secondary mb-4">
+                  Système de Classement Global
+                </h2>
+                <p className="lead text-muted mb-4">
+                  Estimez votre score pour le programme Entrée Express du Canada
+                </p>
               </div>
-            </div>
 
-            {!score ? (
-              <div className="bg-white rounded shadow p-4">
+              {/* Key Stats */}
+              <div className="row mb-5">
+                <div className="col-md-4 text-center mb-3">
+                  <div className="bg-white rounded shadow-sm p-4">
+                    <h3 className="h1 fw-bold text-primary mb-2">600+</h3>
+                    <p className="text-secondary">Score compétitif</p>
+                  </div>
+                </div>
+                <div className="col-md-4 text-center mb-3">
+                  <div className="bg-white rounded shadow-sm p-4">
+                    <h3 className="h1 fw-bold text-primary mb-2">1,200</h3>
+                    <p className="text-secondary">Points maximum</p>
+                  </div>
+                </div>
+                <div className="col-md-4 text-center mb-3">
+                  <div className="bg-white rounded shadow-sm p-4">
+                    <h3 className="h1 fw-bold text-primary mb-2">5+</h3>
+                    <p className="text-secondary">Catégories d'évaluation</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Warning Alert */}
+              <div className="alert alert-warning d-flex align-items-center mb-4" role="alert">
+                <svg xmlns="http://www.w3.org/2000/svg" width="90" height="40" fill="currentColor" className="bi bi-exclamation-triangle-fill me-2 text-warning" viewBox="0 0 16 16">
+                  <path d="M8.982 1.566a1.13 1.13 0 0 0-1.964 0L.165 13.233c-.457.778.091 1.767.982 1.767h13.707c.89 0 1.438-.99.982-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1-2.002 0 1 1 0 0 1 2.002 0z"/>
+                </svg>
+                <div>
+                  <strong className='text-danger'> Outil d'estimation uniquement : </strong> L'évaluation officielle est effectuée par l'IRCC.
+                </div>
+              </div>
+
+              {/* Calculator Form */}
+              <div className="bg-white rounded shadow-lg p-5 mb-5">
+                <h3 className="h4 fw-bold text-dark mb-4">
+                  Calculez vos points SCG
+                </h3>
                 <ScgForm onSubmit={calculateScore} />
               </div>
-            ) : (
-              <div className="mt-4">
+            </>
+          ) : (
+            <>
+              {/* Results Section */}
+              <div className="text-center mb-5">
+                <h2 className="display-5 fw-bold text-dark mb-3">
+                  Vos résultats SCG
+                </h2>
+              </div>
+
+              <div className="bg-white rounded shadow-lg p-5 mb-5">
                 <ScgResults scoreBreakdown={scoreBreakdown} />
+              </div>
 
-                <div className="text-center mt-4">
-                  <button
-                    onClick={resetCalculator}
-                    className="btn btn-primary px-4 py-2"
-                  >
-                    Faire un nouveau calcul
-                  </button>
-                </div>
+              <div className="text-center mb-5">
+                <button
+                  onClick={resetCalculator}
+                  className="btn btn-primary btn-lg px-5 py-3"
+                >
+                  Faire un nouveau calcul
+                </button>
+              </div>
 
-                <div className="bg-success bg-opacity-10 border border-success rounded p-4 mt-4">
-                  <h3 className="h5 mb-3">
-                    🎯 Prochaines étapes recommandées
-                  </h3>
-                  <ul className="list-unstyled text-white">
-                    <li>• Créez votre profil sur le site officiel d'IRCC</li>
-                    <li>• Préparez vos documents (EDE, tests de langue, etc.)</li>
-                    <li>• Contactez Septimmigration pour un accompagnement personnalisé</li>
-                    <li>• Explorez les programmes provinciaux pour augmenter vos chances</li>
-                  </ul>
+              {/* Next Steps */}
+              <div className="rounded shadow-lg p-5" style={{ background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)' }}>
+                <h3 className="h4 fw-bold mb-4" style={{ color: '#fff' }}>
+                  🎯 Prochaines étapes recommandées
+                </h3>
+                <div className="row">
+                  <div className="col-md-6 mb-3">
+                    <div className="rounded p-4" style={{ background: 'rgba(255, 255, 255, 0.15)', backdropFilter: 'blur(10px)' }}>
+                      <h5 className="fw-bold mb-2" style={{ color: '#fff' }}>Profil IRCC</h5>
+                      <p className="mb-0" style={{ color: '#fff', opacity: 0.95 }}>Créez votre profil sur le site officiel d'Immigration, Réfugiés et Citoyenneté Canada</p>
+                    </div>
+                  </div>
+                  <div className="col-md-6 mb-3">
+                    <div className="rounded p-4" style={{ background: 'rgba(255, 255, 255, 0.15)', backdropFilter: 'blur(10px)' }}>
+                      <h5 className="fw-bold mb-2" style={{ color: '#fff' }}>Documents officiels</h5>
+                      <p className="mb-0" style={{ color: '#fff', opacity: 0.95 }}>Préparez vos documents (EDE, tests de langue, certificats d'études)</p>
+                    </div>
+                  </div>
+                  <div className="col-md-6">
+                    <div className="rounded p-4" style={{ background: 'rgba(255, 255, 255, 0.15)', backdropFilter: 'blur(10px)' }}>
+                      <h5 className="fw-bold mb-2" style={{ color: '#fff' }}>Accompagnement</h5>
+                      <p className="mb-0" style={{ color: '#fff', opacity: 0.95 }}>Contactez Septimmigration pour un accompagnement personnalisé</p>
+                    </div>
+                  </div>
+                  <div className="col-md-6">
+                    <div className="rounded p-4" style={{ background: 'rgba(255, 255, 255, 0.15)', backdropFilter: 'blur(10px)' }}>
+                      <h5 className="fw-bold mb-2" style={{ color: '#fff' }}>Programmes provinciaux</h5>
+                      <p className="mb-0" style={{ color: '#fff', opacity: 0.95 }}>Explorez les programmes pour augmenter vos chances d'immigration</p>
+                    </div>
+                  </div>
                 </div>
               </div>
-            )}
+            </>
+          )}
           </div>
         </div>
-      </div>
+      
       <FaqAccordion />
     </>
   );

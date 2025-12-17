@@ -481,6 +481,103 @@ const articles = [
   ]
 }
 ,
+{
+  "slug": "citoyennete-canadienne-adoption-internationale-loi-c3-2025",
+  "type": "html",
+  "title": "Citoyenneté canadienne et adoption internationale : ce qui change avec la Loi C-3 (2025)",
+  "breadcrumb": "Citoyenneté canadienne – Loi C-3",
+  "category": "Citoyenneté canadienne",
+  "date": "2025-12-17",
+  "mainImage": "/images/senatcanada.jpg",
+  "intro":
+    "Le Canada a profondément modifié sa Loi sur la citoyenneté afin de corriger des injustices historiques et d’adapter la transmission de la citoyenneté aux réalités des familles canadiennes vivant à l’étranger. L’entrée en vigueur du projet de loi C-3, le 15 décembre 2025, marque un tournant majeur, notamment pour les enfants adoptés à l’étranger et pour les familles touchées par la limite dite de la première génération.",
+  "highlights": [
+    {
+      "icon": "fas fa-baby",
+      "title": "Adoption internationale",
+      "text": "Deux voies possibles pour obtenir la citoyenneté canadienne"
+    },
+    {
+      "icon": "fas fa-link",
+      "title": "Lien manifeste avec le Canada",
+      "text": "Nouvelle exigence clé dès décembre 2025"
+    },
+    {
+      "icon": "fas fa-balance-scale",
+      "title": "Correction d’injustices",
+      "text": "Rétablissement de la citoyenneté pour les Canadiens lésés"
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Citoyenneté canadienne pour les enfants adoptés à l’étranger",
+      "text":
+        "Un enfant né à l’étranger et adopté par des parents canadiens peut devenir citoyen canadien par deux mécanismes distincts, chacun ayant des conséquences importantes sur la transmission future de la citoyenneté.",
+      "images": []
+    },
+    {
+      "heading": "1️⃣ Attribution directe de la citoyenneté (article 5.1)",
+      "text":
+        "L’enfant peut obtenir la citoyenneté sans passer par la résidence permanente si :<br></br><ul><li>au moins un parent adoptif était citoyen canadien au moment de l’adoption ;</li><li>ce parent est admissible à transmettre la citoyenneté par filiation.</li></ul><br>Cette voie est généralement plus rapide, mais elle comporte désormais des limites importantes en matière de transmission intergénérationnelle.",
+      "images": []
+    },
+    {
+      "heading": "2️⃣ Attribution de la citoyenneté par naturalisation",
+      "text":
+        "Les parents peuvent parrainer l’enfant afin qu’il obtienne la résidence permanente, puis demander la citoyenneté canadienne pour lui (ou l’enfant pourra la demander lui-même à l’âge de 18 ans).<br><br>Avantage clé :<br> un enfant devenu citoyen par naturalisation peut transmettre la citoyenneté à ses propres enfants nés à l’étranger, ce qui n’est pas toujours possible avec l’attribution directe.",
+      "images": []
+    },
+    {
+      "heading": "⚠️ La limite à la première génération : comprendre l’enjeu",
+      "text":
+        "La loi canadienne limitait historiquement la transmission automatique de la citoyenneté à la première génération née ou adoptée à l’étranger. Cette règle a causé de nombreuses situations injustes, reconnues comme inconstitutionnelles par la Cour supérieure de justice de l’Ontario en décembre 2023.",
+      "images": []
+    },
+    {
+      "heading": "🔄 Ce que change le projet de loi C-3",
+      "text":
+        "Le projet de loi C-3 élargit la possibilité de transmettre la citoyenneté au-delà de la première génération, mais introduit une nouvelle condition centrale : la démonstration d’un lien réel avec le Canada.",
+      "images": []
+    },
+    {
+      "heading": "🔗 Le « lien manifeste » avec le Canada",
+      "text":
+        "Pour les enfants nés ou adoptés à l’étranger à partir du 15 décembre 2025, lorsque le parent canadien est lui-même né ou adopté à l’étranger, ce parent doit démontrer un lien manifeste avec le Canada.<br><br>Condition :<br> avoir cumulé au moins 1 095 jours (3 ans) de présence effective au Canada avant la naissance ou l’adoption de l’enfant.<br><br>Sans cette preuve, l’attribution directe de la citoyenneté n’est pas possible.",
+      "images": []
+    },
+    {
+      "heading": "🏛️ Exception importante : fonctionnaires de la Couronne",
+      "text":
+        "La limite de la première génération ne s’applique pas si un parent adoptif ou un grand-parent travaillait à l’étranger comme fonctionnaire de la Couronne canadienne (Forces armées canadiennes, fonction publique fédérale, services provinciaux ou territoriaux), à l’exclusion des employés locaux.",
+      "images": []
+    },
+    {
+      "heading": " Les Canadiens dépossédés de leur citoyenneté",
+      "text":
+        "Le projet de loi C-3 corrige également des injustices historiques touchant des personnes ayant perdu ou n’ayant jamais obtenu la citoyenneté en raison de lois dépassées. Les personnes concernées, leurs descendants et certaines personnes nées ou adoptées à l’étranger avant le 15 décembre 2025 peuvent désormais obtenir ou rétablir la citoyenneté canadienne.",
+      "images": []
+    },
+    {
+      "heading": "🎯 Pourquoi se faire accompagner par Septimmigration ?",
+      "text":
+        "Les nouvelles règles sont plus inclusives, mais aussi plus techniques. Choisir la mauvaise voie (attribution directe ou naturalisation) peut avoir des conséquences majeures sur la transmission future de la citoyenneté.<br><br>Septimmigration vous aide à :<ul><li>analyser votre situation familiale et générationnelle ;</li><li>choisir la stratégie la plus sécurisée ;</li><li>préparer des demandes conformes à la Loi;</li><li>Savoir les droits futurs de vos enfants.</li></ul>",
+      "images": []
+    },
+    {
+      "heading": "Source",
+      "text":
+        "Gouvernement du Canada : <a href='https://www.canada.ca/fr/immigration-refugies-citoyennete/services/citoyennete-canadienne/modifications-loi/regles-2009-2015/adoption.html' target='_blank'>Modifications à la Loi sur la citoyenneté – Adoption</a>",
+      "images": []
+    },
+    {
+      "heading": "Auteur & Contact",
+      "text":
+        "Septimmigration – Toujours travailler dans l’intérêt supérieur de nos clients.<br><br>📩 Contactez-nous pour une consultation personnalisée : <a href='https://forms.gle/jBGccinwS5TovNEUA' target='_blank'>Formulaire officiel ici</a>",
+      "images": []
+    }
+  ]
+}
+,
   // Nouvel article PDF
   {
     slug: "pstq-guide",
