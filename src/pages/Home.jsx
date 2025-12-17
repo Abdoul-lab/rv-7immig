@@ -14,6 +14,7 @@ export default function Home() {
   return (
     <>
       <HeroCarousel />
+      <BlogSection2 />
       {/* <FeatureSection /> */}
       <AboutSection />
       <VisaServiceSection />
@@ -22,7 +23,6 @@ export default function Home() {
       <ExperienceSection />
       {/* <VisaAssessmentSection /> */}
       {/* <WhyChooseUs /> */}
-      <BlogSection2 />
       {/* <BrandCarousel /> */}
     </>
   );
